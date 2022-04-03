@@ -1,0 +1,30 @@
+{
+	"name": "borsti-hp",
+	"productName": "borsti-hp",
+	"version": "0.0.1",
+	"description": "Homepage for borsTiHD.",
+	"author": "borsTiHD",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"scripts": {
+		"dev": "nuxi dev",
+		"build": "nuxi build",
+		"start": "node .output/server/index.mjs",
+		"lint:script": "eslint --ext .ts,vue --ignore-path .gitignore ."
+	},
+	"devDependencies": {
+		"@nuxtjs/eslint-config-typescript": "^9.0.0",
+		"@nuxtjs/tailwindcss": "^5.0.2",
+		"@typescript-eslint/eslint-plugin": "^5.17.0",
+		"@typescript-eslint/parser": "^5.17.0",
+		"@vue/eslint-config-typescript": "^10.0.0",
+		"eslint": "^8.12.0",
+		"eslint-plugin-vue": "^8.5.0",
+		"nuxt3": "latest",
+		"typescript": "^4.6.3",
+		"vite-plugin-eslint": "^1.3.0"
+	}
+}
