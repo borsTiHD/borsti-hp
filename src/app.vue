@@ -4,6 +4,14 @@
 		<div class="flex flex-col">
 			<div class="flex justify-center">
 				<DarkModeToggle />
+
+				<NuxtLink to="/" class="mx-2 text-white">
+					Home
+				</NuxtLink>
+
+				<NuxtLink to="/teamspeak" class="mx-2 text-white">
+					TeamSpeak
+				</NuxtLink>
 			</div>
 		</div>
 
