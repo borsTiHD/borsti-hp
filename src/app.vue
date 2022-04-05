@@ -2,7 +2,7 @@
 	<div class="w-full min-h-screen bg-gray-100 dark:bg-gray-900 bg-fixed bg-cover bg-bottom bg-image" :class="{ dark: isDarkMode }">
 		<!-- Darkmode Toggle -->
 		<div class="flex flex-col">
-			<div class="flex justify-center">
+			<div class="flex justify-center mt-2">
 				<DarkModeToggle />
 
 				<NuxtLink to="/" class="mx-2 text-white">
@@ -16,7 +16,9 @@
 		</div>
 
 		<!-- Content / Pages -->
-		<NuxtPage />
+		<div class="container mx-auto">
+			<NuxtPage />
+		</div>
 	</div>
 </template>
 
