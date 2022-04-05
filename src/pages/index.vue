@@ -1,24 +1,24 @@
 <template>
-    <div class="flex flex-col justify-center">
-        <div class="flex justify-center">
-            <div class="my-4">
-                <div class="text-white text-4xl font-bold self-center">TeamSpeak</div>
-                <div class="text-primary text-sm">borsTiHD TS Viewer</div>
-            </div>
-        </div>
-        <div class="flex justify-center">
-            <div class="flex flex-col justify-center">
-                <div class="backdrop-blur-md backdrop-brightness-50 rounded border border-slate-600 my-2 p-2">
-                    <a :href="tsViewerUrl">
-                        <img :src="tsViewerBanner">
-                    </a>
-                </div>
-                <div class="backdrop-blur-md backdrop-brightness-50 rounded border border-slate-600 my-2 p-2">
-                    <div id="ts3viewer_1111967" style="" />
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="flex flex-col justify-center">
+		<div class="flex justify-center">
+			<div class="my-4">
+				<div class="text-white text-4xl font-bold self-center">TeamSpeak</div>
+				<div class="text-primary text-sm">borsTiHD TS Viewer</div>
+			</div>
+		</div>
+		<div class="flex justify-center">
+			<div class="flex flex-col justify-center">
+				<div class="bg-gray-100 dark:bg-gray-900 backdrop-blur-md backdrop-brightness-50 rounded border border-slate-600 my-2 p-2">
+					<a :href="tsViewerUrl">
+						<img :src="tsViewerBanner">
+					</a>
+				</div>
+				<div class="bg-gray-100 dark:bg-gray-900 backdrop-blur-md backdrop-brightness-50 rounded border border-slate-600 my-2 p-2">
+					<div id="ts3viewer_1111967" style="" />
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script setup>
