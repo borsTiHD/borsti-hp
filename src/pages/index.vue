@@ -1,7 +1,7 @@
 <template>
 	<div class="relative lg:min-h-[100vh] flex flex-col lg:flex-row lg:items-center mx-auto max-w-screen-xl gap-4">
 		<div class="w-full lg:w-1/2 flex justify-center self-end">
-			<img src="/assets/img/borsti_bw.png" height="860" :alt="`Photo of ${name}`" class="w-full h-auto object-cover rounded-lg" loading="lazy">
+			<img src="~/assets/img/borsti_bw.png" height="860" :alt="`Photo of ${name}`" class="w-full h-auto object-cover rounded-lg" loading="lazy">
 		</div>
 		<div class="w-full lg:w-1/2">
 			<!-- Dividing line on smaller device -->
