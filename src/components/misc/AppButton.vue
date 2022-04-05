@@ -1,13 +1,13 @@
 <template>
-    <button
-        :class="[
-            'shadow focus:shadow-outline focus:outline-none text-white py-2 px-4 rounded',
-            buttonTypes[props.type]
-        ]"
-        type="button"
-    >
-        <slot />
-    </button>
+	<button
+		:class="[
+			'shadow focus:shadow-outline focus:outline-none text-white py-2 px-4 rounded',
+			buttonTypes[props.type]
+		]"
+		type="button"
+	>
+		<slot />
+	</button>
 </template>
 
 <script setup>
