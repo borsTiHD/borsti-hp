@@ -27,7 +27,7 @@ module.exports = {
 		quotes: ['error', 'single'],
 		semi: ['error', 'never'],
 		'comma-dangle': ['error', 'never'],
-		'linebreak-style': ['error', 'windows'],
+		'linebreak-style': ['error', 'unix'],
 		'template-curly-spacing': 'off',
 		'max-len': ['off', { code: 120 }],
 		'no-console': 'off',
