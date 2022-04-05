@@ -18,12 +18,14 @@
 	"devDependencies": {
 		"@nuxtjs/eslint-config-typescript": "^9.0.0",
 		"@nuxtjs/tailwindcss": "^5.0.2",
+		"@pinia/nuxt": "^0.1.8",
 		"@typescript-eslint/eslint-plugin": "^5.17.0",
 		"@typescript-eslint/parser": "^5.17.0",
 		"@vue/eslint-config-typescript": "^10.0.0",
 		"eslint": "^8.12.0",
 		"eslint-plugin-vue": "^8.5.0",
 		"nuxt3": "latest",
+		"pinia": "^2.0.13",
 		"typescript": "^4.6.3",
 		"vite-plugin-eslint": "^1.3.0"
 	}
