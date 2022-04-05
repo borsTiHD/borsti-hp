@@ -7,6 +7,7 @@ export default defineNuxtConfig({
 	modules: [
 		'@nuxtjs/tailwindcss'
 	],
+	buildModules: ['@pinia/nuxt'],
 	tailwindcss: {
 		// viewer: false
 	},
