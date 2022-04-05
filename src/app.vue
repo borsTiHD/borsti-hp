@@ -1,7 +1,11 @@
 <template>
 	<div class="w-full min-h-screen bg-gray-100 dark:bg-gray-900 bg-fixed bg-cover bg-bottom bg-image" :class="{ dark: isDarkMode }">
-		<!-- Darkmode -->
-		<DarkModeToggle />
+		<!-- Darkmode Toggle -->
+		<div class="flex flex-col">
+			<div class="flex justify-center">
+				<DarkModeToggle />
+			</div>
+		</div>
 
 		<!-- Content / Pages -->
 		<NuxtPage />
