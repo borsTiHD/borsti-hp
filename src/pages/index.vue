@@ -1,13 +1,14 @@
 <template>
-	<div class="flex flex-col justify-center">
-		<div class="grid grid-cols-2 gap-20">
-			<div class="float-left">
-				<img src="/assets/img/borsti_bw.png" alt="" class="w-full h-auto object-cover rounded-lg" loading="lazy">
-			</div>
-			<div class="my-4">
-				<div class="text-white text-4xl font-bold self-center">{{ name }}</div>
-				<div class="text-primary text-sm">{{ headline }}</div>
-			</div>
+	<div class="relative lg:min-h-[100vh] flex flex-col lg:flex-row lg:items-center mx-auto max-w-screen-xl gap-4">
+		<div class="w-full lg:w-1/2 flex justify-center self-end">
+			<img src="/assets/img/borsti_bw.png" height="860" :alt="`Photo of ${name}`" class="w-full h-auto object-cover rounded-lg" loading="lazy">
+		</div>
+		<div class="w-full lg:w-1/2">
+			<!-- Dividing line on smaller device -->
+			<div class="border-t lg:border-t-0 border-gray-400 dark:border-gray-500 pt-6 lg:pt-0" />
+			<!-- Text -->
+			<h1 class="text-primary-light dark:text-primary border-l-2 border-primary drop-shadow-md text-6xl lg:text-7xl xl:text-8xl leading-none">{{ name }}</h1>
+			<p class="text-gray-900 dark:text-white font-bold my-10 text-lg xl:text-xl leading-tight">{{ headline }}</p>
 		</div>
 	</div>
 </template>
@@ -16,3 +17,6 @@
 const name = 'Bastian Jakobs'
 const headline = 'Writer . YouTuber . Creator . Mentor'
 </script>
+
+<style scope>
+</style>
