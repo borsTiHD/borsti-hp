@@ -1,19 +1,6 @@
 <template>
 	<div class="w-full min-h-screen pt-8 px-8 bg-fixed bg-cover bg-bottom bg-image" :class="[{ dark: isDarkMode }, isDarkMode ? 'bg-image' : 'bg-image-light']">
-		<!-- Darkmode Toggle -->
-		<div class="flex flex-col">
-			<div class="flex justify-center">
-				<NuxtLink to="/" class="text-gray-900 dark:text-white mx-2">
-					Home
-				</NuxtLink>
-
-				<NuxtLink to="/teamspeak" class="text-gray-900 dark:text-white mx-2">
-					TeamSpeak
-				</NuxtLink>
-
-				<DarkModeToggle class="ml-32" />
-			</div>
-		</div>
+		<AppNavbar />
 
 		<!-- Content / Pages -->
 		<div class="container mx-auto">
@@ -23,7 +10,7 @@
 </template>
 
 <script setup>
-import DarkModeToggle from '@/components/misc/DarkModeToggle.vue'
+import AppNavbar from '@/components/layout/AppNavbar.vue'
 import { useDarkModeStore } from '~/store/darkmode'
 
 // Using store and create computed 'DarkMode' property
