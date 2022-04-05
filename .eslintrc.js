@@ -45,16 +45,7 @@ module.exports = {
 		'vue/max-attributes-per-line': 'off',
 		'vue/singleline-html-element-content-newline': 'off',
 		'vue/multiline-html-element-content-newline': 'off',
-
-		'vue/html-indent': ['error', 4, {
-			attribute: 1,
-			baseIndent: 1,
-			closeBracket: 0,
-			alignAttributesVertically: true,
-			ignores: []
-		}
-		],
-
+		'vue/html-indent': ['error', 'tab'],
 		'vue/no-v-html': 'off'
 	}
 }
