@@ -2,18 +2,16 @@
 	<div class="flex flex-col justify-center">
 		<div class="flex justify-center">
 			<div class="my-4">
-				<div class="text-white text-4xl font-bold self-center">TeamSpeak</div>
-				<div class="text-primary text-sm">borsTiHD TS Viewer</div>
+				<h1 class="text-gray-900 dark:text-white text-5xl font-bold self-center">TeamSpeak</h1>
+				<p class="text-primary-light dark:text-primary text">borsTiHD TS Viewer</p>
 			</div>
 		</div>
 		<div class="flex justify-center">
 			<div class="flex flex-col justify-center">
-				<div class="bg-gray-100 dark:bg-gray-900 rounded border border-slate-600 my-2 p-2">
-					<a :href="tsViewerUrl">
-						<img :src="tsViewerBanner">
-					</a>
+				<div class="bg-bg rounded border border-slate-600 my-2 p-2">
+					<a :href="tsViewerUrl"><img :src="tsViewerBanner"></a>
 				</div>
-				<div class="bg-gray-100 dark:bg-gray-900 rounded border border-slate-600 my-2 p-2">
+				<div class="bg-bg rounded border border-slate-600 my-2 p-2">
 					<div id="ts3viewer_1111967" style="" />
 				</div>
 			</div>

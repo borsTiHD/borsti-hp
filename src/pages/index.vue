@@ -8,14 +8,14 @@
 			<div class="border-t lg:border-t-0 border-gray-400 dark:border-gray-500 pt-6 lg:pt-0" />
 			<!-- Text -->
 			<h1 class="text-primary-light dark:text-primary border-l-2 border-primary drop-shadow-md text-6xl lg:text-7xl xl:text-8xl leading-none">{{ name }}</h1>
-			<p class="text-gray-900 dark:text-white font-bold my-10 text-lg xl:text-xl leading-tight">{{ headline }}</p>
+			<p class="text-gray-900 dark:text-white font-bold my-10 text-lg xl:text-xl leading-tight">{{ description }}</p>
 		</div>
 	</div>
 </template>
 
 <script setup>
 const name = 'Bastian Jakobs'
-const headline = 'Writer . YouTuber . Creator . Mentor'
+const description = 'Creator • YouTuber • GFX Designer • Artist'
 </script>
 
 <style scope>

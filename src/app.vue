@@ -3,11 +3,11 @@
 		<!-- Darkmode Toggle -->
 		<div class="flex flex-col">
 			<div class="flex justify-center">
-				<NuxtLink to="/" class="mx-2 text-white">
+				<NuxtLink to="/" class="text-gray-900 dark:text-white mx-2">
 					Home
 				</NuxtLink>
 
-				<NuxtLink to="/teamspeak" class="mx-2 text-white">
+				<NuxtLink to="/teamspeak" class="text-gray-900 dark:text-white mx-2">
 					TeamSpeak
 				</NuxtLink>
 
@@ -37,6 +37,6 @@ const isDarkMode = computed(() => darkModeStore.isDarkMode)
 		background-image:linear-gradient(rgba(40, 40, 40, 0.8), rgba(50, 50, 50, 0.8)), url("assets/img/wallpaper.jpg")
 	}
 	.bg-image-light {
-		background-image:linear-gradient(rgba(170, 170, 170, 0.8), rgba(235, 235, 235, 0.8)), url("assets/img/wallpaper.jpg")
+		background-image:linear-gradient(rgba(255, 255, 255, 0.8), rgba(168, 168, 168, 0.8)), url("assets/img/wallpaper.jpg")
 	}
 </style>
