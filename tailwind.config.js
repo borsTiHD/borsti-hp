@@ -3,6 +3,10 @@ module.exports = {
 	darkMode: 'class',
 	theme: {
 		extend: {
+			fontFamily: {
+				montserrat: ['Montserrat'],
+				roboto: ['Roboto']
+			},
 			colors: {
 				// https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557
 				// https://coolors.co/palette/780000-c1121f-fdf0d5-003049-669bbc
