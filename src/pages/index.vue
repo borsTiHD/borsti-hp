@@ -25,7 +25,7 @@
 const introduction = 'Hello, my name is'
 const name = 'Bastian Jakobs'
 const underline = 'Creator • YouTuber • GFX Designer • Artist'
-const description = 'I\'m a full-stack web developer from Germany, working as an software engineer in a big telecommunication company. I have the passion to make the web a beautiful place.'
+const description = 'I\'m a full-stack web developer from Germany, working as a software engineer at Deutsche Telekom. I have the passion to make the web a beautiful place.'
 const skillset = 'Building web and desktop apps since school. I have a diverse set of skills, ranging from design, NodeJS, Vue, Electron all the way to PHP, MySQL and Linux server administration.'
 </script>
 
