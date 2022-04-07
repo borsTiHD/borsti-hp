@@ -6,12 +6,16 @@
 		<figcaption class="w-full lg:w-1/2">
 			<!-- Dividing line on smaller device -->
 			<div class="border-t lg:border-t-0 border-gray-400 dark:border-gray-500 pt-6 lg:pt-0" />
-			<!-- Text -->
+			<!-- Introduction -->
 			<blockquote>
 				<p class="text-primary-light dark:text-primary font-montserrat font-bold my-5 text-lg lg:text-xl xl:text-2xl leading-tight uppercase">{{ introduction }}</p>
 				<h1 class="text-gray-900 dark:text-white border-l-2 border-primary drop-shadow-md font-roboto text-6xl lg:text-7xl xl:text-8xl leading-none pl-6">{{ name }}</h1>
 				<p class="text-gray-900 dark:text-white font-montserrat font-bold my-10 text-xl lg:text-2xl xl:text-3xl leading-tight">{{ underline }}</p>
-				<p class="text-gray-900 dark:text-white font-montserrat text-base md:text-md leading-relaxed max-w-prose mb-4 p-2 backdrop-blur-md bg-white/10 dark:bg-white/10">{{ description }}</p>
+			</blockquote>
+			<!-- About me -->
+			<blockquote class="backdrop-blur-md bg-white/10 dark:bg-white/10 p-2 mb-4">
+				<p class="text-gray-900 dark:text-white font-montserrat text-base md:text-md leading-relaxed max-w-prose m-2 mb-6">{{ description }}</p>
+				<p class="text-gray-900 dark:text-white font-montserrat text-base md:text-md leading-relaxed max-w-prose m-2 mt-6">{{ skillset }}</p>
 			</blockquote>
 		</figcaption>
 	</figure>
@@ -21,7 +25,8 @@
 const introduction = 'Hello, my name is'
 const name = 'Bastian Jakobs'
 const underline = 'Creator • YouTuber • GFX Designer • Artist'
-const description = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+const description = 'I\'m a full-stack web developer from germany, working as an software engineer in a big telecommunication company. I have the passion to make the web a beautiful place.'
+const skillset = 'Building web and desktop apps since school. I have a diverse set of skills, ranging from design, NodeJS, Vue, Electron all the way to PHP, MySQL and Linux server administration.'
 </script>
 
 <style scope>
