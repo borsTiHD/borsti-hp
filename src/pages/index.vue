@@ -1,5 +1,5 @@
 <template>
-	<figure class="relative lg:min-h-[100vh] flex flex-col lg:flex-row lg:items-center mx-auto max-w-screen-xl gap-4">
+	<figure class="relative lg:min-h-[100vh] flex flex-col lg:flex-row lg:items-center mx-auto max-w-screen-xl -mb-16 gap-6">
 		<div class="w-full lg:w-1/2 flex justify-center self-end drop-shadow-lg">
 			<img src="~/assets/img/borsti_bw.png" height="860" :alt="`Photo of ${name}`" class="w-full h-auto object-cover rounded-lg drop-shadow-lg" loading="lazy">
 		</div>
@@ -10,7 +10,7 @@
 			<blockquote>
 				<p class="text-primary-light dark:text-primary font-montserrat font-bold my-5 text-lg lg:text-xl xl:text-2xl leading-tight uppercase">{{ introduction }}</p>
 				<h1 class="text-gray-900 dark:text-white border-l-2 border-primary drop-shadow-md font-roboto text-6xl lg:text-7xl xl:text-8xl leading-none pl-6">{{ name }}</h1>
-				<p class="text-gray-900 dark:text-white font-montserrat font-bold my-10 text-xl lg:text-2xl xl:text-3xl leading-tight">{{ underline }}</p>
+				<h2 class="text-gray-900 dark:text-white font-montserrat my-10 text-xl lg:text-2xl xl:text-3xl leading-tight">{{ underline }}</h2>
 			</blockquote>
 			<!-- About me -->
 			<blockquote class="backdrop-blur-md bg-white/10 dark:bg-white/10 p-2 mb-4">
