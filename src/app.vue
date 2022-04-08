@@ -1,11 +1,13 @@
 <template>
-	<div class="w-full min-h-screen pt-8 px-8 bg-fixed bg-cover bg-bottom bg-image" :class="[{ dark: isDarkMode }, isDarkMode ? 'bg-image' : 'bg-image-light']">
+	<div class="bg-white dark:bg-black bg-fixed bg-cover bg-bottom bg-image bg-repeat-x bg-scales" :class="[{ dark: isDarkMode }, isDarkMode ? 'bg-image' : 'bg-image-light']">
 		<AppNavbar />
 
-		<!-- Content / Pages -->
-		<div class="container mx-auto">
-			<NuxtPage />
-		</div>
+		<main class="w-full pt-16 px-8">
+			<!-- Content / Pages -->
+			<section class="container mx-auto">
+				<NuxtPage />
+			</section>
+		</main>
 	</div>
 </template>
 
@@ -33,5 +35,20 @@ const isDarkMode = computed(() => darkModeStore.isDarkMode)
 	}
 	.bg-image-light {
 		background-image:linear-gradient(rgba(255, 255, 255, 0.8), rgba(168, 168, 168, 0.8)), url("assets/img/wallpaper.jpg")
+	}
+	.bg-scales {
+		-webkit-animation: scales 100s linear 0s infinite;
+		animation: scales 100s linear 0s infinite;
+	}
+	@keyframes scales {
+		0% {
+			background-position-x:0
+		}
+		50% {
+			background-position-x:-200%
+		}
+		to {
+			background-position-x:0
+		}
 	}
 </style>
