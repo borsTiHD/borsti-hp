@@ -3,21 +3,39 @@
 		<div class="nav-primary flex items-center">
 			<!-- Navbar items - hides on smaller devices -->
 			<div class="hidden md:block">
-				<NuxtLink to="/" class="text-gray-900 sm:p-4 dark:text-white p-2 tracking-[0.01em]">
-					Home
-				</NuxtLink>
-
-				<NuxtLink to="/teamspeak" class="text-gray-900 dark:text-white mx-2">
-					TeamSpeak
+				<NuxtLink
+					v-for="(item, index) in items"
+					:key="index"
+					:to="item.to"
+					class="group relative inline-block text-gray-900 dark:text-white p-1 sm:p-2 m-2 sm:m-4"
+				>
+					{{ item.name }}<span class="w-16 h-0.5 mx-auto block absolute bottom-2 left-0 right-0 group-hover:bg-primary transition-all duration-200 group-hover:scale-x-[0.3]" />
 				</NuxtLink>
 			</div>
 
 			<!-- Darkmode Toggle -->
-			<DarkModeToggle class="ml-32" />
+			<DarkModeToggle class="ml-16" />
 		</div>
 	</nav>
 </template>
 
 <script setup>
 import DarkModeToggle from '@/components/misc/DarkModeToggle.vue'
+
+const items = [
+	{
+		name: 'Home',
+		to: '/'
+	},
+	{
+		name: 'TeamSpeak',
+		to: '/teamspeak'
+	}
+]
 </script>
+
+<style scope>
+.nav-primary a.router-link-active  {
+	font-weight: bold;
+}
+</style>
