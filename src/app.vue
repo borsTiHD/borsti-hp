@@ -11,6 +11,7 @@
 
 <script setup>
 import '@fontsource/roboto'
+import '@fontsource/roboto/700.css'
 import '@fontsource/montserrat'
 
 import AppNavbar from '@/components/layout/AppNavbar.vue'
