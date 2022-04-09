@@ -15,16 +15,17 @@
 				</figcaption>
 				<!-- About me -->
 				<blockquote class="backdrop-blur-md bg-white/10 dark:bg-white/10 rounded-lg p-2 mb-4">
-					<p class="text-gray-900 dark:text-white font-montserrat text-base leading-relaxed max-w-prose m-2 mb-6" v-html="description" />
-					<p class="text-gray-900 dark:text-white font-montserrat text-base leading-relaxed max-w-prose m-2 mt-6" v-html="skillset" />
+					<p class="text-gray-900 dark:text-white font-montserrat leading-relaxed max-w-prose m-2 mb-6" v-html="description" />
+					<p class="text-gray-900 dark:text-white font-montserrat leading-relaxed max-w-prose m-2 mt-6" v-html="skillset" />
 				</blockquote>
 			</div>
 		</figure>
 
 		<section class="bg-white dark:bg-black">
-			<div class="container mx-auto">
+			<div class="container mx-auto py-8">
+				<h1 class="text-gray-900 dark:text-white font-montserrat">Random Headline</h1>
 				<AppCard>
-					<p class="text-gray-900 dark:text-white font-montserrat text-base" v-text="ipsum" />
+					<p class="text-gray-900 dark:text-white font-roboto" v-text="ipsum" />
 				</AppCard>
 			</div>
 		</section>
