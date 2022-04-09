@@ -2,11 +2,9 @@
 	<div class="bg-white dark:bg-black bg-fixed bg-bottom bg-image bg-repeat-x bg-scales-small md:bg-scales" :class="[{ dark: isDarkMode }, isDarkMode ? 'bg-image' : 'bg-image-light']">
 		<AppNavbar />
 
-		<main class="w-full pt-16 px-8">
+		<main>
 			<!-- Content / Pages -->
-			<section class="container mx-auto">
-				<NuxtPage />
-			</section>
+			<NuxtPage />
 		</main>
 	</div>
 </template>
