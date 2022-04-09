@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col justify-center">
+	<div class="flex flex-col justify-center pt-24">
 		<div class="flex justify-center">
 			<div class="my-4">
 				<h1 class="text-gray-900 dark:text-white text-5xl font-bold self-center">TeamSpeak</h1>
