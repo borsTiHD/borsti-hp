@@ -15,7 +15,8 @@ module.exports = {
 				'primary-light': '#D90429',
 				secondary: '#EDF2F4',
 				'bg-light': '#8D99AE',
-				bg: '#2B2D42'
+				bg: '#2B2D42',
+				magenta: '#e20074'
 			}
 		}
 	},
