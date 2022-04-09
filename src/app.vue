@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-white dark:bg-black bg-fixed bg-cover bg-bottom bg-image bg-repeat-x bg-scales" :class="[{ dark: isDarkMode }, isDarkMode ? 'bg-image' : 'bg-image-light']">
+	<div class="bg-white dark:bg-black bg-fixed bg-bottom bg-image bg-repeat-x bg-scales-small md:bg-scales" :class="[{ dark: isDarkMode }, isDarkMode ? 'bg-image' : 'bg-image-light']">
 		<AppNavbar />
 
 		<main class="w-full pt-16 px-8">
@@ -31,24 +31,30 @@ const isDarkMode = computed(() => darkModeStore.isDarkMode)
 
 	/* Background Wallpaper */
 	.bg-image {
-		background-image:linear-gradient(rgba(40, 40, 40, 0.8), rgba(50, 50, 50, 0.8)), url("assets/img/wallpaper.jpg")
+		background-image:linear-gradient(rgba(40, 40, 40, 0.8), rgba(50, 50, 50, 0.8)), url("assets/img/wallpaper.jpg");
+		background-size: auto 140%;
 	}
 	.bg-image-light {
-		background-image:linear-gradient(rgba(255, 255, 255, 0.8), rgba(168, 168, 168, 0.8)), url("assets/img/wallpaper.jpg")
+		background-image:linear-gradient(rgba(255, 255, 255, 0.8), rgba(168, 168, 168, 0.8)), url("assets/img/wallpaper.jpg");
+		background-size: auto 140%;
 	}
 	.bg-scales {
-		-webkit-animation: scales 100s linear 0s infinite;
-		animation: scales 100s linear 0s infinite;
+		-webkit-animation: scales 10s linear 0s infinite;
+		animation: scales 10s linear 0s infinite;
+	}
+	.bg-scales-small {
+		-webkit-animation: scales 30s linear 0s infinite;
+		animation: scales 30s linear 0s infinite;
 	}
 	@keyframes scales {
 		0% {
-			background-position-x:0
+			background-position-x:10%
 		}
 		50% {
-			background-position-x:-200%
+			background-position-x:0%
 		}
 		to {
-			background-position-x:0
+			background-position-x:10%
 		}
 	}
 </style>
