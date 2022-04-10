@@ -1,6 +1,6 @@
 <template>
 	<div class="flex flex-col">
-		<figure class="relative lg:min-h-[100vh] flex flex-col lg:flex-row lg:items-center mx-auto max-w-screen-xl gap-6">
+		<figure class="relative lg:min-h-[100vh] flex flex-col lg:flex-row lg:items-center mx-auto max-w-screen-xl gap-6 p-8 md:p-0">
 			<div class="w-full lg:w-1/2 flex justify-center self-end drop-shadow-lg">
 				<img src="~/assets/img/borsti_bw.png" height="860" :alt="`Photo of ${name}`" class="w-full h-auto object-cover rounded-lg drop-shadow-lg" loading="lazy">
 			</div>
@@ -21,7 +21,7 @@
 			</div>
 		</figure>
 
-		<section class="bg-white dark:bg-black">
+		<section class="bg-white dark:bg-black p-8 md:p-0">
 			<div class="container mx-auto py-8">
 				<h1 class="text-gray-900 dark:text-white font-montserrat">Random Headline</h1>
 				<AppCard>
