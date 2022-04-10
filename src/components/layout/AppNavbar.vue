@@ -1,5 +1,8 @@
 <template>
-	<nav class="flex items-center justify-end w-full p-8 mx-auto my-0 fixed z-30">
+	<nav
+		class="flex items-center justify-end w-full p-8 mx-auto my-0 fixed transition-all duration-200 z-30"
+		:class="scrolled ? 'p-2 px-4 bg-white dark:bg-black border-b border-black dark:border-white' : ''"
+	>
 		<div class="nav-primary flex items-center">
 			<!-- Navbar items - 'menu' determines whether the mobile menu is displayed or not -->
 			<div :class="menu ? 'bg-white dark:bg-black fixed inset-0 flex flex-col justify-center items-center uppercase z-40' : 'hidden md:block'">
@@ -7,7 +10,7 @@
 					v-for="(item, index) in items"
 					:key="index"
 					:to="item.to"
-					class="group relative inline-block text-gray-900 dark:text-white p-1 sm:p-2 m-2 sm:m-4"
+					class="group relative inline-block text-gray-900 dark:text-white p-1 sm:p-2 m-4 sm:m-0 sm:mx-4"
 					:class="{ 'text-2xl': menu }"
 					@click="closeMenu"
 				>
@@ -49,6 +52,18 @@ const items = [
 const menu = ref(false) // State for the menu to be shown
 const toggleMenu = () => { menu.value = !menu.value }
 const closeMenu = () => { menu.value = false }
+
+// Scroll event
+const scrolled = ref(false)
+onMounted(() => { window.addEventListener('scroll', handleScroll) })
+onUnmounted(() => { window.removeEventListener('scroll', handleScroll) })
+const handleScroll = () => {
+	if (window.scrollY > 10) {
+		scrolled.value = true
+	} else {
+		scrolled.value = false
+	}
+}
 </script>
 
 <style scope>
