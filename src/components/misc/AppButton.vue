@@ -16,7 +16,7 @@ const buttonTypes = {
 	success: 'bg-green-600 hover:bg-green-500'
 }
 
-const props = defineProps({
+defineProps({
 	type: {
 		type: String,
 		default: 'primary'
