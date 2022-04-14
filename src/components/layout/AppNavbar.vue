@@ -1,6 +1,6 @@
 <template>
 	<nav
-		class="flex items-center justify-end w-full p-8 mx-auto my-0 fixed transition-all duration-200 z-30"
+		class="bg-gradient-to-b from-white dark:from-body-bg flex items-center justify-end w-full p-8 mx-auto my-0 fixed transition-all duration-200 z-30"
 		:class="scrolled ? 'p-2 px-4 bg-white dark:bg-body-bg border-b border-black dark:border-white' : ''"
 	>
 		<div class="nav-primary flex items-center">
