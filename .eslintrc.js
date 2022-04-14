@@ -12,7 +12,7 @@ module.exports = {
 	},
 	extends: [
 		'eslint:recommended',
-		'plugin:vue/essential',
+		'plugin:vue/vue3-essential',
 		'plugin:@typescript-eslint/recommended',
 		'@nuxtjs/eslint-config-typescript'
 	],
@@ -36,12 +36,15 @@ module.exports = {
 		curly: ['error', 'multi-line'],
 		'import/no-extraneous-dependencies': 'off',
 		'require-await': 0,
-
 		'global-require': 0,
 		'import/no-unresolved': 0,
 		'import/newline-after-import': 0,
 		'no-underscore-dangle': 0,
 
+		// Vue specific rules
+		'vue/multi-word-component-names': ['error', {
+			ignores: ['default']
+		}],
 		'vue/max-attributes-per-line': 'off',
 		'vue/singleline-html-element-content-newline': 'off',
 		'vue/multiline-html-element-content-newline': 'off',
