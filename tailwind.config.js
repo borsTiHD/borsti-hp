@@ -16,6 +16,7 @@ module.exports = {
 				secondary: '#EDF2F4',
 				'bg-light': '#8D99AE',
 				bg: '#2B2D42',
+				'body-bg': '#202125',
 				magenta: '#e20074'
 			}
 		}

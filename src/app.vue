@@ -1,5 +1,5 @@
 <template>
-	<Body :class="[{ dark: isDarkMode }, isDarkMode ? 'bg-black' : 'bg-white']">
+	<Body :class="[{ dark: isDarkMode }, isDarkMode ? 'bg-body-bg' : 'bg-white']">
 		<AppNavbar />
 
 		<main class="bg-fixed bg-bottom bg-image bg-repeat-x bg-scales-small md:bg-scales" :class="[{ dark: isDarkMode }, isDarkMode ? 'bg-image' : 'bg-image-light']">

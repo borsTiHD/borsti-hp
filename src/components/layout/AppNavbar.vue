@@ -1,11 +1,11 @@
 <template>
 	<nav
 		class="flex items-center justify-end w-full p-8 mx-auto my-0 fixed transition-all duration-200 z-30"
-		:class="scrolled ? 'p-2 px-4 bg-white dark:bg-black border-b border-black dark:border-white' : ''"
+		:class="scrolled ? 'p-2 px-4 bg-white dark:bg-body-bg border-b border-black dark:border-white' : ''"
 	>
 		<div class="nav-primary flex items-center">
 			<!-- Navbar items - 'menu' determines whether the mobile menu is displayed or not -->
-			<div :class="menu ? 'bg-white dark:bg-black fixed inset-0 flex flex-col justify-center items-center uppercase z-40' : 'hidden md:block'">
+			<div :class="menu ? 'bg-white dark:bg-body-bg fixed inset-0 flex flex-col justify-center items-center uppercase z-40' : 'hidden md:block'">
 				<NuxtLink
 					v-for="(item, index) in items"
 					:key="index"

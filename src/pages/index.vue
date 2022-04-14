@@ -21,7 +21,7 @@
 			</div>
 		</figure>
 
-		<section class="bg-white dark:bg-black p-8 md:p-0">
+		<section class="bg-white dark:bg-body-bg p-8 md:p-0">
 			<div class="container mx-auto py-8">
 				<h1 class="text-gray-900 dark:text-white font-montserrat">Random Headline</h1>
 				<AppCard>
