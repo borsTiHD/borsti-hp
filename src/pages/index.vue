@@ -63,7 +63,7 @@ const getSkill = (value, skill = undefined, color = undefined) => {
 
 // Building texts
 let counter = 0
-const introduction = 'Hello, my name is'
+const introduction = 'Hi, my name is'
 const name = 'Bastian Jakobs'
 const underline = 'Creator • YouTuber • GFX • Developer'
 const description = `I'm a full-stack web developer from Germany, working as a software engineer at ${getSkill(false, 'Deutsche Telekom', 'decoration-magenta/80')}. I have the passion to make the web a beautiful place.`
