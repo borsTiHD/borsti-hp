@@ -1,11 +1,11 @@
 <template>
 	<Body :class="[{ dark: isDarkMode }, isDarkMode ? 'bg-body-bg' : 'bg-white']">
-		<AppNavbar />
-
-		<main class="bg-fixed bg-bottom bg-image bg-repeat-x bg-scales-small md:bg-scales" :class="[{ dark: isDarkMode }, isDarkMode ? 'bg-image' : 'bg-image-light']">
-			<!-- Content / Pages -->
-			<NuxtPage />
-		</main>
+		<div class="bg-fixed bg-bottom bg-image bg-repeat-x bg-scales-small md:bg-scales min-h-screen" :class="[isDarkMode ? 'bg-image' : 'bg-image-light']">
+			<AppNavbar />
+			<main class="pt-24">
+				<NuxtPage />
+			</main>
+		</div>
 	</Body>
 </template>
 
@@ -22,7 +22,7 @@ const darkModeStore = useDarkModeStore()
 const isDarkMode = computed(() => darkModeStore.isDarkMode)
 </script>
 
-<style scope>
+<style scoped>
 	/* Default font */
 	body {
 		font-family: "Roboto";

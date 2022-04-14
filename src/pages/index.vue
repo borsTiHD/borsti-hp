@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col">
+	<div class="flex flex-col -mt-24">
 		<figure class="relative lg:min-h-[100vh] flex flex-col lg:flex-row lg:items-center mx-auto max-w-screen-xl gap-6 p-8 md:p-0">
 			<div class="w-full lg:w-1/2 flex justify-center self-end drop-shadow-lg">
 				<img src="~/assets/img/borsti_bw.png" height="860" :alt="`Photo of ${name}`" class="w-full h-auto object-cover rounded-lg drop-shadow-lg" loading="lazy">
@@ -35,10 +35,10 @@
 <script setup>
 import AppCard from '@/components/misc/AppCard.vue'
 
-const config = useRuntimeConfig()
-console.log(config.secret)
-console.log(config?.public?.TWITTER_KEY)
-console.log(config?.public?.TWITTER_SECRET)
+// const config = useRuntimeConfig()
+// console.log(config.secret)
+// console.log(config?.public?.TWITTER_KEY)
+// console.log(config?.public?.TWITTER_SECRET)
 
 // await $fetch('/api/getTweets')
 // .then((res) => res.json())
@@ -86,5 +86,5 @@ const skillset = `Building web and desktop apps since school. I have a diverse s
 const ipsum = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
 </script>
 
-<style scope>
+<style scoped>
 </style>
