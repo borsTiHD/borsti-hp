@@ -1,12 +1,12 @@
 <template>
-	<div class="bg-white dark:bg-black bg-fixed bg-bottom bg-image bg-repeat-x bg-scales-small md:bg-scales" :class="[{ dark: isDarkMode }, isDarkMode ? 'bg-image' : 'bg-image-light']">
+	<Body :class="[{ dark: isDarkMode }, isDarkMode ? 'bg-black' : 'bg-white']">
 		<AppNavbar />
 
-		<main>
+		<main class="bg-fixed bg-bottom bg-image bg-repeat-x bg-scales-small md:bg-scales" :class="[{ dark: isDarkMode }, isDarkMode ? 'bg-image' : 'bg-image-light']">
 			<!-- Content / Pages -->
 			<NuxtPage />
 		</main>
-	</div>
+	</Body>
 </template>
 
 <script setup>
