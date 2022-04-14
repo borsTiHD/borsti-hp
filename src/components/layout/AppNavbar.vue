@@ -66,7 +66,7 @@ const handleScroll = () => {
 }
 </script>
 
-<style scope>
+<style scoped>
 .nav-primary a.router-link-active  {
 	font-weight: bold;
 }

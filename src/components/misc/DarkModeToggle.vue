@@ -25,7 +25,7 @@ const isDarkMode = computed(() => darkModeStore.isDarkMode)
 const toggleDarkMode = () => { darkModeStore.setDarkMode(!isDarkMode.value) }
 </script>
 
-<style scope>
+<style scoped>
 	input:checked ~ .dot {
 		transform: translateX(140%);
 	}
