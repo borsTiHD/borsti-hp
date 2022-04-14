@@ -4,6 +4,16 @@ import eslintPlugin from 'vite-plugin-eslint'
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
 	srcDir: 'src/',
+	runtimeConfig: {
+		// The private keys which are only available within server-side
+		// apiSecret: '123',
+		secret: '123',
+		// Keys within public, will be also exposed to the client-side
+		public: {
+			TWITTER_KEY: process.env.TWITTER_KEY || '',
+			TWITTER_SECRET: process.env.TWITTER_SECRET || ''
+		}
+	},
 	modules: [
 		'@nuxtjs/tailwindcss'
 	],

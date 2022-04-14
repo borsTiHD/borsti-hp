@@ -35,6 +35,20 @@
 <script setup>
 import AppCard from '@/components/misc/AppCard.vue'
 
+const config = useRuntimeConfig()
+console.log(config.secret)
+console.log(config?.public?.TWITTER_KEY)
+console.log(config?.public?.TWITTER_SECRET)
+
+// await $fetch('/api/getTweets')
+// .then((res) => res.json())
+// .then((res) => {
+//  console.log(res)
+// })
+// .catch((err) => {
+// console.log(err)
+// })
+
 // Skils for building skillset
 const skills = [
 	'design',
