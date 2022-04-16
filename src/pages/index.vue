@@ -16,8 +16,12 @@
 					</figcaption>
 					<!-- About me -->
 					<blockquote class="backdrop-blur-md bg-white/10 dark:bg-white/10 rounded-lg p-2 mb-4">
-						<p class="text-gray-900 dark:text-white font-montserrat leading-relaxed max-w-prose m-2 mb-6" v-html="description" />
-						<p class="text-gray-900 dark:text-white font-montserrat leading-relaxed max-w-prose m-2 mt-6" v-html="skillset" />
+						<p
+							v-for="(item, index) in descriptions"
+							:key="index"
+							class="text-gray-900 dark:text-white font-montserrat leading-relaxed max-w-prose m-2 mb-6"
+							v-html="item"
+						/>
 					</blockquote>
 				</div>
 			</figure>
@@ -41,6 +45,7 @@ import AppCard from '@/components/misc/AppCard.vue'
 const pageTitle = 'Home - borstihd.de'
 useHead({ title: pageTitle })
 
+// Testing API fetch
 await $fetch('/api/getTweets')
 	.then((res) => {
 		console.log(res)
@@ -80,8 +85,10 @@ let counter = 0
 const introduction = 'Hi, my name is'
 const name = 'Bastian Jakobs'
 const underline = 'Creator • YouTuber • GFX • Developer'
-const description = `I'm a full-stack web developer from Germany, working as a software engineer at ${getSkill(false, 'Deutsche Telekom', 'decoration-magenta/80')}. I have the passion to make the web a beautiful place.`
-const skillset = `Building web and desktop apps since school. I have a diverse set of skills, ranging from ${getSkill(counter++)}, ${getSkill(counter++)}, ${getSkill(counter++)}, ${getSkill(counter++)} all the way to ${getSkill(counter++)}, ${getSkill(counter++)} and ${getSkill(counter++)}.`
+const descriptions = [
+	`I'm a full-stack web developer from Germany, working as a software engineer at ${getSkill(false, 'Deutsche Telekom', 'decoration-magenta/80')}. I have the passion to make the web a beautiful place.`,
+	`Building web and desktop apps since school. I have a diverse set of skills, ranging from ${getSkill(counter++)}, ${getSkill(counter++)}, ${getSkill(counter++)}, ${getSkill(counter++)} all the way to ${getSkill(counter++)}, ${getSkill(counter++)} and ${getSkill(counter++)}.`
+]
 
 const ipsum = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
 </script>
