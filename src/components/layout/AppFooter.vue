@@ -8,7 +8,7 @@
 					v-for="(item, index) in navItems"
 					:key="index"
 					:to="item.to"
-					class="p-1 sm:p-2 m-4 sm:m-0 sm:mx-4 hover:underline underline-offset-2"
+					class="p-1 sm:p-2 m-4 sm:m-0 sm:mx-4 hover:text-primary"
 				>
 					{{ item.name }}
 				</NuxtLink>
