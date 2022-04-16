@@ -1,25 +1,27 @@
 <template>
 	<div class="flex flex-col -mt-24">
-		<figure class="relative lg:min-h-[100vh] flex flex-col lg:flex-row lg:items-center mx-auto max-w-screen-xl gap-6 p-8 md:p-0">
-			<div class="w-full lg:w-1/2 flex justify-center self-end drop-shadow-lg">
-				<img src="~/assets/img/borsti_bw.png" height="860" :alt="`Photo of ${name}`" class="w-full h-auto object-cover rounded-lg drop-shadow-lg" loading="lazy">
-			</div>
-			<div class="w-full lg:w-1/2">
-				<!-- Dividing line on smaller device -->
-				<div class="border-t lg:border-t-0 border-gray-400 dark:border-gray-500 pt-6 lg:pt-0" />
-				<!-- Introduction -->
-				<figcaption>
-					<p class="text-primary-light dark:text-primary font-montserrat font-bold my-5 text-lg lg:text-xl xl:text-2xl leading-tight uppercase" v-text="introduction" />
-					<h1 class="text-gray-900 dark:text-white border-l-2 border-primary drop-shadow-md font-roboto text-6xl lg:text-7xl xl:text-8xl leading-none pl-6" v-text="name" />
-					<h2 class="text-gray-900 dark:text-white font-montserrat my-10 text-xl lg:text-2xl xl:text-3xl leading-tight" v-text="underline" />
-				</figcaption>
-				<!-- About me -->
-				<blockquote class="backdrop-blur-md bg-white/10 dark:bg-white/10 rounded-lg p-2 mb-4">
-					<p class="text-gray-900 dark:text-white font-montserrat leading-relaxed max-w-prose m-2 mb-6" v-html="description" />
-					<p class="text-gray-900 dark:text-white font-montserrat leading-relaxed max-w-prose m-2 mt-6" v-html="skillset" />
-				</blockquote>
-			</div>
-		</figure>
+		<section>
+			<figure class="relative lg:min-h-[100vh] flex flex-col lg:flex-row lg:items-center mx-auto max-w-screen-xl gap-6 p-8 md:p-0">
+				<div class="w-full lg:w-1/2 flex justify-center self-end drop-shadow-lg">
+					<img src="~/assets/img/borsti_bw.png" height="860" :alt="`Photo of ${name}`" class="w-full h-auto object-cover rounded-lg drop-shadow-lg" loading="lazy">
+				</div>
+				<div class="w-full lg:w-1/2">
+					<!-- Dividing line on smaller device -->
+					<div class="border-t lg:border-t-0 border-gray-400 dark:border-gray-500 pt-6 lg:pt-0" />
+					<!-- Introduction -->
+					<figcaption>
+						<p class="text-primary-light dark:text-primary font-montserrat font-bold my-5 text-lg lg:text-xl xl:text-2xl leading-tight uppercase" v-text="introduction" />
+						<h1 class="text-gray-900 dark:text-white border-l-2 border-primary drop-shadow-md font-roboto text-6xl lg:text-7xl xl:text-8xl leading-none pl-6" v-text="name" />
+						<h2 class="text-gray-900 dark:text-white font-montserrat my-10 text-xl lg:text-2xl xl:text-3xl leading-tight" v-text="underline" />
+					</figcaption>
+					<!-- About me -->
+					<blockquote class="backdrop-blur-md bg-white/10 dark:bg-white/10 rounded-lg p-2 mb-4">
+						<p class="text-gray-900 dark:text-white font-montserrat leading-relaxed max-w-prose m-2 mb-6" v-html="description" />
+						<p class="text-gray-900 dark:text-white font-montserrat leading-relaxed max-w-prose m-2 mt-6" v-html="skillset" />
+					</blockquote>
+				</div>
+			</figure>
+		</section>
 
 		<section class="bg-white dark:bg-body-bg p-8 md:p-0">
 			<div class="container mx-auto py-8">
