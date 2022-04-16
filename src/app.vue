@@ -1,10 +1,11 @@
 <template>
 	<Body :class="[{ dark: isDarkMode }, isDarkMode ? 'bg-body-bg' : 'bg-white']">
-		<div class="bg-fixed bg-bottom bg-image bg-repeat-x bg-scales-small md:bg-scales min-h-screen" :class="[isDarkMode ? 'bg-image' : 'bg-image-light']">
+		<div class="bg-fixed bg-bottom bg-image bg-repeat-x bg-scales-small md:bg-scales flex flex-col min-h-screen" :class="[isDarkMode ? 'bg-image' : 'bg-image-light']">
 			<AppNavbar />
 			<main class="pt-24">
 				<NuxtPage />
 			</main>
+			<AppFooter />
 		</div>
 	</Body>
 </template>
@@ -15,6 +16,7 @@ import '@fontsource/roboto/700.css'
 import '@fontsource/montserrat'
 
 import AppNavbar from '@/components/layout/AppNavbar.vue'
+import AppFooter from '@/components/layout/AppFooter.vue'
 import { useDarkModeStore } from '~/store/darkmode'
 
 // Using store and create computed 'DarkMode' property

@@ -50,13 +50,13 @@ const pageTitle = 'Home - borstihd.de'
 useHead({ title: pageTitle })
 
 // Testing API fetch
-await $fetch('/api/getTweets')
-	.then((res) => {
-		console.log(res)
-	})
-	.catch((err) => {
-		console.log(err)
-	})
+// await $fetch('/api/getTweets')
+// .then((res) => {
+// console.log(res)
+// })
+// .catch((err) => {
+// console.log(err)
+// })
 
 // About me button
 const aboutMeClick = () => {
