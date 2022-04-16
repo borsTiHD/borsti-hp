@@ -23,13 +23,16 @@
 							v-html="item"
 						/>
 					</blockquote>
+					<div class="invisible md:visible mt-8">
+						<AppButton class="font-montserrat tracking-widest" uppercase @click="aboutMeClick">Know me ↴</AppButton>
+					</div>
 				</div>
 			</figure>
 		</section>
 
-		<section class="bg-white dark:bg-body-bg p-8 md:p-0">
+		<section id="about-me" class="bg-white dark:bg-body-bg p-8 md:p-0">
 			<div class="container mx-auto py-8">
-				<h1 class="text-gray-900 dark:text-white font-montserrat">Random Headline</h1>
+				<h1 class="text-gray-900 dark:text-white font-montserrat text-lg lg:text-xl xl:text-2xl">About Me</h1>
 				<AppCard>
 					<p class="text-gray-900 dark:text-white font-roboto" v-text="ipsum" />
 				</AppCard>
@@ -40,6 +43,7 @@
 
 <script setup>
 import AppCard from '@/components/misc/AppCard.vue'
+import AppButton from '@/components/misc/AppButton.vue'
 
 // Changing Title
 const pageTitle = 'Home - borstihd.de'
@@ -53,6 +57,12 @@ await $fetch('/api/getTweets')
 	.catch((err) => {
 		console.log(err)
 	})
+
+// About me button
+const aboutMeClick = () => {
+	const el = document.getElementById('about-me')
+	el.scrollIntoView({ behavior: 'smooth' })
+}
 
 // Skils for building skillset
 const skills = [
