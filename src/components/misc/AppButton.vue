@@ -13,7 +13,7 @@
 
 <script setup>
 const buttonTypes = {
-	primary: 'bg-primary-light dark:bg-primary hover:bg-rose-400',
+	primary: 'bg-primary-light dark:bg-primary hover:bg-rose-400 dark:hover:bg-rose-400',
 	success: 'bg-green-600 hover:bg-green-500'
 }
 
