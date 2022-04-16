@@ -7,7 +7,7 @@
 			<!-- Navbar items - 'menu' determines whether the mobile menu is displayed or not -->
 			<div :class="menu ? 'bg-white dark:bg-body-bg fixed inset-0 flex flex-col justify-center items-center uppercase z-40' : 'hidden md:block'">
 				<NuxtLink
-					v-for="(item, index) in items"
+					v-for="(item, index) in navItems"
 					:key="index"
 					:to="item.to"
 					class="group relative inline-block text-gray-900 dark:text-white p-1 sm:p-2 m-4 sm:m-0 sm:mx-4"
@@ -37,16 +37,8 @@
 import DarkModeToggle from '@/components/misc/DarkModeToggle.vue'
 
 // Navitems
-const items = [
-	{
-		name: 'Home',
-		to: '/'
-	},
-	{
-		name: 'TeamSpeak',
-		to: '/teamspeak'
-	}
-]
+const { $pages } = useNuxtApp()
+const navItems = $pages
 
 // Menu control for mobile view
 const menu = ref(false) // State for the menu to be shown
