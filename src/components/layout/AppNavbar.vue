@@ -35,10 +35,11 @@
 
 <script setup>
 import DarkModeToggle from '@/components/misc/DarkModeToggle.vue'
+import { usePagesStore } from '~/store/pages'
 
 // Navitems
-const { $pages } = useNuxtApp()
-const navItems = $pages
+const pagesStore = usePagesStore()
+const navItems = computed(() => pagesStore.getPages)
 
 // Menu control for mobile view
 const menu = ref(false) // State for the menu to be shown
