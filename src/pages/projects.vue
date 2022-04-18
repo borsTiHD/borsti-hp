@@ -8,23 +8,12 @@
 		</div>
 		<section class="flex justify-center bg-white dark:bg-body-bg p-8">
 			<div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
-				<AppCard>
-					<p class="font-roboto" v-text="ipsum" />
-				</AppCard>
-				<AppCard>
-					<p class="font-roboto" v-text="ipsum" />
-				</AppCard>
-				<AppCard>
-					<p class="font-roboto" v-text="ipsum" />
-				</AppCard>
-				<AppCard>
-					<p class="font-roboto" v-text="ipsum" />
-				</AppCard>
-				<AppCard>
-					<p class="font-roboto" v-text="ipsum" />
-				</AppCard>
-				<AppCard>
-					<p class="font-roboto" v-text="ipsum" />
+				<AppCard
+					v-for="(project, index) in projects"
+					:key="index"
+				>
+					<template #header>{{ project.title }}</template>
+					<p class="font-roboto" v-text="project.description" />
 				</AppCard>
 			</div>
 		</section>
@@ -41,4 +30,10 @@ const pageTitle = `Projects - ${appStore.getTitle}`
 useHead({ title: pageTitle })
 
 const ipsum = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+
+// Projects
+const projects = [...Array(10).keys()].map((i) => ({
+	title: `Project ${i + 1}`,
+	description: ipsum
+}))
 </script>
