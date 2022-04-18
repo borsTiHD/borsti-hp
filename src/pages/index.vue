@@ -31,10 +31,10 @@
 		</section>
 
 		<section id="about-me" class="bg-white dark:bg-body-bg p-8 md:p-0">
-			<div class="container mx-auto py-8">
-				<h1 class="text-gray-900 dark:text-white font-montserrat text-lg lg:text-xl xl:text-2xl">About Me</h1>
+			<div class="container mx-auto py-8 text-gray-900 dark:text-white ">
+				<h1 class="font-montserrat text-lg lg:text-xl xl:text-2xl">About Me</h1>
 				<AppCard>
-					<p class="text-gray-900 dark:text-white font-roboto" v-text="ipsum" />
+					<p class="font-roboto" v-text="ipsum" />
 				</AppCard>
 			</div>
 		</section>
