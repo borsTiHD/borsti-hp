@@ -44,9 +44,11 @@
 <script setup>
 import AppCard from '@/components/misc/AppCard.vue'
 import AppButton from '@/components/misc/AppButton.vue'
+import { useAppStore } from '~/store/app'
 
 // Changing Title
-const pageTitle = 'Home - borstihd.de'
+const appStore = useAppStore()
+const pageTitle = `Home - ${appStore.getTitle}`
 useHead({ title: pageTitle })
 
 // Testing API fetch

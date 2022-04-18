@@ -21,9 +21,11 @@
 
 <script setup>
 import { onMounted } from 'vue'
+import { useAppStore } from '~/store/app'
 
 // Changing Title
-const pageTitle = 'Teamspeak - borstihd.de'
+const appStore = useAppStore()
+const pageTitle = `Teamspeak - ${appStore.getTitle}`
 useHead({ title: pageTitle })
 
 // TS Viewer Config
