@@ -9,6 +9,10 @@ export const usePagesStore = defineStore({
 				to: '/'
 			},
 			{
+				name: 'Projects',
+				to: '/projects'
+			},
+			{
 				name: 'TeamSpeak',
 				to: '/teamspeak'
 			}
