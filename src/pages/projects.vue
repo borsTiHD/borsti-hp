@@ -11,8 +11,15 @@
 				<AppCard
 					v-for="(project, index) in projects"
 					:key="index"
+					:img="project.img"
 				>
 					<template #header>{{ project.title }}</template>
+					<template #footer>
+						<div class="flex justify-end">
+							<AppButton size="small" uppercase>See more</AppButton>
+						</div>
+					</template>
+
 					<p class="font-roboto" v-text="project.description" />
 				</AppCard>
 			</div>
@@ -21,6 +28,7 @@
 </template>
 
 <script setup>
+import AppButton from '@/components/misc/AppButton.vue'
 import AppCard from '@/components/misc/AppCard.vue'
 import { useAppStore } from '~/store/app'
 
@@ -34,6 +42,7 @@ const ipsum = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
 // Projects
 const projects = [...Array(10).keys()].map((i) => ({
 	title: `Project ${i + 1}`,
+	img: `https://picsum.photos/id/${i + 1}/860/860`,
 	description: ipsum
 }))
 </script>
