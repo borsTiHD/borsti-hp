@@ -1,8 +1,9 @@
 <template>
 	<button
 		:class="[
-			'shadow focus:shadow-outline focus:outline-none text-white py-2 px-4 rounded',
+			'shadow focus:shadow-outline focus:outline-none text-white rounded',
 			buttonTypes[props.type],
+			buttonSizes[props.size],
 			props.uppercase ? 'uppercase' : 'normal-case'
 		]"
 		type="button"
@@ -17,10 +18,19 @@ const buttonTypes = {
 	success: 'bg-green-600 hover:bg-green-500'
 }
 
+const buttonSizes = {
+	default: 'py-2 px-4',
+	small: 'py-1 px-2 text-sm'
+}
+
 const props = defineProps({
 	type: {
 		type: String,
 		default: 'primary'
+	},
+	size: {
+		type: String,
+		default: 'default'
 	},
 	uppercase: {
 		type: Boolean,
