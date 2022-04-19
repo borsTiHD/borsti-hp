@@ -15,9 +15,9 @@
 			</section>
 
 			<!-- Social links -->
-			<section class="py-0 lg:px-8 flex flex-col">
-				<h2 class="text-gray-600 dark:text-gray-300 md:text-right mb-2">{{ socialHeader }}</h2>
-				<div class="flex flex-wrap md:justify-center items-center gap-4">
+			<section class="py-0 lg:px-8 flex flex-col md:justify-center">
+				<h2 class="text-gray-600 dark:text-gray-300 md:text-center lg:text-right mb-2 px-1 sm:px-2">{{ socialHeader }}</h2>
+				<div class="flex flex-wrap items-center md:justify-center gap-4">
 					<a
 						v-for="(item, index) in socials"
 						:key="index"
