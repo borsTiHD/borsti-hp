@@ -14,13 +14,21 @@
 					:img="project.img"
 				>
 					<template #header>{{ project.title }}</template>
+					<template #default>
+						<div class="flex flex-col">
+							<ul class="grid grid-rows-1 grid-flow-col gap-4 justify-items-center">
+								<li v-for="(topics, i) in project.topics" :key="i" class="">
+									<a :href="topics.url || `https://npm.io/search/keyword:${topics.name}`">{{ topics.name }}</a>
+								</li>
+							</ul>
+							<p class="font-roboto" v-text="project.description" />
+						</div>
+					</template>
 					<template #footer>
 						<div class="flex justify-end">
 							<AppButton size="small" uppercase>See more</AppButton>
 						</div>
 					</template>
-
-					<p class="font-roboto" v-text="project.description" />
 				</AppCard>
 			</div>
 		</section>
@@ -43,6 +51,13 @@ const ipsum = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
 const projects = [...Array(10).keys()].map((i) => ({
 	title: `Project ${i + 1}`,
 	img: `https://picsum.photos/id/${i + 1}/860/860`,
+	topics: [
+		{ name: 'vue', url: '' },
+		{ name: 'nuxt', url: '' },
+		{ name: 'express', url: '' },
+		{ name: 'jws', url: '' },
+		{ name: 'socket.io', url: 'https://github.com/socketio/socket.io' }
+	],
 	description: ipsum
 }))
 </script>
