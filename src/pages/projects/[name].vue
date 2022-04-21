@@ -9,11 +9,11 @@
 		<section class="flex justify-center bg-white dark:bg-body-bg p-8">
 			<div class="container mx-auto">
 				<AppCard :img="project.preview">
-					<template #header>{{ project.name }}</template>
 					<template #default>
 						<AppDivider class="mt-0" />
-						<div class="flex flex-col">
-							<p class="font-roboto" v-text="project.introduction" />
+						<div class="relative overflow-auto">
+							<img class="float-right m-2 h-48 object-cover rounded-lg drop-shadow-lg" :src="project.preview" loading="lazy">
+							<p class="text-justify">{{ project.introduction + project.introduction + project.introduction + project.introduction }}</p>
 						</div>
 						<AppDivider />
 						<div class="grid grid-cols-4 gap-4">
