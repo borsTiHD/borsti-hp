@@ -15,7 +15,7 @@
 
 		<!-- Footer - If slot is given -->
 		<div v-if="hasFooterSlot" class="card-footer">
-			<div class="border-t border-gray-400 dark:border-gray-500 pt-2 mt-2" />
+			<AppDivider />
 			<slot name="footer" />
 		</div>
 	</div>
@@ -23,6 +23,7 @@
 
 <script setup>
 import { useSlots } from 'vue'
+import AppDivider from '@/components/misc/AppDivider.vue'
 const slots = useSlots()
 
 // Checking if slots are given

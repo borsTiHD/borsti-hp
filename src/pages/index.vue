@@ -7,7 +7,7 @@
 				</div>
 				<div class="w-full lg:w-1/2">
 					<!-- Dividing line on smaller device -->
-					<div class="border-t lg:border-t-0 border-gray-400 dark:border-gray-500 pt-6 lg:pt-0" />
+					<AppDivider class="lg:border-t-0 pt-6 lg:pt-0" />
 					<!-- Introduction -->
 					<figcaption>
 						<p class="text-primary-light dark:text-primary font-montserrat font-bold my-5 text-lg lg:text-xl xl:text-2xl leading-tight uppercase" v-text="introduction" />
@@ -44,6 +44,7 @@
 <script setup>
 import AppCard from '@/components/misc/AppCard.vue'
 import AppButton from '@/components/misc/AppButton.vue'
+import AppDivider from '@/components/misc/AppDivider.vue'
 import { useAppStore } from '~/store/app'
 
 // Changing Title
