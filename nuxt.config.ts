@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from 'nuxt3'
+import { defineNuxtConfig } from 'nuxt'
 import eslintPlugin from 'vite-plugin-eslint'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
@@ -18,7 +18,7 @@ export default defineNuxtConfig({
 	],
 	buildModules: ['@pinia/nuxt'],
 	tailwindcss: {
-		// viewer: false
+		viewer: false
 	},
 	vite: {
 		plugins: [
