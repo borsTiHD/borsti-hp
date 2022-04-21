@@ -47,7 +47,7 @@ import AppButton from '@/components/misc/AppButton.vue'
 import AppDivider from '@/components/misc/AppDivider.vue'
 import { useAppStore } from '~/store/app'
 
-// Changing Title
+// Changing title
 const appStore = useAppStore()
 const pageTitle = `Home - ${appStore.getTitle}`
 useHead({ title: pageTitle })
