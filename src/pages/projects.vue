@@ -7,7 +7,7 @@
 			</div>
 		</div>
 		<section class="flex justify-center bg-white dark:bg-body-bg p-8">
-			<div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+			<div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4">
 				<AppCard
 					v-for="(project, index) in projects"
 					:key="index"
@@ -16,17 +16,15 @@
 					<template #header>{{ project.title }}</template>
 					<template #default>
 						<div class="flex flex-col">
-							<ul class="grid grid-rows-1 grid-flow-col gap-4 justify-items-center">
-								<li v-for="(topics, i) in project.topics" :key="i" class="">
-									<a :href="topics.url || `https://npm.io/search/keyword:${topics.name}`">{{ topics.name }}</a>
-								</li>
-							</ul>
+							<AppDivider class="mt-0" />
 							<p class="font-roboto" v-text="project.description" />
 						</div>
 					</template>
 					<template #footer>
-						<div class="flex justify-end">
-							<AppButton size="small" uppercase>See more</AppButton>
+						<div class="flex flex-row gap-2">
+							<span>Tags:</span>
+							<span>{{ project.topics.join(', ') }}</span>
+							<AppButton class="ml-auto" size="small" uppercase @click="openUrl(project.url)">See more</AppButton>
 						</div>
 					</template>
 				</AppCard>
@@ -36,6 +34,7 @@
 </template>
 
 <script setup>
+import AppDivider from '@/components/misc/AppDivider.vue'
 import AppButton from '@/components/misc/AppButton.vue'
 import AppCard from '@/components/misc/AppCard.vue'
 import { useAppStore } from '~/store/app'
@@ -45,19 +44,19 @@ const appStore = useAppStore()
 const pageTitle = `Projects - ${appStore.getTitle}`
 useHead({ title: pageTitle })
 
+// Open url in new tab
+const openUrl = (url) => {
+	window.open(url, '_blank')
+}
+
 const ipsum = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
 
 // Projects
 const projects = [...Array(10).keys()].map((i) => ({
 	title: `Project ${i + 1}`,
 	img: `https://picsum.photos/id/${i + 1}/860/860`,
-	topics: [
-		{ name: 'vue', url: '' },
-		{ name: 'nuxt', url: '' },
-		{ name: 'express', url: '' },
-		{ name: 'jws', url: '' },
-		{ name: 'socket.io', url: 'https://github.com/socketio/socket.io' }
-	],
+	url: 'https://github.com/borsTiHD',
+	topics: ['vue', 'nuxt', 'express', 'jws', 'socket.io'],
 	description: ipsum
 }))
 </script>
