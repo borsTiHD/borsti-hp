@@ -2,7 +2,7 @@
 	<div class="flex flex-col text-gray-900 dark:text-white">
 		<div class="flex justify-center">
 			<div class="my-4">
-				<h1 class="text-gray-900 dark:text-white text-5xl font-bold self-center">Project: {{ project.name }}</h1>
+				<h1 class="text-gray-900 dark:text-white text-5xl font-bold self-center">{{ project.name }}</h1>
 				<p class="text-primary-light dark:text-primary text">clone on GitHub</p>
 			</div>
 		</div>

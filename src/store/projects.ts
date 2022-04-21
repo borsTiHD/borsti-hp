@@ -9,8 +9,8 @@ export const useProjectsStore = defineStore({
 			name: `Project ${i + 1}`,
 			url: 'https://github.com/borsTiHD',
 			topics: ['vue', 'nuxt', 'express', 'jws', 'socket.io'],
-			preview: `https://picsum.photos/id/${i * 5}/860/860`,
-			images: [...Array(10).keys()].map((x) => `https://picsum.photos/id/${i * 5 + x}/860/860`),
+			preview: `https://picsum.photos/id/${i * 10}/860/860`,
+			images: [...Array(10).keys()].map((x) => `https://picsum.photos/id/${i * 10 + x}/860/860`),
 			introduction: ipsum,
 			description: ipsum
 		}))
