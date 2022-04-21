@@ -2,7 +2,7 @@
 <template>
 	<div
 		:class="[
-			'border-t pt-2 mt-2',
+			vertical ? 'border-r pr-2 mr-2' : 'border-t pt-2 mt-2',
 			colorSets[props.colorSet],
 		]"
 	/>
@@ -18,6 +18,10 @@ const props = defineProps({
 	colorSet: {
 		type: String,
 		default: 'default'
+	},
+	vertical: {
+		type: Boolean,
+		default: false
 	}
 })
 </script>
