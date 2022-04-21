@@ -48,7 +48,7 @@ useHead({ title: pageTitle })
 
 // Open project
 const openProject = (name) => {
-	navigateTo({ path: `/project/${name}` })
+	return navigateTo({ path: `/projects/${name}` })
 }
 
 // Get all projects
