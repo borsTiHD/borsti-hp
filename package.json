@@ -7,7 +7,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": ""
+		"url": "https://github.com/borsTiHD/borsti-hp"
 	},
 	"scripts": {
 		"dev": "nuxi dev",
