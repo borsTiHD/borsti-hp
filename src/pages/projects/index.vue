@@ -25,7 +25,7 @@
 						<div class="flex flex-row gap-2">
 							<span>Tags:</span>
 							<span>{{ project.topics.join(', ') }}</span>
-							<AppButton class="ml-auto" size="small" uppercase @click="openProject(project.name)">See more</AppButton>
+							<AppButton class="ml-auto" size="small" uppercase @click="openProject(project.projectName)">See more</AppButton>
 						</div>
 					</template>
 				</AppCard>
