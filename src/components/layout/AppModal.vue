@@ -5,7 +5,7 @@
 		<div class="modal-container p-4 w-full max-w-2xl m-auto">
 			<!-- Image Modal -->
 			<div v-if="image">
-				<img :src="image" class="w-full h-auto object-cover rounded-lg drop-shadow-lg" loading="lazy">
+				<img :src="image" class="w-full h-auto object-cover rounded-lg drop-shadow-lg cursor-pointer" loading="lazy" @click="openUrl(image)">
 			</div>
 
 			<!-- Modal body -->
@@ -63,4 +63,7 @@ const slots = useSlots()
 const hasHeaderSlot = !!slots.header
 const hasContentSlot = !!slots.content
 const hasFooterSlot = !!slots.footer
+
+// Open url in new tab
+const openUrl = (url) => useOpenUrl(url)
 </script>

@@ -90,7 +90,5 @@ const openImage = (src) => {
 }
 
 // Open url in new tab
-const openUrl = (url) => {
-	window.open(url, '_blank')
-}
+const openUrl = (url) => useOpenUrl(url)
 </script>
