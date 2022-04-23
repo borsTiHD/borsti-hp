@@ -27,7 +27,7 @@
 						<div class="flex flex-wrap gap-2">
 							<span class="self-end">Tags:</span>
 							<span v-for="(topic, index) in project.topics" :key="index" class="self-end">
-								<span class="text-primary-light dark:text-primary">{{ topic }}</span>
+								<NuxtLink :to="npmLink(topic)" class="text-primary-light dark:text-primary" target="_blank">{{ topic }}</NuxtLink>
 								<span v-if="project.topics.length > index + 1">,</span>
 							</span>
 							<AppButton v-if="project.url" class="ml-auto" @click="openUrl(project.url)">
@@ -91,4 +91,7 @@ const openImage = (src) => {
 
 // Open url in new tab
 const openUrl = (url) => useOpenUrl(url)
+
+// Generating Npm Search link
+const npmLink = (topic) => useNpmSearch(topic)
 </script>

@@ -25,7 +25,7 @@
 						<div class="flex flex-wrap gap-2">
 							<span class="self-end">Tags:</span>
 							<span v-for="(topic, i) in project.topics" :key="i" class="self-end">
-								<span class="text-primary-light dark:text-primary">{{ topic }}</span>
+								<NuxtLink :to="npmLink(topic)" class="text-primary-light dark:text-primary" target="_blank">{{ topic }}</NuxtLink>
 								<span v-if="project.topics.length > i + 1">,</span>
 							</span>
 							<AppButton class="ml-auto" size="small" uppercase @click="openProject(project.projectName)">See more</AppButton>
@@ -50,9 +50,10 @@ const pageTitle = `Projects - ${appStore.getTitle}`
 useHead({ title: pageTitle })
 
 // Open project
-const openProject = (name) => {
-	return navigateTo({ path: `/projects/${name}` })
-}
+const openProject = (name) => navigateTo({ path: `/projects/${name}` })
+
+// Generating Npm Search link
+const npmLink = (topic) => useNpmSearch(topic)
 
 // Get all projects
 const projectsStore = useProjectsStore()
