@@ -1,7 +1,7 @@
 <template>
 	<footer class="bg-gray-200 dark:bg-black flex flex-col flex-grow px-8 pt-8">
 		<!-- Container -->
-		<div class="text-gray-900 dark:text-white container xl:max-w-screen-xl lg:flex justify-between mx-auto mt-2 lg:mt-8 mb-12">
+		<div class="text-gray-900 dark:text-white container xl:max-w-screen-xl lg:flex justify-between mx-auto mt-2 lg:mt-8 mb-8">
 			<!-- Page links -->
 			<section class="flex flex-row flex-wrap md:justify-center lg:flex-col divide-none md:divide-solid divide-y divide-gray-900 dark:divide-gray-400 mb-8 lg:mb-0 gap-2">
 				<NuxtLink
@@ -31,10 +31,19 @@
 				</div>
 			</section>
 		</div>
+
+		<!-- Copyright -->
+		<AppDivider />
+		<section class="m-4 text-gray-600 dark:text-gray-300 flex justify-center gap-4">
+			<span class="text-center">© 2022 borstihd.de</span>
+			<span>-</span>
+			<a href="/impressum" class="hover:text-primary">Impressum</a>
+		</section>
 	</footer>
 </template>
 
 <script setup>
+import AppDivider from '@/components/misc/AppDivider.vue'
 import { usePagesStore } from '~/store/pages'
 import { useSocialsStore } from '~/store/socials'
 
