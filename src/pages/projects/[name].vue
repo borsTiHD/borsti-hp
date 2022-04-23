@@ -17,7 +17,7 @@
 							<p class="text-justify">{{ project.introduction + project.introduction + project.introduction + project.introduction }}</p>
 						</div>
 						<AppDivider />
-						<div class="grid grid-cols-4 gap-4">
+						<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 							<img
 								v-for="(img, index) in project.images"
 								:key="index"
