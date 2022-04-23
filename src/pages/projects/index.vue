@@ -23,8 +23,11 @@
 					</template>
 					<template #footer>
 						<div class="flex flex-row gap-2">
-							<span>Tags:</span>
-							<span>{{ project.topics.join(', ') }}</span>
+							<span class="self-end">Tags:</span>
+							<span v-for="(topic, i) in project.topics" :key="i" class="self-end">
+								<span class="text-primary-light dark:text-primary">{{ topic }}</span>
+								<span v-if="project.topics.length > i + 1">,</span>
+							</span>
 							<AppButton class="ml-auto" size="small" uppercase @click="openProject(project.projectName)">See more</AppButton>
 						</div>
 					</template>
