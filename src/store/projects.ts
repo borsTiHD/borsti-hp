@@ -7,6 +7,7 @@ export const useProjectsStore = defineStore({
 	state: () => ({
 		projects: [...Array(10).keys()].map((i) => ({
 			name: `Project ${i + 1}`,
+			projectName: `project-${i + 1}`,
 			url: 'https://github.com/borsTiHD',
 			topics: ['vue', 'nuxt', 'express', 'jws', 'socket.io'],
 			preview: `https://picsum.photos/id/${i * 10}/860/860`,
@@ -17,6 +18,6 @@ export const useProjectsStore = defineStore({
 	}),
 	getters: {
 		getProjects: (state) => state.projects,
-		getProjectByName: (state) => (name) => state.projects.find((project) => project.name === name)
+		getProjectByName: (state) => (name) => state.projects.find((project) => project.projectName === name)
 	}
 })
