@@ -1,7 +1,8 @@
 <template>
 	<button
 		:class="[
-			'shadow focus:shadow-outline focus:outline-none text-white rounded',
+			'shadow rounded',
+			'focus:ring-4 focus:outline-none',
 			buttonTypes[props.type],
 			buttonSizes[props.size],
 			props.uppercase ? 'uppercase' : 'normal-case'
@@ -14,8 +15,9 @@
 
 <script setup>
 const buttonTypes = {
-	primary: 'bg-primary-light dark:bg-primary hover:bg-rose-400 dark:hover:bg-rose-400',
-	success: 'bg-green-600 hover:bg-green-500'
+	primary: 'text-white bg-primary-light dark:bg-primary hover:bg-rose-400 dark:hover:bg-rose-400 focus:ring-rose-300/60',
+	secondary: 'text-gray-900 dark:text-white bg-white dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-400 focus:ring-gray-600/60',
+	success: 'text-white bg-green-600 hover:bg-green-500 focus:ring-green-300'
 }
 
 const buttonSizes = {
