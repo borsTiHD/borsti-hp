@@ -22,7 +22,7 @@
 						</div>
 					</template>
 					<template #footer>
-						<div class="flex flex-row gap-2">
+						<div class="flex flex-wrap gap-2">
 							<span class="self-end">Tags:</span>
 							<span v-for="(topic, i) in project.topics" :key="i" class="self-end">
 								<span class="text-primary-light dark:text-primary">{{ topic }}</span>

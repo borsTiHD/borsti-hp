@@ -19,12 +19,12 @@
 					<template #default>
 						<!-- Content -->
 						<div class="relative overflow-auto">
-							<img class="float-right m-4 h-96 object-cover rounded-lg drop-shadow-lg" :src="project.preview" loading="lazy">
+							<img class="float-right my-4 md:m-4 h-auto md:h-96 object-cover rounded-lg drop-shadow-lg" :src="project.preview" loading="lazy">
 							<p class="text-justify">{{ project.introduction + project.introduction + project.introduction + project.introduction }}</p>
 						</div>
 
 						<!-- Topics / tags -->
-						<div class="flex flex-row gap-2">
+						<div class="flex flex-wrap gap-2">
 							<span class="self-end">Tags:</span>
 							<span v-for="(topic, index) in project.topics" :key="index" class="self-end">
 								<span class="text-primary-light dark:text-primary">{{ topic }}</span>
