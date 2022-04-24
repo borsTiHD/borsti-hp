@@ -18,7 +18,7 @@
 					<template #default>
 						<div class="flex flex-col">
 							<AppDivider class="mt-0" />
-							<p class="font-roboto" v-text="project.introduction" />
+							<p class="font-roboto" v-html="project.introduction" />
 						</div>
 					</template>
 					<template #footer>
