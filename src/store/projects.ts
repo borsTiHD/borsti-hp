@@ -49,7 +49,6 @@ export const useProjectsStore = defineStore({
 			{
 				name: 'AutoFAN',
 				projectName: 'autofan',
-				url: 'https://github.com/borsTiHD',
 				topics: ['electron', 'vue', 'nuxt', 'vuetify', 'axios', 'express', 'ssh2', 'xterm'],
 				preview: '/img/projects/autofan/1-Home-NoSidebar.jpg',
 				images: [
@@ -66,8 +65,8 @@ export const useProjectsStore = defineStore({
 					'/img/projects/autofan/11-Settings-NoSidebar.jpg',
 					'/img/projects/autofan/12-Home-Skin-Darkmode.jpg'
 				],
-				introduction: ipsum,
-				description: ipsum
+				introduction: 'Description is coming soon.',
+				description: 'Description is coming soon.'
 			}
 		],
 		projectsTestData: [...Array(10).keys()].map((i) => ({
