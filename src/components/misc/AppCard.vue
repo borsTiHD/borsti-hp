@@ -23,7 +23,7 @@
 		</div>
 
 		<!-- Footer - If slot is given -->
-		<div v-if="hasFooterSlot" class="card-footer">
+		<div v-if="hasFooterSlot" class="card-footer mt-auto">
 			<AppDivider />
 			<slot name="footer" />
 		</div>
