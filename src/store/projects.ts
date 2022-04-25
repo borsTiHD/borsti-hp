@@ -1,7 +1,4 @@
 import { defineStore } from 'pinia'
-
-const ipsum = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-
 export const useProjectsStore = defineStore({
 	id: 'projects-store',
 	state: () => ({
@@ -67,6 +64,55 @@ export const useProjectsStore = defineStore({
 				],
 				introduction: 'Description is coming soon.',
 				description: 'Description is coming soon.'
+			},
+			{
+				name: 'TiMon',
+				projectName: 'timon',
+				topics: ['php', 'mysql', 'oracle', 'bootstrap', 'jquery', 'datatables.net'],
+				preview: '/img/no_image.jpg',
+				images: [],
+				introduction: 'Description is coming soon.',
+				description: 'Description is coming soon.'
+			},
+			{
+				name: 'Diablo 2 Runewords Companion 😈',
+				projectName: 'diablo2-runewords-companion',
+				url: 'https://github.com/borsTiHD/diablo2-runewords-companion',
+				topics: ['vue', 'nuxt', 'vuetify'],
+				preview: '/img/no_image.jpg',
+				images: [],
+				introduction: 'This is a small companion App for Diablo 2 Resurrected. It was designed to help with building runewords, as well as get information about all runes.',
+				description: 'Description is coming soon.'
+			},
+			{
+				name: 'Meme Stonks 🚀',
+				projectName: 'meme-stonks',
+				url: 'https://github.com/borsTiHD/meme-stonks',
+				topics: ['vue', 'nuxt', 'vuetify', 'axios', 'chart.js', 'idb'],
+				preview: '/img/no_image.jpg',
+				images: [],
+				introduction: 'Description is coming soon.',
+				description: 'Description is coming soon.'
+			},
+			{
+				name: 'Homepage: borstihd.de',
+				projectName: 'borsti-hp',
+				url: 'https://github.com/borsTiHD/borsti-hp',
+				topics: ['vue3', 'nuxt3', 'typescript', 'pinia'],
+				preview: '/img/no_image.jpg',
+				images: [],
+				introduction: 'Description is coming soon.',
+				description: 'Description is coming soon.'
+			},
+			{
+				name: 'Host Alive',
+				projectName: 'host-alive',
+				url: 'https://github.com/borsTiHD/host-alive',
+				topics: ['nodejs', 'net-ping', 'pushover-notifications'],
+				preview: '/img/no_image.jpg',
+				images: [],
+				introduction: 'Small project for pinging a host/url with a few options.',
+				description: 'Description is coming soon.'
 			}
 		],
 		projectsTestData: [...Array(10).keys()].map((i) => ({
@@ -76,8 +122,8 @@ export const useProjectsStore = defineStore({
 			topics: ['vue', 'nuxt', 'express', 'jws', 'socket.io'],
 			preview: `https://picsum.photos/id/${i * 10}/860/860`,
 			images: [...Array(10).keys()].map((x) => `https://picsum.photos/id/${i * 10 + x}/860/860`),
-			introduction: ipsum,
-			description: ipsum
+			introduction: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+			description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
 		}))
 	}),
 	getters: {
