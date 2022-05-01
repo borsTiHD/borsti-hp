@@ -13,6 +13,8 @@
 					:key="index"
 					:img="project.preview"
 					image-hover
+					image-clickable
+					@image-clicked="openProject(project.projectName)"
 				>
 					<template #header>{{ project.name }}</template>
 					<template #default>
@@ -28,7 +30,9 @@
 								<NuxtLink :to="npmLink(topic)" class="text-primary-light dark:text-primary" target="_blank">{{ topic }}</NuxtLink>
 								<span v-if="project.topics.length > i + 1">,</span>
 							</span>
-							<AppButton class="ml-auto" size="small" uppercase @click="openProject(project.projectName)">See more</AppButton>
+							<NuxtLink :to="`/projects/${project.projectName}`" class="ml-auto">
+								<AppButton size="small" uppercase>See more</AppButton>
+							</NuxtLink>
 						</div>
 					</template>
 				</AppCard>
