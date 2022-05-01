@@ -1,16 +1,24 @@
 <template>
 	<div class="bg-black/10 dark:bg-white/10 flex flex-col rounded-lg p-4 my-4">
 		<!-- Image - only renders if img is given -->
-		<img
+		<div
 			v-if="img"
-			:src="props.img"
-			height="100%"
 			:class="[
-				'card-image w-full h-48 object-cover rounded-lg drop-shadow-lg',
-				imageHover ? 'hover:object-scale-down' : ''
+				'card-image-container w-full h-48',
+				imageClickable ? 'cursor-pointer' : '',
 			]"
-			loading="lazy"
+			@click="imageClickable && imageClicked()"
 		>
+			<img
+				:src="props.img"
+				height="100%"
+				:class="[
+					'card-image w-full h-48 object-cover rounded-lg drop-shadow-lg',
+					imageHover ? 'hover:object-scale-down' : ''
+				]"
+				loading="lazy"
+			>
+		</div>
 
 		<!-- Header - only renders if slot is given -->
 		<h1 v-if="hasHeaderSlot" class="card-header font-roboto text-3xl md:text-4xl my-2">
@@ -39,6 +47,10 @@ const slots = useSlots()
 const hasHeaderSlot = !!slots.header
 const hasFooterSlot = !!slots.footer
 
+// Emit Image clicked event
+const emit = defineEmits(['image-clicked'])
+const imageClicked = () => emit('image-clicked')
+
 // Props
 const props = defineProps({
 	img: {
@@ -46,6 +58,10 @@ const props = defineProps({
 		default: false
 	},
 	imageHover: {
+		type: Boolean,
+		default: false
+	},
+	imageClickable: {
 		type: Boolean,
 		default: false
 	}
