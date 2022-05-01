@@ -47,10 +47,10 @@ export const useProjectsStore = defineStore({
 				name: 'AutoFAN',
 				projectName: 'autofan',
 				topics: ['electron', 'vue', 'nuxt', 'vuetify', 'axios', 'express', 'ssh2', 'xterm'],
-				preview: '/img/projects/autofan/1-Home-NoSidebar.jpg',
+				preview: '/img/projects/autofan/15-Masscall-Darkmode.jpg',
 				images: [
 					'/img/projects/autofan/1-Home-NoSidebar.jpg',
-					'/img/projects/autofan/2-Masscall-NoSidebar.jpg',
+					'/img/projects/autofan/2-Masscall-NoSidebar-B.jpg',
 					'/img/projects/autofan/3-BNG-NoSidebar.jpg',
 					'/img/projects/autofan/4-Alarme-NoSidebar.jpg',
 					'/img/projects/autofan/5-Tickets-NoSidebar.jpg',
@@ -60,7 +60,9 @@ export const useProjectsStore = defineStore({
 					'/img/projects/autofan/9-WLAN-ESA-APs-NoSidebar.jpg',
 					'/img/projects/autofan/10-Kalender-NoSidebar.jpg',
 					'/img/projects/autofan/11-Settings-NoSidebar.jpg',
-					'/img/projects/autofan/12-Home-Skin-Darkmode.jpg'
+					'/img/projects/autofan/12-Home-Skin-Darkmode.jpg',
+					'/img/projects/autofan/13-Home-Blue-Theme.jpg',
+					'/img/projects/autofan/15-Masscall-Darkmode.jpg'
 				],
 				introduction: 'Description is coming soon.',
 				description: 'Description is coming soon.'
