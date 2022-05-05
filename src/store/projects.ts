@@ -62,10 +62,23 @@ export const useProjectsStore = defineStore({
 					'/img/projects/autofan/11-Settings-NoSidebar.jpg',
 					'/img/projects/autofan/12-Home-Skin-Darkmode.jpg',
 					'/img/projects/autofan/13-Home-Blue-Theme.jpg',
-					'/img/projects/autofan/15-Masscall-Darkmode.jpg'
+					'/img/projects/autofan/15-Masscall-Darkmode.jpg',
+					'/img/projects/autofan/16_autofan_v1.3.jpg',
+					'/img/projects/autofan/17_AutoFan_v2.jpg',
+					'/img/projects/autofan/18_autofan_v2.37.jpg'
 				],
-				introduction: 'Description is coming soon.',
-				description: 'Description is coming soon.'
+				introduction: 'AutoFAN is a large-scale desktop application based on Electron. It is a monitoring and management system for network devices such as DSLAM/MSAN/OLT/BNGs and is used within the Service Management Center by Deutsche Telekom AG.',
+				description: [
+					'AutoFAN is a large-scale desktop application based on Electron. It is a monitoring and management system for network devices such as DSLAM/MSAN/OLT/BNGs and is used within the Service Management Center by Deutsche Telekom AG.',
+					'<br>',
+					'The main idea behind building the app was to help colleagues combine many work steps into one application and reduce the time needed to check major incidents significantly. It combines many tools in one and the main task is to check network devices for reachability and customer impact. In addition, it has many other functions such as a parallel scanning of multiple devices, or integrated and automated cli access via ssh.',
+					'<br>',
+					'The underlying technology behind this is based on Electron and uses Vue/Nuxt for the frontend. It comes with an automatic update system via an internal server with the support of different channels (alpha/beta/stable) and uses a fully integrated GitLab Ci pipeline for automatic testing, building and deploying of the app.',
+					'<br>',
+					'Originally, the app was written with AutoIt and had only a fraction of the features it has now. Below in the gallery the last photos show how it once looked in the past and what it has evolved from.',
+					'<br>',
+					'The project is fully maintained by me and is in constant development to deliver more features and a better user experience.'
+				]
 			},
 			{
 				name: 'TiMon',
@@ -100,7 +113,7 @@ export const useProjectsStore = defineStore({
 				name: 'Homepage: borstihd.de',
 				projectName: 'borsti-hp',
 				url: 'https://github.com/borsTiHD/borsti-hp',
-				topics: ['vue3', 'nuxt3', 'typescript', 'pinia'],
+				topics: ['vue3', 'nuxt3', 'typescript', 'tailwindcss', 'pinia'],
 				preview: '/img/no_image.jpg',
 				images: [],
 				introduction: 'Description is coming soon.',
