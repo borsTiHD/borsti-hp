@@ -67,9 +67,9 @@ export const useProjectsStore = defineStore({
 					'/img/projects/autofan/17_AutoFan_v2.jpg',
 					'/img/projects/autofan/18_autofan_v2.37.jpg'
 				],
-				introduction: 'AutoFAN is a large-scale desktop application based on Electron. It is a monitoring and management system for network devices such as DSLAM/MSAN/OLT/BNGs and is used within the Service Management Center by Deutsche Telekom AG.',
+				introduction: 'AutoFAN is a large-scale desktop application based on Electron. It is a monitoring and management system for network devices such as DSLAM/MSAN/OLT/BNGs and is used within a larger NOC (Network Operations Center).',
 				description: [
-					'AutoFAN is a large-scale desktop application based on Electron. It is a monitoring and management system for network devices such as DSLAM/MSAN/OLT/BNGs and is used within the Service Management Center by Deutsche Telekom AG.',
+					'AutoFAN is a large-scale desktop application based on Electron. It is a monitoring and management system for network devices such as DSLAM/MSAN/OLT/BNGs and is used within a larger NOC (Network Operations Center).',
 					'<br>',
 					'The main idea behind building the app was to help colleagues combine many work steps into one application and reduce the time needed to check major incidents significantly. It combines many tools in one and the main task is to check network devices for reachability and customer impact. In addition, it has many other functions such as a parallel scanning of multiple devices, or integrated and automated cli access via ssh.',
 					'<br>',
