@@ -94,10 +94,32 @@ export const useProjectsStore = defineStore({
 				projectName: 'diablo2-runewords-companion',
 				url: 'https://github.com/borsTiHD/diablo2-runewords-companion',
 				topics: ['vue', 'nuxt', 'vuetify'],
-				preview: '/img/no_image.jpg',
-				images: [],
-				introduction: 'This is a small companion App for Diablo 2 Resurrected. It was designed to help with building runewords, as well as get information about all runes.',
-				description: 'Description is coming soon.'
+				preview: '/img/projects/diablo2-runewords-companion/3_runewords_calcualted.png',
+				images: [
+					'/img/projects/diablo2-runewords-companion/1_welcome.png',
+					'/img/projects/diablo2-runewords-companion/2_runewords_listing.png',
+					'/img/projects/diablo2-runewords-companion/3_runewords_calcualted.png',
+					'/img/projects/diablo2-runewords-companion/4_runewords_calcualted_with_rune_filters.png',
+					'/img/projects/diablo2-runewords-companion/4_runewords_calcualted_with_rune_filters_2.png',
+					'/img/projects/diablo2-runewords-companion/5_single_runeword.png',
+					'/img/projects/diablo2-runewords-companion/6_runes_listing.png',
+					'/img/projects/diablo2-runewords-companion/7_single_rune.png',
+					'/img/projects/diablo2-runewords-companion/8_gems_listing.png',
+					'/img/projects/diablo2-runewords-companion/9_single_gem.png',
+					'/img/projects/diablo2-runewords-companion/10_sidebar.png'
+				],
+				introduction: 'This is a small companion app for the game <strong>Diablo 2 Resurrected</strong>. It was designed to help with building runewords, as well as get information about all runes.',
+				description: [
+					'This is a small companion app for the game <strong>Diablo 2 Resurrected</strong>. It was designed to help with building runewords, as well as get information about all runes.',
+					'<br>',
+					'Using the search input, you can search for any rune, runeword, or gemstone listed in the game and get to a more detailed page with more information.',
+					'<br>',
+					'The centerpiece, however, is the runeword calculator. A runeword consists of a recipe of different runes. There, the user can enter all runes he owns in the game and also their quantity. The app then calculates which runewords are possible and can be built based on their recipes. To simplify the search, the app also has various filter options.',
+					'<br>',
+					'The app is written with Vue.js and uses the Nuxt.js framework for the frontend. It is a single page application without a backend.',
+					'<br>',
+					'You can find the project on Github and is open source. Besides, you can try out the app there.'
+				]
 			},
 			{
 				name: 'Meme Stonks 🚀',
