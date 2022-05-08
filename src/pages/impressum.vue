@@ -16,8 +16,8 @@
 					<p>53844 Troisdorf</p>
 
 					<p class="mt-4"><strong>Kontakt:</strong></p>
-					<p>Telefon: 0151-40419170</p>
-					<p>E-Mail: bastian.j[at]gmx.net</p>
+					<p>Telefon: 151-40419170</p>
+					<p>E-Mail: bastian.j [at] gmx.net</p>
 
 					<p class="mt-4"><strong>Haftungsausschluss: </strong></p>
 					<p><strong>Haftung für Inhalte</strong></p>
