@@ -164,10 +164,23 @@ export const useProjectsStore = defineStore({
 				projectName: 'host-alive',
 				url: 'https://github.com/borsTiHD/host-alive',
 				topics: ['nodejs', 'net-ping', 'pushover-notifications'],
-				preview: '/img/no_image.jpg',
-				images: [],
-				introduction: 'Small project for pinging a host/url with a few options.',
-				description: 'Description is coming soon.'
+				preview: '/img/projects/host-alive/2_continous.png',
+				images: [
+					'/img/projects/host-alive/1_repeat-mode_with_report.png',
+					'/img/projects/host-alive/2_continous.png'
+				],
+				introduction: 'This is a small Node.js project to ping a host/url with a few options and can be used to monitor a device or server.',
+				description: [
+					'This is a small Node.js project to ping a host/url with a few options and can be used to monitor a device or server.',
+					'<br>',
+					'The project is written with Node.js and uses the net-ping library. The project also uses the pushover-notifications library for sending push notifications.',
+					'<br>',
+					'To start the app you first have to set a few settings in the .env variables. According to the example of the .env.example, the mode and the target is set there. HOST is the host to ping (it can be either an IP address or a url). REPEAT / CONTINOUS determines how often or whether pinging should be permanent. If a notification is to be sent in case of an unsuccessful ping, the pushover token can also be entered.',
+					'<br>',
+					'After that, the app can be launched as a console application. If a url was specified as the target, an attempt is first made to resolve the IP address. Now the pings are sent and the runtimes are displayed. If several pings in a row fail within a certain period, a notification will be sent to the user via Pushover with a report.',
+					'<br>',
+					'You can find the project on GitHub and is open source.'
+				]
 			}
 		],
 		projectsTestData: [...Array(10).keys()].map((i) => ({
