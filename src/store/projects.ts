@@ -31,7 +31,7 @@ export const useProjectsStore = defineStore({
 				introduction: 'Pi-Control helps with gathering information, as well as to simplify controlling your raspberry pi.<br>The project is based on the Vue.js framework and uses Nuxt.js for the frontend and Socket.io in combination with Express (REST Api) for the backend. It is open source and can be found on GitHub.',
 				description: [
 					'Pi-Control helps with gathering information, as well as to simplify controlling your raspberry pi.',
-					'The project is based on the Vue.js framework and uses Nuxt.js for the frontend and Socket.io in combination with Express (REST Api) for the backend. It is open source and can be found on GitHub.',
+					'The project is based on the Vue.js framework and uses Nuxt.js for the frontend and Socket.io in combination with Express (REST API) for the backend. It is open source and can be found on GitHub.',
 					'<br>',
 					'It comes with a shell script (one-step automated install) that completely handles the installation and update processes for the user. The script sets up a service on demand, which can start or stop the app on the server, making the app extremely easy to use.',
 					'<br>',
@@ -118,7 +118,7 @@ export const useProjectsStore = defineStore({
 					'<br>',
 					'The app is written with Vue.js and uses the Nuxt.js framework for the frontend. It is a single page application without a backend.',
 					'<br>',
-					'You can find the project on Github and is open source. Besides, you can try out the app there.'
+					'You can find the project on GitHub and is open source. Besides, you can try out the app there.'
 				]
 			},
 			{
@@ -126,10 +126,28 @@ export const useProjectsStore = defineStore({
 				projectName: 'meme-stonks',
 				url: 'https://github.com/borsTiHD/meme-stonks',
 				topics: ['vue', 'nuxt', 'vuetify', 'axios', 'chart.js', 'idb'],
-				preview: '/img/no_image.jpg',
-				images: [],
-				introduction: 'Description is coming soon.',
-				description: 'Description is coming soon.'
+				preview: '/img/projects/meme-stonks/3_stock_apple.png',
+				images: [
+					'/img/projects/meme-stonks/1_settings.png',
+					'/img/projects/meme-stonks/2_settings_exchanges.png',
+					'/img/projects/meme-stonks/3_stock_apple.png',
+					'/img/projects/meme-stonks/4_stock_apple_different_scales.png',
+					'/img/projects/meme-stonks/5_stock_microsoft.png',
+					'/img/projects/meme-stonks/6_stock_microsoft_different_scales.png',
+					'/img/projects/meme-stonks/7_stock_alphabet.png'
+				],
+				introduction: 'Meme Stonks is a small app that allows you to track your favorite stocks.',
+				description: [
+					'Meme Stonks is a small app that allows you to track your favorite stocks.',
+					'<br>',
+					'It uses the REST API from marketstack. In order for the app to work, either a free or a premium token must be stored in the settings. The token is then stored locally in the browser. Afterwards, the preferred exchange can be set and the app then fetches a list of available stocks.',
+					'<br>',
+					'Using the search at the top, you can search for stocks with an autocomplete. If a stock is selected, the data is retrieved via the API and listed in various charts. The charts can be set according to predefined times or, in the case of the large chart, also manually. You can also view the trend of the entire period in a percentage, or in an absolute amount.',
+					'<br>',
+					'The app is written with Vue.js and uses the Nuxt.js framework for the frontend. It is a single page application and unfortunately was never finished. To avoid too much load on the API, all data is stored in an IndexedDB with a detailed cache period within the browser.',
+					'<br>',
+					'You can find the project on GitHub and is open source.'
+				]
 			},
 			{
 				name: 'Homepage: borstihd.de',
