@@ -154,8 +154,8 @@ export const useProjectsStore = defineStore({
 				projectName: 'borsti-hp',
 				url: 'https://github.com/borsTiHD/borsti-hp',
 				topics: ['vue3', 'nuxt3', 'typescript', 'tailwindcss', 'pinia'],
-				preview: '/img/no_image.jpg',
-				images: [],
+				preview: '/img/wallpaper.jpg',
+				images: ['/img/wallpaper.jpg'],
 				introduction: 'Description is coming soon.',
 				description: 'Description is coming soon.'
 			},

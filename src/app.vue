@@ -32,11 +32,11 @@ const isDarkMode = computed(() => darkModeStore.isDarkMode)
 
 	/* Background Wallpaper */
 	.bg-image {
-		background-image:linear-gradient(rgba(40, 40, 40, 0.8), rgba(50, 50, 50, 0.8)), url("assets/img/wallpaper.jpg");
+		background-image:linear-gradient(rgba(40, 40, 40, 0.8), rgba(50, 50, 50, 0.8)), url("img/wallpaper.jpg");
 		background-size: auto 140%;
 	}
 	.bg-image-light {
-		background-image:linear-gradient(rgba(255, 255, 255, 0.8), rgba(168, 168, 168, 0.8)), url("assets/img/wallpaper.jpg");
+		background-image:linear-gradient(rgba(255, 255, 255, 0.8), rgba(168, 168, 168, 0.8)), url("img/wallpaper.jpg");
 		background-size: auto 140%;
 	}
 	.bg-scales {
