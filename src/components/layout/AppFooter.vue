@@ -36,8 +36,6 @@
 		<AppDivider />
 		<section class="m-4 text-gray-600 dark:text-gray-300 flex justify-center gap-4">
 			<span class="text-center">© 2022 borstihd.de</span>
-			<span>-</span>
-			<NuxtLink to="/impressum" class="hover:text-primary">Impressum</NuxtLink>
 		</section>
 	</footer>
 </template>
