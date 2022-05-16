@@ -95,6 +95,14 @@ const openImage = (src) => {
 	showModal.value = true
 }
 
+// Image loaded
+// const onImgLoad = (index) => {
+// console.log('image geloaded', index)
+// document.getElementById(`img-${index}`).classList.remove('skeleton')
+// // document.querySelector('.skeleton').classList.remove('skeleton')
+// // @load="onImgLoad(index)"
+// }
+
 // Generating Npm Search link
 const npmLink = (topic) => useNpmSearch(topic)
 </script>
