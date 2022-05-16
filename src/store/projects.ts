@@ -28,7 +28,7 @@ export const useProjectsStore = defineStore({
 					'https://raw.githubusercontent.com/borsTiHD/pi-control/main/screenshots/Swagger/Pi-Control-Swagger-3.png',
 					'https://raw.githubusercontent.com/borsTiHD/pi-control/main/screenshots/Swagger/Pi-Control-Swagger-4.png'
 				],
-				introduction: 'Pi-Control helps with gathering information, as well as to simplify controlling your raspberry pi.<br>The project is based on the Vue.js framework and uses Nuxt.js for the frontend and Socket.io in combination with Express (REST Api) for the backend. It is open source and can be found on GitHub.',
+				introduction: 'Pi-Control helps with gathering information, as well as to simplify controlling your raspberry pi.',
 				description: [
 					'Pi-Control helps with gathering information, as well as to simplify controlling your raspberry pi.',
 					'The project is based on the Vue.js framework and uses Nuxt.js for the frontend and Socket.io in combination with Express (REST API) for the backend. It is open source and can be found on GitHub.',
