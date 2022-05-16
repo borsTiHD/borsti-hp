@@ -67,7 +67,7 @@
 </template>
 
 <script setup>
-import AppModal from '@/components/layout/AppModal.vue'
+import AppModal from '@/components/misc/AppModal.vue'
 import AppDivider from '@/components/misc/AppDivider.vue'
 import AppButton from '@/components/misc/AppButton.vue'
 import AppCard from '@/components/misc/AppCard.vue'
