@@ -47,7 +47,7 @@ export const useProjectsStore = defineStore({
 				name: 'AutoFAN',
 				projectName: 'autofan',
 				topics: ['electron', 'vue', 'nuxt', 'vuetify', 'axios', 'express', 'ssh2', 'xterm'],
-				preview: '/img/projects/autofan/15-Masscall-Darkmode.jpg',
+				preview: '/img/projects/autofan/1-Home-NoSidebar.jpg',
 				images: [
 					'/img/projects/autofan/1-Home-NoSidebar.jpg',
 					'/img/projects/autofan/2-Masscall-NoSidebar-B.jpg',
@@ -83,9 +83,18 @@ export const useProjectsStore = defineStore({
 			{
 				name: 'TiMon',
 				projectName: 'timon',
-				topics: ['php', 'mysql', 'oracle', 'bootstrap', 'jquery', 'datatables.net'],
-				preview: '/img/no_image.jpg',
-				images: [],
+				topics: ['php', 'mysql', 'oracle', 'bootstrap', 'jquery', 'ajax', 'datatables.net'],
+				preview: '/img/projects/timon/1_Home.jpg',
+				images: [
+					'/img/projects/timon/1_Home.jpg',
+					'/img/projects/timon/2_SLA.jpg',
+					'/img/projects/timon/3_SLA_Tickets.jpg',
+					'/img/projects/timon/4_SLA_Matrix.jpg',
+					'/img/projects/timon/5_Ticket_Auswertung.jpg',
+					'/img/projects/timon/6_Cluster_Auswertung.jpg',
+					'/img/projects/timon/7_Supervision.jpg',
+					'/img/projects/timon/8_Teams.jpg'
+				],
 				introduction: 'Description is coming soon.',
 				description: 'Description is coming soon.'
 			},
