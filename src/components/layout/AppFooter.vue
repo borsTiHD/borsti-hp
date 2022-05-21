@@ -23,6 +23,7 @@
 						:key="index"
 						:href="item.link"
 						class="p-1 sm:p-2"
+						target="_blank"
 					>
 						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi hover:text-primary" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
 							<path fill="currentColor" :d="item.icon" />
