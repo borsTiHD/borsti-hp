@@ -41,7 +41,7 @@
 							</NuxtLink>
 							<span class="self-end">Tags:</span>
 							<span v-for="(topic, index) in project.topics" :key="index" class="self-end">
-								<NuxtLink :to="npmLink(topic)" class="text-primary-light dark:text-primary" target="_blank">{{ topic }}</NuxtLink>
+								<NuxtLink :to="npmLink(topic)" class="text-primary-light dark:text-primary hover:text-rose-400 dark:hover:text-rose-300" target="_blank">{{ topic }}</NuxtLink>
 								<span v-if="project.topics.length > index + 1">,</span>
 							</span>
 						</div>
