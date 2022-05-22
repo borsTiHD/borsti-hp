@@ -95,8 +95,20 @@ export const useProjectsStore = defineStore({
 					'/img/projects/timon/7_Supervision.jpg',
 					'/img/projects/timon/8_Teams.jpg'
 				],
-				introduction: 'Description is coming soon.',
-				description: 'Description is coming soon.'
+				introduction: 'TiMon comes from ticket monitoring. It is a web application for monitoring and analyzing tickets and has been used in a larger NOC (Network Operations Center) for many years.',
+				description: [
+					'TiMon comes from ticket monitoring. It is a web application for monitoring and analyzing tickets and has been used in a larger NOC (Network Operations Center) for many years.',
+					'<br>',
+					'The main idea behind the development was to monitor the durations of all tickets and constantly generate reports on the Service Level Agreements (SLA). In addition to the runtime, further custom and dynamic evaluations can be created based on various criteria, such as the manufacturer of the network elements, different failure types, or many other possibilities.',
+					'<br>',
+					'It is used by a number of different teams operating in the same NOC. The individual evaluations are determined in real time and can be configured as desired. The ticket list can be accessed and analyzed in more detail for each evaluation created.',
+					'<br>',
+					'In addition to evaluation, the app also takes on the task of the supervision of tickets to be processed by the individual teams. In addition to various standard rules, custom rules can be defined for each team, according to which tickets are filtered and listed for further processing by the employee.',
+					'<br>',
+					'Since it is already a quite old app, the underlying technology behind it consists of PHP and uses MySQL, as well as an Oracle database and relies on a self-built Bootstrap template for the frontend. Most of the comfortable functions, as well as Ajax queries are realized with the help of jquery and vanilla javascript.',
+					'<br>',
+					'The project is completely maintained by me, however plans exist to rebuild the app from scratch using more modern technologies such as Vue 3.'
+				]
 			},
 			{
 				name: 'Diablo 2 Runewords Companion 😈',
