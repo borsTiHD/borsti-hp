@@ -39,11 +39,8 @@
 									</span>
 								</AppButton>
 							</NuxtLink>
-							<span class="self-end">Tags:</span>
-							<span v-for="(topic, index) in project.topics" :key="index" class="self-end">
-								<NuxtLink :to="npmLink(topic)" class="text-primary-light dark:text-primary hover:text-rose-400 dark:hover:text-rose-300" target="_blank">{{ topic }}</NuxtLink>
-								<span v-if="project.topics.length > index + 1">,</span>
-							</span>
+							<!-- Listing Topics/Tags -->
+							<AppListTopics :topics="project.topics" />
 						</div>
 						<AppDivider />
 
@@ -71,6 +68,7 @@ import AppModal from '@/components/misc/AppModal.vue'
 import AppDivider from '@/components/misc/AppDivider.vue'
 import AppButton from '@/components/misc/AppButton.vue'
 import AppCard from '@/components/misc/AppCard.vue'
+import AppListTopics from '@/components/misc/AppListTopics.vue'
 import { useAppStore } from '~/store/app'
 import { useProjectsStore } from '~/store/projects'
 
@@ -102,7 +100,4 @@ const openImage = (src) => {
 // // document.querySelector('.skeleton').classList.remove('skeleton')
 // // @load="onImgLoad(index)"
 // }
-
-// Generating Npm Search link
-const npmLink = (topic) => useNpmSearch(topic)
 </script>
