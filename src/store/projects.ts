@@ -177,8 +177,16 @@ export const useProjectsStore = defineStore({
 				topics: ['vue3', 'nuxt3', 'typescript', 'tailwindcss', 'pinia'],
 				preview: '/img/wallpaper.jpg',
 				images: ['/img/wallpaper.jpg'],
-				introduction: 'Description is coming soon.',
-				description: 'Description is coming soon.'
+				introduction: 'Well, this project is the page you are visiting right now. A portfolio to list some of my projects.',
+				description: [
+					'Well, this project is the page you are visiting right now. A portfolio to list some of my projects and with links to various social media accounts.',
+					'<br>',
+					'I used this project to make my first steps with Vue 3 / Nuxt 3 and the composition api. I also built the design completely with Tailwind CSS.',
+					'<br>',
+					'By the way, the background is self-made and represents the bundled source code from the project Pi-Control and can be downloaded in full quality from my <a class="hover:text-primary underline underline-offset-2" href="https://www.deviantart.com/p3r0/art/Source-Code-Wallpaper-4k-912021763" target="_blank">Deviantart</a> page.',
+					'<br>',
+					'If you want to get in contact with me, you can do so via <a class="hover:text-primary underline underline-offset-2" href="https://www.linkedin.com/in/bastian-jakobs/" target="_blank">LinkedIn</a> or one of the other social media links in the footer.'
+				]
 			},
 			{
 				name: 'Host Alive',
