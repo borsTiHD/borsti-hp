@@ -1,8 +1,9 @@
 <template>
 	<div
 		:class="[
-			'bg-black/10 dark:bg-white/10 hover:bg-black/20 hover:dark:bg-white/20 flex flex-col rounded-lg p-4',
-			cardTransition ? 'transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-105 ' : ''
+			'bg-black/10 dark:bg-white/10 flex flex-col rounded-lg p-4',
+			cardHover ? 'hover:bg-black/20 hover:dark:bg-white/20' : '',
+			cardTransition ? 'transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-105' : ''
 		]"
 	>
 		<!-- Image - only renders if img is given -->
@@ -58,6 +59,10 @@ const imageClicked = () => emit('image-clicked')
 
 // Props
 const props = defineProps({
+	cardHover: {
+		type: Boolean,
+		default: false
+	},
 	cardTransition: {
 		type: Boolean,
 		default: false

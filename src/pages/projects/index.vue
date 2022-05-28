@@ -13,6 +13,7 @@
 					:key="index"
 					:img="project.preview"
 					image-clickable
+					card-hover
 					card-transition
 					@image-clicked="openProject(project.projectName)"
 				>
