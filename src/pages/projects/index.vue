@@ -7,13 +7,13 @@
 			</div>
 		</div>
 		<section class="flex justify-center bg-white dark:bg-body-bg p-8">
-			<div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4">
+			<div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
 				<AppCard
 					v-for="(project, index) in projects"
 					:key="index"
 					:img="project.preview"
-					image-hover
 					image-clickable
+					card-transition
 					@image-clicked="openProject(project.projectName)"
 				>
 					<template #header>{{ project.name }}</template>
