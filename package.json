@@ -19,7 +19,7 @@
 		"@fontsource/montserrat": "^4.5.10",
 		"@fontsource/roboto": "^4.5.7",
 		"@nuxtjs/eslint-config-typescript": "^9.0.0",
-		"@nuxtjs/tailwindcss": "^5.0.4",
+		"@nuxtjs/tailwindcss": "^5.1.2",
 		"@pinia/nuxt": "^0.1.8",
 		"@typescript-eslint/eslint-plugin": "^5.25.0",
 		"@typescript-eslint/parser": "^5.25.0",
