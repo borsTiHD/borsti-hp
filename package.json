@@ -22,7 +22,7 @@
 		"@nuxtjs/tailwindcss": "^5.0.4",
 		"@pinia/nuxt": "^0.1.9",
 		"@typescript-eslint/eslint-plugin": "^5.25.0",
-		"@typescript-eslint/parser": "^5.25.0",
+		"@typescript-eslint/parser": "^5.29.0",
 		"@vue/eslint-config-typescript": "^10.0.0",
 		"eslint": "^8.16.0",
 		"eslint-plugin-vue": "^8.7.1",
