@@ -1,12 +1,12 @@
 <template>
-	<div class="flex flex-col mb-8">
+	<div class="flex flex-col">
 		<div class="flex justify-center">
 			<div class="my-4">
 				<h1 class="text-gray-900 dark:text-white text-5xl font-bold self-center">TeamSpeak</h1>
 				<p class="text-primary-light dark:text-primary text">borsTiHD TS Viewer</p>
 			</div>
 		</div>
-		<div class="flex justify-center">
+		<section class="flex justify-center bg-white dark:bg-body-bg p-8">
 			<div class="flex flex-col justify-center">
 				<div class="bg-bg rounded border border-slate-600 my-2 p-2">
 					<a :href="tsViewerUrl"><img :src="tsViewerBanner"></a>
@@ -15,7 +15,7 @@
 					<div id="ts3viewer_1111967" style="" />
 				</div>
 			</div>
-		</div>
+		</section>
 	</div>
 </template>
 
