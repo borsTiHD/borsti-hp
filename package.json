@@ -16,7 +16,7 @@
 		"lint:script": "eslint --ext .ts,vue --ignore-path .gitignore ."
 	},
 	"devDependencies": {
-		"@fontsource/montserrat": "^4.5.10",
+		"@fontsource/montserrat": "^4.5.11",
 		"@fontsource/roboto": "^4.5.7",
 		"@nuxtjs/eslint-config-typescript": "^10.0.0",
 		"@nuxtjs/tailwindcss": "^5.1.3",
