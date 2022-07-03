@@ -1,8 +1,9 @@
 <template>
 	<!-- Image gallery -->
 	<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-		<!-- Modal - for images -->
+		<!-- Modal - for fullscreen -->
 		<AppModal
+			v-if="!props.noHover"
 			v-model="showModal"
 			:image="activeImage"
 			gallery-mode
@@ -10,14 +11,19 @@
 			@previous-image="previousImage"
 		/>
 
+		<!-- Images -->
 		<img
 			v-for="(img, index) in props.images"
 			:key="index"
 			:src="img"
 			height="100%"
-			class="card-image w-full h-48 object-cover rounded-lg drop-shadow-lg cursor-pointer transform transition duration-500 hover:object-scale-down hover:scale-150 hover:z-10"
+			class="card-image drop-shadow-lg"
+			:class="[
+				props.noHover ? '' : 'cursor-pointer transform transition duration-500 hover:object-scale-down hover:scale-150 hover:z-10',
+				props.fullsize ? 'w-48' : 'w-full h-48 object-cover rounded-lg '
+			]"
 			loading="lazy"
-			@click="openImage(index)"
+			@click="props.noHover ? '' : openImage(index)"
 		>
 	</div>
 </template>
@@ -30,6 +36,16 @@ const props = defineProps({
 	images: {
 		type: Array,
 		required: true
+	},
+	// No hover effects if set true - includes fullscreen modal
+	noHover: {
+		type: Boolean,
+		default: false
+	},
+	// If set, images displayed without cuts
+	fullsize: {
+		type: Boolean,
+		default: false
 	}
 })
 
