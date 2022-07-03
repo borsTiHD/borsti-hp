@@ -19,7 +19,8 @@
 						<p
 							v-for="(item, index) in descriptions"
 							:key="index"
-							class="text-gray-900 dark:text-white font-montserrat leading-relaxed max-w-prose m-2 mb-6"
+							class="text-gray-900 dark:text-white font-montserrat leading-relaxed max-w-prose m-2"
+							:class="index !== (descriptions.length - 1) ? 'mb-6' : ''"
 							v-html="item"
 						/>
 					</blockquote>
@@ -34,7 +35,13 @@
 			<div class="container mx-auto py-8 text-gray-900 dark:text-white ">
 				<h1 class="font-montserrat text-lg lg:text-xl xl:text-2xl">About Me</h1>
 				<AppCard>
-					<p class="font-roboto" v-text="moreAboutMe" />
+					<p
+						v-for="(item, index) in moreAboutMe"
+						:key="index"
+						class="text-gray-900 dark:text-white font-roboto leading-relaxed max-w-prose m-2"
+						:class="index !== (moreAboutMe.length - 1) ? 'mb-6' : ''"
+						v-html="item"
+					/>
 				</AppCard>
 			</div>
 		</section>
@@ -103,7 +110,9 @@ const descriptions = [
 	`Building web and desktop apps since school. I have a diverse set of skills, ranging from ${getSkill(counter++)}, ${getSkill(counter++)}, ${getSkill(counter++)}, ${getSkill(counter++)} all the way to ${getSkill(counter++)}, ${getSkill(counter++)} and ${getSkill(counter++)}.`
 ]
 
-const moreAboutMe = 'More about me is coming soon.'
+const moreAboutMe = [
+	'More about me is coming soon.'
+]
 </script>
 
 <style scoped>
