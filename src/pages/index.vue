@@ -153,9 +153,9 @@ const moreAboutMe = [
 
 const logos = [
 	'/img/logos/Windows_logo_-_2021.png',
-	'/img/logos/Android_robot.png',
 	'/img/logos/linux_penguin.png',
 	'/img/logos/favpng_kali-linux-backtrack-linux-distribution-offensive-security-certified-professional.png',
+	'/img/logos/Android_robot.png',
 	'/img/logos/Electron_Software_Framework_Logo.png',
 	'/img/logos/kisspng-node-js-javascript-web-application-express-js.png',
 	'/img/logos/Vue.js_Logo_2.png',
