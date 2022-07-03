@@ -35,13 +35,44 @@
 			<div class="container mx-auto py-8 text-gray-900 dark:text-white ">
 				<h1 class="font-montserrat text-lg lg:text-xl xl:text-2xl">About Me</h1>
 				<AppCard>
-					<p
-						v-for="(item, index) in moreAboutMe"
-						:key="index"
-						class="text-gray-900 dark:text-white font-roboto leading-relaxed max-w-prose m-2"
-						:class="index !== (moreAboutMe.length - 1) ? 'mb-6' : ''"
-						v-html="item"
-					/>
+					<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+						<div>
+							<p
+								v-for="(item, index) in moreAboutMe"
+								:key="index"
+								class="text-gray-900 dark:text-white font-roboto leading-relaxed m-2"
+								:class="index !== (moreAboutMe.length - 1) ? 'mb-6' : ''"
+								v-html="item"
+							/>
+						</div>
+						<div>
+							<ImageGallery :images="logos" />
+						</div>
+					</div>
+				</AppCard>
+				<AppCard class="mt-8">
+					<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+						<div>
+							<p
+								v-for="(item, index) in moreAboutMe.slice(0, 2)"
+								:key="index"
+								class="text-gray-900 dark:text-white font-roboto leading-relaxed m-2 mb-6"
+								v-html="item"
+							/>
+							<div class="hidden md:block mt-8"><ImageGallery :images="logos.slice(0, 4)" /></div>
+						</div>
+						<div>
+							<div class="hidden md:block mt-8"><ImageGallery :images="logos.slice(4)" /></div>
+							<p
+								v-for="(item, index) in moreAboutMe.slice(2)"
+								:key="index"
+								class="text-gray-900 dark:text-white font-roboto leading-relaxed m-2"
+								:class="index !== 2 ? 'mb-6' : ''"
+								v-html="item"
+							/>
+						</div>
+						<div class="block md:hidden"><ImageGallery :images="logos" /></div>
+					</div>
 				</AppCard>
 			</div>
 		</section>
@@ -52,6 +83,7 @@
 import AppCard from '@/components/misc/AppCard.vue'
 import AppButton from '@/components/misc/AppButton.vue'
 import AppDivider from '@/components/misc/AppDivider.vue'
+import ImageGallery from '@/components/misc/ImageGallery.vue'
 import { useAppStore } from '~/store/app'
 
 // Changing title
@@ -111,7 +143,22 @@ const descriptions = [
 ]
 
 const moreAboutMe = [
-	'More about me is coming soon.'
+	'I\'ve always been involved in nerdy PC stuff, building my own computers, solving friends software and hardware problems, experimenting around with software and operating systems until you crashed the OS and had to reinstall everything. Modded consoles and tinkered with them and even didn\'t stop at the Dreambox (nowadays with the Raspberry Pi). You name it.',
+	'The passion of software development started in the early Counter-Strike era when I founded a clan together with friends and developed my first static website for our clan page.',
+	'Later in school I chose Android programming and dynamic websites (php + mysql) as electives. At that time I also made my first experiences with BackTrack (now known as Kali Linux) and cracked my parents WLAN with a netbook.',
+	'And today I bring self-taught experience in diverse environments. Among them backend practices in NodeJS and PHP (also a little Python with Django), and mostly Vue for the frontend. Together with Electron, I gained most of my experience in a large desktop application that I built myself and has been in production use for several years in a large NOC (Network Operations Center).',
+	'If you want to learn more, or get in touch with me feel free to drop me a line via my <a class="hover:text-primary underline underline-offset-2" href="https://www.linkedin.com/in/bastian-jakobs/" target="_blank">LinkedIn</a> profile.'
+]
+
+const logos = [
+	'/img/logos/Android_robot.png',
+	'/img/logos/Electron_Software_Framework_Logo.png',
+	'/img/logos/favpng_kali-linux-backtrack-linux-distribution-offensive-security-certified-professional.png',
+	'/img/logos/favpng_raspberry-pi-3-raspbian-computer-kodi.png',
+	'/img/logos/linux_penguin.png',
+	'/img/logos/kisspng-node-js-javascript-web-application-express-js.png',
+	'/img/logos/Vue.js_Logo_2.png',
+	'/img/logos/Windows_logo_-_2021.png'
 ]
 </script>
 
