@@ -7,7 +7,7 @@ export const useProjectsStore = defineStore({
 				name: 'Pi-Control',
 				projectName: 'pi-control',
 				url: 'https://github.com/borsTiHD/pi-control',
-				topics: ['vue', 'nuxt', 'nodejs', 'socket.io', 'express', 'xterm', 'bcryptjs', 'jwt', 'swagger', 'vuetify', 'pwa'],
+				topics: ['vue', 'nuxt', 'nodejs', 'socket.io', 'express', 'xterm', 'bcryptjs', 'jwt', 'swagger', 'pwa'],
 				preview: 'https://raw.githubusercontent.com/borsTiHD/pi-control/main/screenshots/mockup.png',
 				images: [
 					'https://raw.githubusercontent.com/borsTiHD/pi-control/main/screenshots/mockup.png',
