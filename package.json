@@ -13,11 +13,14 @@
 		"dev": "nuxi dev",
 		"build": "nuxi build",
 		"start": "node .output/server/index.mjs",
-		"lint:script": "eslint --ext .ts,vue --ignore-path .gitignore ."
+		"lint:script": "eslint --ext .ts,vue --ignore-path .gitignore .",
+        "test": "vitest run --dir tests",
+        "test:coverage": "vitest run --coverage"
 	},
 	"devDependencies": {
 		"@fontsource/montserrat": "^4.5.11",
 		"@fontsource/roboto": "^4.5.7",
+		"@nuxt/test-utils": "^3.0.0-rc.6",
 		"@nuxtjs/eslint-config-typescript": "^10.0.0",
 		"@nuxtjs/tailwindcss": "^5.3.0",
 		"@pinia/nuxt": "^0.3.0",
@@ -28,8 +31,10 @@
 		"eslint-plugin-vue": "^8.7.1",
 		"nuxt": "^3.0.0-rc.6",
 		"pinia": "^2.0.16",
+		"playwright": "^1.24.0",
 		"postcss-custom-properties": "^12.1.8",
 		"typescript": "^4.7.4",
-		"vite-plugin-eslint": "^1.6.1"
+		"vite-plugin-eslint": "^1.6.1",
+		"vitest": "^0.19.0"
 	}
 }
