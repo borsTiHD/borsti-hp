@@ -46,6 +46,7 @@ export const useProjectsStore = defineStore({
 			{
 				name: 'AutoFAN',
 				projectName: 'autofan',
+				url: '',
 				topics: ['electron', 'vue', 'nuxt', 'vuetify', 'axios', 'express', 'ssh2', 'xterm'],
 				preview: '/img/projects/autofan/1-Home-NoSidebar.jpg',
 				images: [
@@ -83,6 +84,7 @@ export const useProjectsStore = defineStore({
 			{
 				name: 'TiMon',
 				projectName: 'timon',
+				url: '',
 				topics: ['php', 'mysql', 'oracle', 'bootstrap', 'jquery', 'ajax', 'datatables.net'],
 				preview: '/img/projects/timon/1_Home.jpg',
 				images: [
