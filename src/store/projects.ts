@@ -113,6 +113,38 @@ export const useProjectsStore = defineStore({
 				]
 			},
 			{
+				name: 'Vue-Jack 🃏',
+				projectName: 'vue-jack',
+				url: 'https://github.com/borsTiHD/vue-jack',
+				topics: ['vue3', 'nuxt3', 'typescript', 'tailwindcss', 'pinia', 'vitest'],
+				preview: '/img/projects/vue-jack/4_game3_win.png',
+				images: [
+					'/img/projects/vue-jack/1_welcome.png',
+					'/img/projects/vue-jack/2_rules.png',
+					'/img/projects/vue-jack/3_newgame.png',
+					'/img/projects/vue-jack/4_game1.png',
+					'/img/projects/vue-jack/4_game2_win.png',
+					'/img/projects/vue-jack/4_game3_win.png',
+					'/img/projects/vue-jack/5_welcome_mobile.png',
+					'/img/projects/vue-jack/6_rules_mobile.png',
+					'/img/projects/vue-jack/7_newgame_mobile.png',
+					'/img/projects/vue-jack/8_game1_mobile.png',
+					'/img/projects/vue-jack/8_game2_mobile.png'
+				],
+				introduction: 'It\'s a simple Blackjack clone written in Vue3/Nuxt3.',
+				description: [
+					'It\'s a simple Blackjack clone written in Vue3/Nuxt3.',
+					'<br>',
+					'The design was created with Tailwind and was also optimized for mobile devices.',
+					'<br>',
+					'The game is based on the classic Blackjack rules and has a simple and intuitive interface. You play against the dealer. Your goal is to reach a higher card value than the dealer, but not to exceed 21. In addition, a betting system is integrated. You start with 500 credits and can bet a sum between 10-100 per round. Depending on how the round goes, you win or lose different amounts.',
+					'<br>',
+					'If you want to know more about the rules, you can find them in the rules section of the game.',
+					'<br>',
+					'You can find the project on GitHub and is open source. <a class="hover:text-primary underline underline-offset-2" href="https://vue-jack.vercel.app" target="_blank">Here</a> you can try the game for yourself.'
+				]
+			},
+			{
 				name: 'Diablo 2 Runewords Companion 😈',
 				projectName: 'diablo2-runewords-companion',
 				url: 'https://github.com/borsTiHD/diablo2-runewords-companion',
@@ -176,7 +208,7 @@ export const useProjectsStore = defineStore({
 				name: 'Homepage: borstihd.de',
 				projectName: 'borsti-hp',
 				url: 'https://github.com/borsTiHD/borsti-hp',
-				topics: ['vue3', 'nuxt3', 'typescript', 'tailwindcss', 'pinia'],
+				topics: ['vue3', 'nuxt3', 'typescript', 'tailwindcss', 'pinia', 'vitest'],
 				preview: '/img/wallpaper.jpg',
 				images: ['/img/wallpaper.jpg'],
 				introduction: 'Well, this project is the page you are visiting right now. A portfolio to list some of my projects.',
