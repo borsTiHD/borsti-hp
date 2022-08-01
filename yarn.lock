@@ -456,31 +456,7 @@
     unimport "^0.1.6"
     untyped "^0.4.4"
 
-"@nuxt/kit@^3.0.0-rc.4":
-  version "3.0.0-rc.4"
-  resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.0.0-rc.4.tgz#8aa3c26f1bb9f3e7bb78ad2cec33473e32ffccd0"
-  integrity sha512-ZBSeHFy3fPUx0equCtyP6eVUAZQWwRqTp2YnHSFqM5+yhN5aTGo8gBlfwttVBr4yhFBpGFRHhQj/iNPqrCeTnQ==
-  dependencies:
-    "@nuxt/schema" "^3.0.0-rc.4"
-    c12 "^0.2.7"
-    consola "^2.15.3"
-    defu "^6.0.0"
-    globby "^13.1.2"
-    hash-sum "^2.0.0"
-    ignore "^5.2.0"
-    jiti "^1.13.0"
-    knitwork "^0.1.2"
-    lodash.template "^4.5.0"
-    mlly "^0.5.2"
-    pathe "^0.3.0"
-    pkg-types "^0.3.2"
-    scule "^0.2.1"
-    semver "^7.3.7"
-    unctx "^1.1.4"
-    unimport "^0.2.7"
-    untyped "^0.4.4"
-
-"@nuxt/kit@^3.0.0-rc.5", "@nuxt/kit@^3.0.0-rc.6":
+"@nuxt/kit@^3.0.0-rc.4", "@nuxt/kit@^3.0.0-rc.5", "@nuxt/kit@^3.0.0-rc.6":
   version "3.0.0-rc.6"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.0.0-rc.6.tgz#b59c10639cb591bdc5a63164fb352b344230a065"
   integrity sha512-+lxSd6dSWlAzMXfGOPcY4856xnMF1Ck1rycFUZ+K2QYiDXphq/fiW2eMaWLVvqgPyL2Box2WzVDZJ6C5ceptcw==
@@ -533,22 +509,6 @@
     std-env "^3.1.1"
     ufo "^0.8.3"
     unimport "^0.1.6"
-
-"@nuxt/schema@^3.0.0-rc.4":
-  version "3.0.0-rc.4"
-  resolved "https://registry.yarnpkg.com/@nuxt/schema/-/schema-3.0.0-rc.4.tgz#d94005e1aca00349f1256cb827ee7478d50a1802"
-  integrity sha512-5yjfKvPJ/NboevQYZLyO1SS9nJW6KHtdd7Ei61D19gYGtnN+aOpxOnUX08A1rZMb3G2Cw5JRxVeF9+AfBYefJg==
-  dependencies:
-    c12 "^0.2.7"
-    create-require "^1.1.1"
-    defu "^6.0.0"
-    jiti "^1.13.0"
-    pathe "^0.3.0"
-    postcss-import-resolver "^2.0.0"
-    scule "^0.2.1"
-    std-env "^3.1.1"
-    ufo "^0.8.4"
-    unimport "^0.2.7"
 
 "@nuxt/schema@^3.0.0-rc.6":
   version "3.0.0-rc.6"
@@ -671,10 +631,10 @@
     eslint-plugin-unicorn "^42.0.0"
     eslint-plugin-vue "^8.7.1"
 
-"@nuxtjs/tailwindcss@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/tailwindcss/-/tailwindcss-5.3.0.tgz#7bd85d46909d151902e7267e6c1653e3cf6eb567"
-  integrity sha512-cS4P5L09ndgWXUsN1FHBPb7m2JhXS7c26d3otfwgNHLlNdUC8qjDRp83wpvkOBOgV+AOH8auZM3fSAuXNklMyA==
+"@nuxtjs/tailwindcss@^5.3.1":
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/tailwindcss/-/tailwindcss-5.3.1.tgz#5c90ba3df4782653f0c625ea7eb7e898fa2844c1"
+  integrity sha512-NrnYUA65DWG9cB6wLdK7NMhaDIIAbqxmMueGIvqy8xuTfHGNvtjFZQY2ywu60N70cjIYqYnbyJURj+PQoNN9Ew==
   dependencies:
     "@nuxt/kit" "^3.0.0-rc.5"
     "@nuxt/postcss8" "^1.1.3"
@@ -6216,12 +6176,7 @@ ufo@^0.7.9:
   resolved "https://registry.yarnpkg.com/ufo/-/ufo-0.7.11.tgz#17defad497981290383c5d26357773431fdbadcb"
   integrity sha512-IT3q0lPvtkqQ8toHQN/BkOi4VIqoqheqM1FnkNWT9y0G8B3xJhwnoKBu5OHx8zHDOvveQzfKuFowJ0VSARiIDg==
 
-ufo@^0.8.3, ufo@^0.8.4:
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/ufo/-/ufo-0.8.4.tgz#23e9ed82398d2116dcb378e8fba5ced8eca2ee40"
-  integrity sha512-/+BmBDe8GvlB2nIflWasLLAInjYG0bC9HRnfEpNi4sw77J2AJNnEVnTDReVrehoh825+Q/evF3THXTAweyam2g==
-
-ufo@^0.8.5:
+ufo@^0.8.3, ufo@^0.8.4, ufo@^0.8.5:
   version "0.8.5"
   resolved "https://registry.yarnpkg.com/ufo/-/ufo-0.8.5.tgz#e367b4205ece9d9723f2fa54f887d43ed1bce5d0"
   integrity sha512-e4+UtA5IRO+ha6hYklwj6r7BjiGMxS0O+UaSg9HbaTefg4kMkzj4tXzEBajRR+wkxf+golgAWKzLbytCUDMJAA==
@@ -6281,22 +6236,6 @@ unimport@^0.1.6:
     scule "^0.2.1"
     unplugin "^0.6.2"
 
-unimport@^0.2.7:
-  version "0.2.10"
-  resolved "https://registry.yarnpkg.com/unimport/-/unimport-0.2.10.tgz#9ac0d003db40c750a8ecc0fd4317dc5e0500795e"
-  integrity sha512-HoQ0ZDzHJboRYJ4/YxtMAATxiya/s5C2UE6jLFNj1e0D6Qfq6Pw2P40L+ALCkjLwLhR8l2VROE7kba/AaFtdQg==
-  dependencies:
-    "@rollup/pluginutils" "^4.2.1"
-    escape-string-regexp "^5.0.0"
-    fast-glob "^3.2.11"
-    local-pkg "^0.4.1"
-    magic-string "^0.26.2"
-    mlly "^0.5.3"
-    pathe "^0.3.0"
-    scule "^0.2.1"
-    strip-literal "^0.4.0"
-    unplugin "^0.7.0"
-
 unimport@^0.4.4, unimport@^0.4.5:
   version "0.4.7"
   resolved "https://registry.yarnpkg.com/unimport/-/unimport-0.4.7.tgz#a3da4c7f15444a15d7b4ea1e50e592771a79c488"
@@ -6323,16 +6262,6 @@ unplugin@^0.6.1, unplugin@^0.6.2:
   resolved "https://registry.yarnpkg.com/unplugin/-/unplugin-0.6.2.tgz#5646829e7f8a664c8a4498654f258dc6ad3ebf1f"
   integrity sha512-+QONc2uBFQbeo4x5mlJHjTKjR6pmuchMpGVrWhwdGFFMb4ttFZ4E9KqhOOrNcm3Q8NNyB1vJ4s5e36IZC7UWYw==
   dependencies:
-    chokidar "^3.5.3"
-    webpack-sources "^3.2.3"
-    webpack-virtual-modules "^0.4.3"
-
-unplugin@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/unplugin/-/unplugin-0.7.0.tgz#8c8e28a7ca454a13313483ddd4c1f9cc1809d966"
-  integrity sha512-OsiFrgybmqm5bGuaodvbLYhqUrvGuRHRMZDhddKEXTDbuQ1x+hR7M1WpQguXj03whVYjEYChhFo738cZH5RNig==
-  dependencies:
-    acorn "^8.7.1"
     chokidar "^3.5.3"
     webpack-sources "^3.2.3"
     webpack-virtual-modules "^0.4.3"
