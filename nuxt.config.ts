@@ -13,9 +13,15 @@ export default defineNuxtConfig({
         }
     },
     modules: [
+        '@nuxtjs/color-mode',
         '@nuxtjs/tailwindcss',
         '@pinia/nuxt'
     ],
+    colorMode: {
+        preference: 'system', // default theme
+        dataValue: 'theme', // activate data-theme in <html> tag
+        classSuffix: ''
+    },
     vite: {
         plugins: [
             eslintPlugin()

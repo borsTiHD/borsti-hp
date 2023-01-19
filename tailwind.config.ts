@@ -27,5 +27,5 @@ export default <Config> {
             }
         }
     },
-    plugins: []
+    plugins: [require('daisyui')]
 }
