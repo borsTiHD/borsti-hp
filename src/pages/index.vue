@@ -1,6 +1,6 @@
 <template>
 	<div class="-mt-24">
-		<section class="hero min-h-screen bg-base-400">
+		<section class="hero min-h-screen">
 			<div class="hero-content flex-col lg:flex-row">
 				<img src="~/assets/img/borsti_bw.png" :alt="`Photo of ${name}`" class="max-w-sm rounded-lg drop-shadow-xl">
 				<div>
@@ -10,7 +10,7 @@
 				</div>
 			</div>
 		</section>
-		<section>
+		<section id="about-me" class="bg-base-300 p-8 md:p-0">
 			<div class="p-10">
 				<div class="card w-96 bg-base-100 shadow-xl">
 					<figure><img src="https://placeimg.com/400/225/arch" alt="Shoes"></figure>
