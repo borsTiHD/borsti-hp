@@ -1,16 +1,11 @@
 <template>
 	<div>
-		<div class="p-4 flex gap-4">
-			<button class="btn">Hello daisyUI</button>
-			<select v-model="colorMode.preference" class="select w-full max-w-xs">
-				<option disabled selected>Theme</option>
-				<option v-for="theme of themes" :key="theme">{{ theme }}</option>
-			</select>
-		</div>
-		<div class="hero bg-base-200 py-10">
-			<div class="hero-content text-center">
-				<div class="max-w-md">
-					<h1 class="text-5xl font-bold">Hello there</h1>
+		<AppNavbar />
+		<div class="hero min-h-screen bg-base-400 py-8 pt-32 -mt-24">
+			<div class="hero-content flex-col lg:flex-row">
+				<img src="https://placeimg.com/260/400/arch" class="max-w-sm rounded-lg shadow-2xl">
+				<div>
+					<h1 class="text-5xl font-bold">Box Office News!</h1>
 					<p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
 					<button class="btn btn-primary">Get Started</button>
 				</div>
@@ -32,37 +27,9 @@
 </template>
 
 <script setup>
-const colorMode = useColorMode()
-const themes = [
-    'system',
-    'light',
-    'dark',
-    'cupcake',
-    'bumblebee',
-    'emerald',
-    'corporate',
-    'synthwave',
-    'retro',
-    'cyberpunk',
-    'valentine',
-    'halloween',
-    'garden',
-    'forest',
-    'aqua',
-    'lofi',
-    'pastel',
-    'fantasy',
-    'wireframe',
-    'black',
-    'luxury',
-    'dracula',
-    'cmyk',
-    'autumn',
-    'business',
-    'acid',
-    'lemonade',
-    'night',
-    'coffee',
-    'winter'
-]
+import '@fontsource/roboto'
+import '@fontsource/roboto/700.css'
+import '@fontsource/montserrat'
+
+import AppNavbar from '@/components/layout/AppNavbar.vue'
 </script>
