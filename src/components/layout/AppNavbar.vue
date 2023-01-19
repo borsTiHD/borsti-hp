@@ -1,5 +1,5 @@
 <template>
-	<nav class="navbar md:ml-auto md:m-4 gap-2 rounded-lg bg-base-300/40 md:w-fit">
+	<nav class="navbar gap-2 bg-base-300 md:ml-auto md:m-4 md:rounded-lg md:w-fit">
 		<div class="navbar-start">
 			<div class="dropdown">
 				<label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -28,7 +28,7 @@
 			</label>
 			<div class="menu menu-compact dropdown-content mt-3 p-2 gap-2 shadow bg-base-300 rounded-box w-52">
 				<ul tabindex="0">
-					<li>    
+					<li>
 						<a class="justify-between">
 							Profile
 							<span class="badge">New</span>
@@ -40,7 +40,6 @@
 						<span class="label-text">Select theme</span>
 					</label>
 					<select v-model="colorMode.preference" class="select select-sm select-info">
-						<option disabled selected>Theme</option>
 						<option v-for="theme of themes" :key="theme">{{ theme }}</option>
 					</select>
 				</div>
