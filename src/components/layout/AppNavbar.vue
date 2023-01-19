@@ -1,6 +1,6 @@
 <template>
 	<nav class="navbar ml-auto m-4 gap-2 rounded-lg bg-base-300/40 w-fit">
-		<div class="flex-1">
+		<div class="md:flex hidden flex-1">
 			<a class="btn btn-ghost normal-case text-xl">borsTiHD</a>
 		</div>
 		<div class="flex-none gap-2">
