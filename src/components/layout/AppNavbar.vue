@@ -1,8 +1,9 @@
 <template>
     <nav class="navbar gap-2 bg-base-300 md:ml-auto md:m-4 md:rounded-lg md:w-fit z-50">
+        <!-- Mobile Menu -->
         <div class="navbar-start">
             <div class="dropdown">
-                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                <label tabindex="0" class="btn btn-ghost md:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </label>
                 <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-300 rounded-box w-52">
@@ -12,13 +13,17 @@
                 </ul>
             </div>
         </div>
-        <div class="hidden md:flex flex-none gap-2">
+
+        <!-- Links -->
+        <div class="hidden md:flex flex-none gap-2 md:-ml-2">
             <ul class="menu menu-horizontal px-1">
                 <li v-for="(item, index) in navItems" :key="index">
                     <NuxtLink :to="item.to">{{ item.name }}</NuxtLink>
                 </li>
             </ul>
         </div>
+
+        <!-- User options -->
         <div class="ml-auto dropdown dropdown-end">
             <label tabindex="0" class="btn btn-ghost btn-circle avatar">
                 <div class="w-10 rounded-full">
