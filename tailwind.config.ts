@@ -23,7 +23,7 @@ export default <Config> {
                 // 'bg-light': '#8D99AE',
                 // bg: '#2B2D42',
                 // 'body-bg': '#202125',
-                // magenta: '#e20074'
+                magenta: '#e20074'
             },
             backgroundImage: {
                 'dark-pattern': 'linear-gradient(to right bottom, rgba(40, 40, 40, 0.8), rgba(50, 50, 50, 0.8)), url(\'~/assets/img/wallpaper.jpg\')',
