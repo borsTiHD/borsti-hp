@@ -14,14 +14,14 @@
                 </mask>
                 <path fill d="M0 0h48v48H0z" mask="url(#ipSSourceCode0)" />
             </svg>
-            <div class="grid grid-flow-col gap-4">
+            <div class="flex gap-4">
                 <NuxtLink v-for="(item, index) in navItems" :key="index" :to="item.link" class="link link-hover">{{ item.name }}</NuxtLink>
             </div>
             <p>{{ copyright }}</p>
         </div>
         <div class="h-full ml-auto flex flex-col justify-center">
             <span class="footer-title ml-auto">{{ socialHeader }}</span>
-            <div class="grid grid-flow-col gap-4 ml-auto">
+            <div class="flex gap-4 ml-auto">
                 <a v-for="(item, index) in socials" :key="index" :href="item.link" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" role="img" class="fill-current iconify iconify--mdi hover:text-primary">
                         <path :d="item.icon" />
