@@ -50,8 +50,6 @@
 <script setup>
 import { usePagesStore } from '~/store/pages'
 
-const appName = 'borsTiHD'
-
 // Navitems
 const pagesStore = usePagesStore()
 const navItems = computed(() => pagesStore.getPages)
