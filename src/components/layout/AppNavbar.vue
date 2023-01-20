@@ -11,7 +11,6 @@
 					</li>
 				</ul>
 			</div>
-			<NuxtLink :to="navItems[0].to" class="btn btn-ghost normal-case text-xl">{{ appName }}</NuxtLink>
 		</div>
 		<div class="hidden md:flex flex-none gap-2">
 			<ul class="menu menu-horizontal px-1">
