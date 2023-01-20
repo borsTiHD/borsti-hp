@@ -1,10 +1,11 @@
 <template>
-	<div class="bg-fixed bg-top bg-repeat-x bg-scales-small md:bg-scales bg-[length:auto_140%] flex flex-col min-h-screen" :class="[themeMode]">
-		<AppNavbar />
-		<main>
-			<NuxtPage />
-		</main>
-	</div>
+    <div class="bg-fixed bg-top bg-repeat-x bg-scales-small md:bg-scales bg-[length:auto_140%] flex flex-col min-h-screen" :class="[themeMode]">
+        <AppNavbar />
+        <main>
+            <NuxtPage />
+        </main>
+        <AppFooter />
+    </div>
 </template>
 
 <script setup>
@@ -13,6 +14,7 @@ import '@fontsource/roboto/700.css'
 import '@fontsource/montserrat'
 
 import AppNavbar from '@/components/layout/AppNavbar.vue'
+import AppFooter from '@/components/layout/AppFooter.vue'
 
 // Theme Mode - Dark/Light background image depending on theme
 const colorMode = useColorMode()
