@@ -35,6 +35,11 @@
 <script setup>
 import { usePagesStore } from '~/store/pages'
 import { useSocialsStore } from '~/store/socials'
+import { useAppStore } from '~/store/app'
+
+// Changing title
+const appStore = useAppStore()
+const pageTitle = appStore.getTitle
 
 // Navitems
 const pagesStore = usePagesStore()
@@ -49,6 +54,6 @@ const socials = computed(() => socialsStore.getSocials)
 const copyright = computed(() => {
     const date = new Date()
     const year = date.getFullYear()
-    return `© ${year} borstihd.de`
+    return `© ${year} ${pageTitle} - Bastian Jakobs`
 })
 </script>
