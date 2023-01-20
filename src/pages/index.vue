@@ -5,42 +5,71 @@
                 <!-- Picture - left side -->
                 <figure><img src="~/assets/img/borsti_bw.png" :alt="`Photo of ${author}`" class="max-w-sm rounded-lg drop-shadow-xl" loading="lazy"></figure>
 
-                <!-- Text - right side -->
-                <div>
-                    <!-- Introduction -->
-                    <figcaption>
-                        <div class="card bg-base-300 shadow-xl">
-                            <div class="card-body">
-                                <p class="text-primary font-montserrat font-bold my-5 text-lg lg:text-xl xl:text-2xl leading-tight uppercase">{{ introduction }}</p>
-                                <h1 class="font-roboto text-5xl leading-none font-bold">{{ author }}</h1>
-                                <h2 class="text-primary font-montserrat mb-10 text-xl lg:text-2xl xl:text-3xl leading-tight">{{ underline }}</h2>
+                <!-- Introduction - right side -->
+                <div class="mt-auto card bg-base-300 shadow-xl">
+                    <div class="card-body">
+                        <p class="text-primary font-montserrat font-bold my-5 text-lg lg:text-xl xl:text-2xl leading-tight uppercase">{{ introduction }}</p>
+                        <h1 class="font-roboto text-5xl leading-none font-bold">{{ author }}</h1>
+                        <h2 class="text-primary font-montserrat mb-10 text-xl lg:text-2xl xl:text-3xl leading-tight">{{ underline }}</h2>
 
-                                <!-- About me -->
-                                <blockquote class="bg-base-100 rounded-lg p-2 mb-4">
-                                    <p
-                                        v-for="(item, index) in descriptions"
-                                        :key="index"
-                                        class="font-montserrat leading-relaxed max-w-prose m-2"
-                                        :class="index !== (descriptions.length - 1) ? 'mb-6' : ''"
-                                        v-html="item"
-                                    />
-                                </blockquote>
+                        <!-- About me -->
+                        <blockquote class="bg-base-100 rounded-lg p-2 mb-4">
+                            <p
+                                v-for="(item, index) in descriptions"
+                                :key="index"
+                                class="font-montserrat leading-relaxed max-w-prose m-2"
+                                :class="index !== (descriptions.length - 1) ? 'mb-6' : ''"
+                                v-html="item"
+                            />
+                        </blockquote>
 
-                                <button class="btn btn-primary" @click="btnAboutMe">Know me ↴</button>
-                            </div>
-                        </div>
-                    </figcaption>
+                        <button class="btn btn-primary" @click="btnAboutMe">Know me ↴</button>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="about-me" class="bg-base-300 p-10">
+        <section id="about-me" class="bg-base-300 p-10 flex gap-4">
             <div class="card w-96 bg-base-100 shadow-xl">
                 <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes"></figure>
                 <div class="card-body">
-                    <h2 class="card-title">Shoes!</h2>
+                    <h2 class="card-title">About Me</h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
+                </div>
+            </div>
+        </section>
+        <section id="about-me" class="bg-base-300 p-10 xl:px-28">
+            <div class="card bg-base-100 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">About Me</h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div>
+                            <p
+                                v-for="(item, index) in moreAboutMe.slice(0, 2)"
+                                :key="index"
+                                class="font-roboto leading-relaxed m-2 mb-6"
+                                v-html="item"
+                            />
+                            <div class="hidden lg:flex gap-4 mt-10">
+                                <div v-for="(logo, index) in logos.slice(0, 4)" :key="index" class="w-36 rounded-xl drop-shadow-md">
+                                    <img :src="logo" alt="Tech Logo">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="hidden lg:flex gap-4 mt-10">
+                                <div v-for="(logo, index) in logos.slice(4)" :key="index" class="w-36 rounded-xl drop-shadow-md">
+                                    <img :src="logo" alt="Tech Logo">
+                                </div>
+                            </div>
+                            <p
+                                v-for="(item, index) in moreAboutMe.slice(2)"
+                                :key="index"
+                                class="font-roboto leading-relaxed m-2"
+                                :class="index !== 2 ? 'mb-6' : ''"
+                                v-html="item"
+                            />
+                        </div>
+                        <div class="block md:hidden"><ImageGallery :images="logos" no-hover fullsize /></div>
                     </div>
                 </div>
             </div>
@@ -96,5 +125,27 @@ const underline = 'Creator • YouTuber • GFX • Developer'
 const descriptions = [
 	`I'm a full-stack web developer from Germany, working as a software engineer at ${getSkill(false, 'Deutsche Telekom', 'decoration-magenta/80')}. I have the passion to make the web a beautiful place.`,
 	`Building web and desktop apps since school. I have a diverse set of skills, ranging from ${getSkill(counter++)}, ${getSkill(counter++)}, ${getSkill(counter++)}, ${getSkill(counter++)} all the way to ${getSkill(counter++)}, ${getSkill(counter++)} and ${getSkill(counter++)}.`
+]
+
+// More about me
+const linkedIn = 'https://www.linkedin.com/in/bastian-jakobs/'
+const moreAboutMe = [
+    'I\'ve always been involved in nerdy PC stuff, building my own computers, solving friends software and hardware problems, experimenting around with software and operating systems until you crashed the OS and had to reinstall everything. Modded consoles and tinkered with them and even didn\'t stop at the Dreambox (nowadays with the Raspberry Pi). You name it.',
+    'The passion of software development started in the early Counter-Strike era when I founded a clan together with friends and developed my first static website for our clan page.',
+    'Later in school I chose Android programming and dynamic websites (php + mysql) as electives. At that time I also made my first experiences with BackTrack (now known as Kali Linux) and cracked my parents WLAN with a netbook.',
+    'And today I bring self-taught experience in diverse environments. Among them backend practices in NodeJS and PHP (also a little Python with Django), and mostly Vue for the frontend. Together with Electron, I gained most of my experience in a large desktop application that I built myself and has been in production use for several years in a large NOC (Network Operations Center).',
+    `If you want to learn more, or get in touch with me feel free to drop me a line via <a class="hover:text-primary underline underline-offset-2" href="${linkedIn}" target="_blank">LinkedIn</a>.`
+]
+
+// Tech logos
+const logos = [
+    '/img/logos/Windows_logo_-_2021.png',
+    '/img/logos/linux_penguin.png',
+    '/img/logos/favpng_kali-linux-backtrack-linux-distribution-offensive-security-certified-professional.png',
+    '/img/logos/Android_robot.png',
+    '/img/logos/Electron_Software_Framework_Logo.png',
+    '/img/logos/kisspng-node-js-javascript-web-application-express-js.png',
+    '/img/logos/Vue.js_Logo_2.png',
+    '/img/logos/favpng_raspberry-pi-3-raspbian-computer-kodi.png'
 ]
 </script>
