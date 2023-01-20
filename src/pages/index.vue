@@ -26,5 +26,12 @@
 </template>
 
 <script setup>
+import { useAppStore } from '~/store/app'
+
+// Changing title
+const appStore = useAppStore()
+const pageTitle = `Home - ${appStore.getTitle}`
+useHead({ title: pageTitle })
+
 const name = 'Bastian Jakobs'
 </script>
