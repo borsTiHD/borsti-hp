@@ -15,7 +15,7 @@
                 <path fill d="M0 0h48v48H0z" mask="url(#ipSSourceCode0)" />
             </svg>
             <div class="flex gap-4">
-                <NuxtLink v-for="(item, index) in navItems" :key="index" :to="item.link" class="link link-hover">{{ item.name }}</NuxtLink>
+                <NuxtLink v-for="(item, index) in navItems" :key="index" :to="item.link" class="link link-hover hover:text-primary">{{ item.name }}</NuxtLink>
             </div>
             <p>{{ copyright }}</p>
         </div>
