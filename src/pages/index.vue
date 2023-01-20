@@ -1,5 +1,6 @@
 <template>
     <div class="-mt-24">
+        <!-- Profile with picture -->
         <section class="hero min-h-screen">
             <div class="hero-content flex-col lg:flex-row">
                 <!-- Picture - left side -->
@@ -28,17 +29,10 @@
                 </div>
             </div>
         </section>
-        <section id="about-me" class="bg-base-300 p-10 flex gap-4">
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes"></figure>
-                <div class="card-body">
-                    <h2 class="card-title">About Me</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                </div>
-            </div>
-        </section>
-        <section id="about-me" class="bg-base-300 p-10 xl:px-28">
-            <div class="card bg-base-100 shadow-xl">
+
+        <!-- More about me -->
+        <section id="about-me" class="bg-base-300 p-4 lg:px-28 lg:py-10 flex justify-center">
+            <div class="card bg-base-100 shadow-xl max-w-7xl">
                 <div class="card-body">
                     <h2 class="card-title">About Me</h2>
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -46,7 +40,7 @@
                             <p
                                 v-for="(item, index) in moreAboutMe.slice(0, 2)"
                                 :key="index"
-                                class="font-roboto leading-relaxed m-2 mb-6"
+                                class="font-roboto leading-relaxed my-2 mb-6"
                                 v-html="item"
                             />
                             <div class="hidden lg:flex gap-4 mt-10">
@@ -64,12 +58,16 @@
                             <p
                                 v-for="(item, index) in moreAboutMe.slice(2)"
                                 :key="index"
-                                class="font-roboto leading-relaxed m-2"
+                                class="font-roboto leading-relaxed my-2"
                                 :class="index !== 2 ? 'mb-6' : ''"
                                 v-html="item"
                             />
                         </div>
-                        <div class="block md:hidden"><ImageGallery :images="logos" no-hover fullsize /></div>
+                        <div class="flex lg:hidden gap-4 mt-10">
+                            <div v-for="(logo, index) in logos" :key="index" class="w-36 rounded-xl drop-shadow-md">
+                                <img :src="logo" alt="Tech Logo">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -115,7 +113,7 @@ const getRandomColor = () => {
 
 // Creates skill tag
 const getSkill = (value, skill = undefined, color = undefined) => {
-    return `<a class="font-roboto italic underline underline-offset-2 ${color || getRandomColor()} decoration-2">${skill || skills[value]}</a>`
+    return `<span class="font-roboto italic underline underline-offset-2 ${color || getRandomColor()} decoration-2">${skill || skills[value]}</span>`
 }
 
 // Introduction text
@@ -134,7 +132,7 @@ const moreAboutMe = [
     'The passion of software development started in the early Counter-Strike era when I founded a clan together with friends and developed my first static website for our clan page.',
     'Later in school I chose Android programming and dynamic websites (php + mysql) as electives. At that time I also made my first experiences with BackTrack (now known as Kali Linux) and cracked my parents WLAN with a netbook.',
     'And today I bring self-taught experience in diverse environments. Among them backend practices in NodeJS and PHP (also a little Python with Django), and mostly Vue for the frontend. Together with Electron, I gained most of my experience in a large desktop application that I built myself and has been in production use for several years in a large NOC (Network Operations Center).',
-    `If you want to learn more, or get in touch with me feel free to drop me a line via <a class="hover:text-primary underline underline-offset-2" href="${linkedIn}" target="_blank">LinkedIn</a>.`
+    `If you want to learn more, or get in touch with me feel free to drop me a line via <a class="link link-hover hover:text-primary underline underline-offset-2" href="${linkedIn}" target="_blank">LinkedIn</a>.`
 ]
 
 // Tech logos
