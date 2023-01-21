@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer p-10 bg-neutral text-neutral-content">
+    <footer class="footer mt-auto p-10 bg-neutral text-neutral-content">
         <div>
             <!-- Icon by: https://icones.js.org/collection/icon-park-outline?s=source+code -->
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 48 48" fill-rule="evenodd" clip-rule="evenodd" class="fill-current">
