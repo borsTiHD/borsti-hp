@@ -18,7 +18,7 @@
         <div class="ml-auto flex gap-2">
             <Transition name="bounce">
                 <div v-if="showSearch" class="form-control">
-                    <input ref="searchInput" type="text" placeholder="Search" class="input input-bordered" autofocus>
+                    <input ref="searchInput" type="text" placeholder="Search" class="input input-bordered" autofocus @blur="showSearch = false">
                 </div>
             </Transition>
             <button class="btn btn-circle glass" @click="showSearchInput">
