@@ -36,7 +36,7 @@
                         <div class="card-actions">
                             <div class="flex items-end gap-2 w-full">
                                 <div class="flex flex-wrap gap-1">
-                                    <span v-for="(topic, topicIndex) in project.topics" :key="topicIndex" class="badge badge-secondary">{{ topic }}</span>
+                                    <span v-for="(topic, topicIndex) in project.topics" :key="topicIndex" class="badge badge-secondary badge-outline">{{ topic }}</span>
                                 </div>
                                 <NuxtLink :to="`/projects/${project.projectName}`" class="ml-auto">
                                     <button class="btn btn-sm btn-primary whitespace-nowrap">See more</button>
