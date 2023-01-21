@@ -23,8 +23,8 @@
                         <div v-if="search" class="menu menu-compact dropdown-content mt-3 p-2 gap-2 shadow bg-base-300 rounded-box w-52">
                             <div class="form-control w-full max-w-xs">
                                 <ul tabindex="0">
-                                    <li v-for="(project, index) in searchedProjects" :key="index" @click="openProject(project.name)">
-                                        <span>{{ project.name }}</span>
+                                    <li v-for="(result, index) in searchResults" :key="index" @click="openResult(result.item)">
+                                        <span>{{ result.item.name }}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -74,12 +74,16 @@
 </template>
 
 <script setup>
+import Fuse from 'fuse.js'
 import { usePagesStore } from '~/store/pages'
 import { useProjectsStore } from '~/store/projects'
 
 // Navitems
 const pagesStore = usePagesStore()
 const navItems = computed(() => pagesStore.getPages)
+
+// Projects
+const projectsStore = useProjectsStore()
 
 // Search
 const search = ref(null)
@@ -94,17 +98,29 @@ const showSearchInput = () => {
     }
 }
 
-// Projects
-const projectsStore = useProjectsStore()
-const projects = projectsStore.getProjects
-const openProject = (name) => navigateTo({ path: `/projects/${name}` })
-const searchedProjects = computed(() => {
+// Fuzzy search setup
+const searchObject = [...navItems.value, ...projectsStore.getProjects] // Search object with pages and projects
+const fuse = new Fuse(searchObject, {
+    keys: ['name', 'projectName', 'introduction', 'description', 'topics'], // Search keys for the search object
+    // includeScore: true,
+    threshold: 0.3,
+    minMatchCharLength: 2,
+    ignoreLocation: true // Ignore location of the search term
+})
+
+// Search with fuzzy search
+const searchResults = computed(() => {
     if (search.value) {
-        const foundProjects = projects.filter((project) => project.name.toLowerCase().includes(search.value.toLowerCase()))
-        return foundProjects.length > 0 ? foundProjects : projects
+        return fuse.search(search.value)
     }
     return []
 })
+
+// Navigate to search result
+const openResult = (result) => {
+    if (result.to) { navigateTo({ path: result.to }) } // Navigate to page
+    else { navigateTo({ path: `/projects/${result.projectName}` }) } // Navigate to project
+}
 
 // DaisyUI theme switcher
 const colorMode = useColorMode()
