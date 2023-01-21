@@ -15,7 +15,7 @@
         </div>
 
         <!-- Search -->
-        <div class="flex gap-2">
+        <div class="ml-auto flex gap-2">
             <Transition name="bounce">
                 <div v-if="showSearch" class="form-control">
                     <input ref="searchInput" type="text" placeholder="Search" class="input input-bordered" autofocus>
@@ -27,7 +27,7 @@
         </div>
 
         <!-- Links -->
-        <div class="hidden md:flex gap-2 md:-ml-2">
+        <div class="hidden md:flex gap-2">
             <ul class="menu menu-horizontal px-1">
                 <li v-for="(item, index) in navItems" :key="index">
                     <NuxtLink :to="item.to">{{ item.name }}</NuxtLink>
@@ -36,7 +36,7 @@
         </div>
 
         <!-- User options -->
-        <div class="ml-auto dropdown dropdown-end">
+        <div class="dropdown dropdown-end">
             <label tabindex="0" class="btn btn-ghost btn-circle avatar">
                 <div class="w-10 rounded-full">
                     <img src="https://placeimg.com/80/80/people">
