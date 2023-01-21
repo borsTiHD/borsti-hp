@@ -1,8 +1,8 @@
 <template>
-    <div class="-mt-24">
+    <div class="-mt-48">
         <!-- Profile with picture -->
         <section class="hero min-h-screen">
-            <div class="hero-content flex-col lg:flex-row">
+            <div class="hero-content flex-col lg:flex-row pt-24">
                 <!-- Picture - left side -->
                 <figure><img src="~/assets/img/borsti_bw.png" :alt="`Photo of ${author}`" class="max-w-sm rounded-lg drop-shadow-xl" loading="lazy"></figure>
 
@@ -23,7 +23,6 @@
                                 v-html="item"
                             />
                         </blockquote>
-
                         <button class="btn btn-primary" @click="btnAboutMe">Know me ↴</button>
                     </div>
                 </div>
