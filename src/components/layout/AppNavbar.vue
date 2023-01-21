@@ -18,7 +18,18 @@
         <div class="ml-auto flex gap-2">
             <Transition name="bounce">
                 <div v-if="showSearch" class="form-control">
-                    <input ref="searchInput" type="text" placeholder="Search" class="input input-bordered" autofocus @blur="showSearch = false">
+                    <div class="dropdown dropdown-end">
+                        <input ref="searchInput" v-model="search" type="text" placeholder="Search" class="input input-bordered" autofocus @blur="search === '' ? showSearch = false : false">
+                        <div v-if="search" class="menu menu-compact dropdown-content mt-3 p-2 gap-2 shadow bg-base-300 rounded-box w-52">
+                            <div class="form-control w-full max-w-xs">
+                                <ul tabindex="0">
+                                    <li v-for="(project, index) in searchedProjects" :key="index" @click="openProject(project.name)">
+                                        <span>{{ project.name }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </Transition>
             <button class="btn btn-circle btn-ghost" @click="showSearchInput">
@@ -64,12 +75,14 @@
 
 <script setup>
 import { usePagesStore } from '~/store/pages'
+import { useProjectsStore } from '~/store/projects'
 
 // Navitems
 const pagesStore = usePagesStore()
 const navItems = computed(() => pagesStore.getPages)
 
 // Search
+const search = ref(null)
 const searchInput = ref(null)
 const showSearch = ref(false)
 const showSearchInput = () => {
@@ -80,6 +93,18 @@ const showSearchInput = () => {
         })
     }
 }
+
+// Projects
+const projectsStore = useProjectsStore()
+const projects = projectsStore.getProjects
+const openProject = (name) => navigateTo({ path: `/projects/${name}` })
+const searchedProjects = computed(() => {
+    if (search.value) {
+        const foundProjects = projects.filter((project) => project.name.toLowerCase().includes(search.value.toLowerCase()))
+        return foundProjects.length > 0 ? foundProjects : projects
+    }
+    return []
+})
 
 // DaisyUI theme switcher
 const colorMode = useColorMode()
