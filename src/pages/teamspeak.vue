@@ -1,12 +1,15 @@
 <template>
-    <div class="flex flex-col gap-4 h-full grow">
+    <div class="flex flex-col">
+        <!-- Headline -->
         <div class="flex justify-center">
-            <div class="flex flex-col">
+            <div class="flex flex-col my-4">
                 <h1 class="text-5xl font-bold">TeamSpeak</h1>
                 <p class="text-primary">borsTiHD TS Viewer</p>
             </div>
         </div>
-        <section class="bg-base-300 flex justify-center p-8 lg:px-28 lg:py-10 h-full grow">
+
+        <!-- Content -->
+        <section class="bg-base-300 flex justify-center p-8 lg:px-28 lg:py-10">
             <div class="flex flex-col justify-center">
                 <div class="bg-slate-800 rounded border border-slate-600 my-2 p-2">
                     <a :href="tsViewerUrl"><img :src="tsViewerBanner"></a>
