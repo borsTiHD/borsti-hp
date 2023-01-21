@@ -17,7 +17,7 @@
                     :key="index"
                     :img="project.preview"
                     :class="[
-                        'card w-[32rem] bg-base-100 shadow-xl hover:shadow-2xl',
+                        'card w-80 sm:w-[32rem] bg-base-100 shadow-xl hover:shadow-2xl',
                         'hover:bg-base-200',
                         'transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-105'
                     ]"

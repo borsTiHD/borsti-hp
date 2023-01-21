@@ -4,7 +4,7 @@
         <section class="hero min-h-screen">
             <div class="hero-content flex-col lg:flex-row pt-24">
                 <!-- Picture - left side -->
-                <figure><img src="~/assets/img/borsti_bw.png" :alt="`Photo of ${author}`" class="max-w-sm rounded-lg drop-shadow-xl" loading="lazy"></figure>
+                <figure><img src="~/assets/img/borsti_bw.png" :alt="`Photo of ${author}`" class="w-64 sm:w-96 max-w-sm rounded-lg drop-shadow-xl" loading="lazy"></figure>
 
                 <!-- Introduction - right side -->
                 <div class="mt-auto card bg-base-300 shadow-xl">
