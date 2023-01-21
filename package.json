@@ -15,6 +15,7 @@
     "@fontsource/montserrat": "^4.5.14",
     "@fontsource/roboto": "^4.5.8",
     "@pinia/nuxt": "^0.4.6",
+    "fuse.js": "^6.6.2",
     "pinia": "^2.0.29"
   },
   "devDependencies": {
