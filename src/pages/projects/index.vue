@@ -61,9 +61,6 @@ const appStore = useAppStore()
 const pageTitle = `${pageName} - ${appStore.getTitle}`
 useHead({ title: pageTitle })
 
-// Open project
-const openProject = (name) => navigateTo({ path: `/projects/${name}` })
-
 // Get all projects
 const projectsStore = useProjectsStore()
 const projects = projectsStore.getProjects
