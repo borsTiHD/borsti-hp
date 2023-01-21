@@ -1,19 +1,22 @@
 <template>
     <footer class="footer mt-auto p-10 bg-neutral text-neutral-content">
-        <div>
-            <!-- Icon by: https://icones.js.org/collection/icon-park-outline?s=source+code -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 48 48" fill-rule="evenodd" clip-rule="evenodd" class="fill-current">
-                <mask id="ipSSourceCode0">
-                    <g fill="none">
-                        <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M23 40H7a3 3 0 0 1-3-3V11a3 3 0 0 1 3-3h34a3 3 0 0 1 3 3v14.882" />
-                        <path fill="#fff" stroke="#fff" stroke-width="4" d="M4 11a3 3 0 0 1 3-3h34a3 3 0 0 1 3 3v9H4v-9Z" />
-                        <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m34 33l-4 4l4 4m6-8l4 4l-4 4" />
-                        <circle r="2" fill="#000" transform="matrix(0 -1 -1 0 10 14)" />
-                        <circle r="2" fill="#000" transform="matrix(0 -1 -1 0 16 14)" />
-                    </g>
-                </mask>
-                <path fill d="M0 0h48v48H0z" mask="url(#ipSSourceCode0)" />
-            </svg>
+        <div class="flex flex-col">
+            <div class="flex items-end gap-4">
+                <!-- Icon by: https://icones.js.org/collection/icon-park-outline?s=source+code -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 48 48" fill-rule="evenodd" clip-rule="evenodd" class="fill-current">
+                    <mask id="ipSSourceCode0">
+                        <g fill="none">
+                            <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M23 40H7a3 3 0 0 1-3-3V11a3 3 0 0 1 3-3h34a3 3 0 0 1 3 3v14.882" />
+                            <path fill="#fff" stroke="#fff" stroke-width="4" d="M4 11a3 3 0 0 1 3-3h34a3 3 0 0 1 3 3v9H4v-9Z" />
+                            <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m34 33l-4 4l4 4m6-8l4 4l-4 4" />
+                            <circle r="2" fill="#000" transform="matrix(0 -1 -1 0 10 14)" />
+                            <circle r="2" fill="#000" transform="matrix(0 -1 -1 0 16 14)" />
+                        </g>
+                    </mask>
+                    <path fill d="M0 0h48v48H0z" mask="url(#ipSSourceCode0)" />
+                </svg>
+                <p>Press <kbd class="kbd kbd-sm">F</kbd> to pay respects.</p>
+            </div>
             <div class="flex gap-4">
                 <NuxtLink v-for="(item, index) in navItems" :key="index" :to="item.link" class="link link-hover hover:text-primary">{{ item.name }}</NuxtLink>
             </div>
@@ -28,6 +31,7 @@
                     </svg>
                 </a>
             </div>
+            <p class="ml-auto mt-2"><kbd class="kbd kbd-sm">&lt;</kbd><kbd class="kbd kbd-sm">/</kbd><kbd class="kbd kbd-sm">&gt;</kbd></p>
         </div>
     </footer>
 </template>
