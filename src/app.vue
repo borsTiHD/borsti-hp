@@ -1,7 +1,7 @@
 <template>
     <div class="bg-fixed bg-top bg-repeat-x bg-scales-small md:bg-scales bg-[length:auto_140%] flex flex-col min-h-screen" :class="[themeMode]">
         <AppNavbar />
-        <main>
+        <main class="pt-24">
             <NuxtPage />
         </main>
         <AppFooter />
