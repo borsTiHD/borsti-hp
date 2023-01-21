@@ -3,8 +3,8 @@
         <!-- Headline -->
         <div class="flex justify-center">
             <div class="flex flex-col my-4">
-                <h1 class="text-5xl font-bold">TeamSpeak</h1>
-                <p class="text-primary">borsTiHD TS Viewer</p>
+                <h1 class="text-5xl font-bold">{{ pageName }}</h1>
+                <p class="text-primary">{{ subTitle }}</p>
             </div>
         </div>
 
@@ -26,8 +26,10 @@
 import { useAppStore } from '~/store/app'
 
 // Changing title
+const pageName = 'TeamSpeak'
+const subTitle = 'borsTiHD TS Viewer'
 const appStore = useAppStore()
-const pageTitle = `TeamSpeak - ${appStore.getTitle}`
+const pageTitle = `${pageName} - ${appStore.getTitle}`
 useHead({ title: pageTitle })
 
 // TS Viewer Config
