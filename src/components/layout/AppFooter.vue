@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer mt-auto p-10 bg-neutral text-neutral-content">
+    <footer class="footer bg-neutral text-neutral-content mt-auto p-10 flex-grow">
         <div class="flex flex-col">
             <div class="flex items-end gap-4">
                 <!-- Icon by: https://icones.js.org/collection/icon-park-outline?s=source+code -->
@@ -22,7 +22,7 @@
             </div>
             <p>{{ copyright }}</p>
         </div>
-        <div class="h-full ml-auto flex flex-col justify-center">
+        <div class="ml-auto flex flex-col">
             <span class="footer-title ml-auto">{{ socialHeader }}</span>
             <div class="flex gap-4 ml-auto">
                 <a v-for="(item, index) in socials" :key="index" :href="item.link" target="_blank">
@@ -31,7 +31,12 @@
                     </svg>
                 </a>
             </div>
-            <p class="ml-auto mt-2"><kbd class="kbd kbd-sm">&lt;</kbd><kbd class="kbd kbd-sm">/</kbd><kbd class="kbd kbd-sm">&gt;</kbd></p>
+            <p class="ml-auto mt-2 flex items-end gap-1 font-weight-thin content-end">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m14.6 16.6l4.6-4.6l-4.6-4.6L16 6l6 6l-6 6l-1.4-1.4m-5.2 0L4.8 12l4.6-4.6L8 6l-6 6l6 6l1.4-1.4Z"/></svg>
+                with
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-rose-500" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z" /></svg>
+                in Germany
+            </p>
         </div>
     </footer>
 </template>
@@ -58,6 +63,6 @@ const socials = computed(() => socialsStore.getSocials)
 const copyright = computed(() => {
     const date = new Date()
     const year = date.getFullYear()
-    return `© ${year} ${pageTitle} - Bastian Jakobs`
+    return `© ${year} ${pageTitle}`
 })
 </script>
