@@ -14,12 +14,11 @@
                         <h2 class="text-primary font-montserrat mb-10 text-xl lg:text-2xl xl:text-3xl leading-tight">{{ underline }}</h2>
 
                         <!-- About me -->
-                        <blockquote class="bg-base-100 rounded-lg p-2 mb-4">
+                        <blockquote class="p-2 mb-4 flex flex-col gap-6 bg-base-100 rounded-lg">
                             <p
                                 v-for="(item, index) in descriptions"
                                 :key="index"
                                 class="font-montserrat leading-relaxed max-w-prose m-2"
-                                :class="index !== (descriptions.length - 1) ? 'mb-6' : ''"
                                 v-html="item"
                             />
                         </blockquote>
