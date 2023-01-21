@@ -32,37 +32,53 @@
 
         <!-- More about me -->
         <section id="about-me" class="bg-base-300 p-4 lg:px-28 lg:py-10 flex justify-center">
-            <div class="card bg-base-100 shadow-xl max-w-7xl">
+            <div class="card bg-base-100 shadow-xl max-w-screen-xl">
                 <div class="card-body">
                     <h2 class="card-title">About Me</h2>
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <div>
-                            <p
-                                v-for="(item, index) in moreAboutMe.slice(0, 2)"
-                                :key="index"
-                                class="font-roboto leading-relaxed my-2 mb-6"
-                                v-html="item"
-                            />
-                            <div class="hidden lg:flex gap-4 mt-10">
+                        <!-- Left side -->
+                        <div class="flex flex-col gap-4 justify-between">
+                            <!-- Text -->
+                            <div class="mockup-code">
+                                <div class="px-4 flex flex-col gap-4">
+                                    <p
+                                        v-for="(item, index) in moreAboutMe.slice(0, 2)"
+                                        :key="index"
+                                        class="font-roboto leading-relaxed"
+                                        v-html="item"
+                                    />
+                                </div>
+                            </div>
+                            <!-- Logos -->
+                            <div class="hidden lg:flex gap-4">
                                 <div v-for="(logo, index) in logos.slice(0, 4)" :key="index" class="w-36 rounded-xl drop-shadow-md">
                                     <img :src="logo" alt="Tech Logo">
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <div class="hidden lg:flex gap-4 mt-10">
+
+                        <!-- Right side -->
+                        <div class="flex flex-col gap-4 justify-between">
+                            <!-- Logos -->
+                            <div class="hidden lg:flex gap-4">
                                 <div v-for="(logo, index) in logos.slice(4)" :key="index" class="w-36 rounded-xl drop-shadow-md">
                                     <img :src="logo" alt="Tech Logo">
                                 </div>
                             </div>
-                            <p
-                                v-for="(item, index) in moreAboutMe.slice(2)"
-                                :key="index"
-                                class="font-roboto leading-relaxed my-2"
-                                :class="index !== 2 ? 'mb-6' : ''"
-                                v-html="item"
-                            />
+                            <!-- Text -->
+                            <div class="mockup-code">
+                                <div class="px-4 flex flex-col gap-4">
+                                    <p
+                                        v-for="(item, index) in moreAboutMe.slice(2)"
+                                        :key="index"
+                                        class="font-roboto leading-relaxed"
+                                        v-html="item"
+                                    />
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Logos for mobile -->
                         <div class="flex lg:hidden gap-4 mt-10">
                             <div v-for="(logo, index) in logos" :key="index" class="w-36 rounded-xl drop-shadow-md">
                                 <img :src="logo" alt="Tech Logo">
