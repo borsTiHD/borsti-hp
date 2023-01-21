@@ -3,6 +3,11 @@ import eslintPlugin from 'vite-plugin-eslint'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     srcDir: 'src/',
+    typescript: {
+        strict: true,
+        shim: false,
+        typeCheck: true
+    },
     runtimeConfig: {
         // The private keys which are only available within server-side
         TWITTER_KEY: process.env.TWITTER_KEY || '',
