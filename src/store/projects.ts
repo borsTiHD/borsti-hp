@@ -217,7 +217,13 @@ export const useProjectsStore = defineStore({
                 url: 'https://github.com/borsTiHD/borsti-hp',
                 topics: ['vue3', 'nuxt3', 'typescript', 'tailwindcss', 'daisyui', 'pinia'],
                 preview: '/img/projects/borsti-hp/wallpaper.jpg',
-                images: ['/img/projects/borsti-hp/wallpaper.jpg'],
+                images: [
+                    '/img/projects/borsti-hp/wallpaper.jpg',
+                    '/img/projects/borsti-hp/1-borstihp-home-hero-view.png',
+                    '/img/projects/borsti-hp/2-borstihp-home-about-me.png',
+                    '/img/projects/borsti-hp/3-borstihp-projects.png',
+                    '/img/projects/borsti-hp/4-borstihp-single-project.png'
+                ],
                 introduction: 'Well, this project is the page you are visiting right now. A portfolio to list some of my projects.',
                 description: [
                     'Well, this project is the page you are visiting right now. A portfolio to list some of my projects and with links to various social media accounts.',
