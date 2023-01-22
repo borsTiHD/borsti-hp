@@ -50,7 +50,7 @@
                             <!-- Logos -->
                             <div class="hidden lg:flex gap-4">
                                 <div v-for="(logo, index) in logos.slice(0, 4)" :key="index" class="w-36 rounded-xl drop-shadow-md">
-                                    <img :src="logo" alt="Tech Logo">
+                                    <img :src="logo.path" :alt="logo.name">
                                 </div>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                             <!-- Logos -->
                             <div class="hidden lg:flex gap-4">
                                 <div v-for="(logo, index) in logos.slice(4)" :key="index" class="w-36 rounded-xl drop-shadow-md">
-                                    <img :src="logo" alt="Tech Logo">
+                                    <img :src="logo.path" :alt="logo.name">
                                 </div>
                             </div>
                             <!-- Text -->
@@ -79,7 +79,7 @@
                         <!-- Logos for mobile -->
                         <div class="flex lg:hidden gap-4 mt-10">
                             <div v-for="(logo, index) in logos" :key="index" class="w-36 rounded-xl drop-shadow-md">
-                                <img :src="logo" alt="Tech Logo">
+                                <img :src="logo.path" :alt="logo.name">
                             </div>
                         </div>
                     </div>
@@ -151,13 +151,13 @@ const moreAboutMe = [
 
 // Tech logos
 const logos = [
-    '/img/logos/Windows_logo_-_2021.png',
-    '/img/logos/linux_penguin.png',
-    '/img/logos/favpng_kali-linux-backtrack-linux-distribution-offensive-security-certified-professional.png',
-    '/img/logos/Android_robot.png',
-    '/img/logos/Electron_Software_Framework_Logo.png',
-    '/img/logos/kisspng-node-js-javascript-web-application-express-js.png',
-    '/img/logos/Vue.js_Logo_2.png',
-    '/img/logos/favpng_raspberry-pi-3-raspbian-computer-kodi.png'
+    { name: 'Windows', path: '/img/logos/Windows_logo_-_2021.png' },
+    { name: 'Linux', path: '/img/logos/linux_penguin.png' },
+    { name: 'Kali Linux', path: '/img/logos/favpng_kali-linux-backtrack-linux-distribution-offensive-security-certified-professional.png' },
+    { name: 'Android', path: '/img/logos/Android_robot.png' },
+    { name: 'Electron', path: '/img/logos/Electron_Software_Framework_Logo.png' },
+    { name: 'Node.js', path: '/img/logos/kisspng-node-js-javascript-web-application-express-js.png' },
+    { name: 'Vue.js', path: '/img/logos/Vue.js_Logo_2.png' },
+    { name: 'Raspberry Pi', path: '/img/logos/favpng_raspberry-pi-3-raspbian-computer-kodi.png' }
 ]
 </script>
