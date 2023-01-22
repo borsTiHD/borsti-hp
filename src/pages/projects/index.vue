@@ -36,11 +36,9 @@
                         <div class="card-actions">
                             <div class="flex items-end gap-2 w-full">
                                 <div class="flex flex-wrap gap-1">
-                                    <span v-for="(topic, topicIndex) in project.topics" :key="topicIndex" class="badge badge-secondary badge-outline">{{ topic }}</span>
+                                    <a v-for="(topic, topicIndex) in project.topics" :key="topicIndex" class="badge badge-secondary badge-outline" :href="npmLink(topic)" target="_blank">{{ topic }}</a>
                                 </div>
-                                <NuxtLink :to="`/projects/${project.projectName}`" class="ml-auto">
-                                    <button class="btn btn-sm btn-primary whitespace-nowrap">See more</button>
-                                </NuxtLink>
+                                <NuxtLink :to="`/projects/${project.projectName}`" class="ml-auto btn btn-sm btn-primary whitespace-nowrap">See more</NuxtLink>
                             </div>
                         </div>
                     </div>
@@ -64,4 +62,7 @@ useHead({ title: pageTitle })
 // Get all projects
 const projectsStore = useProjectsStore()
 const projects = projectsStore.getProjects
+
+// Generating Npm Search link
+const npmLink = (topic) => useNpmSearch(topic)
 </script>
