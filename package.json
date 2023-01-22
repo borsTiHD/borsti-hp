@@ -1,36 +1,46 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore ."
-  },
-  "overrides": {
-    "vue": "latest"
-  },
-  "dependencies": {
-    "@fontsource/montserrat": "^4.5.14",
-    "@fontsource/roboto": "^4.5.8",
-    "@pinia/nuxt": "^0.4.6",
-    "fuse.js": "^6.6.2",
-    "pinia": "^2.0.29"
-  },
-  "devDependencies": {
-    "@nuxtjs/color-mode": "^3.2.0",
-    "@nuxtjs/tailwindcss": "^6.2.0",
-    "@typescript-eslint/eslint-plugin": "^5.48.2",
-    "@typescript-eslint/parser": "^5.48.2",
-    "daisyui": "^2.47.0",
-    "eslint": "^8.32.0",
-    "eslint-plugin-nuxt": "^4.0.0",
-    "eslint-plugin-vue": "^9.9.0",
-    "nuxt": "^3.0.0",
-    "tailwindcss": "^3.2.4",
-    "typescript": "^4.9.4",
-    "vite-plugin-eslint": "^1.8.1",
-    "vue-tsc": "^1.0.24"
-  }
+	"name": "borsti-hp",
+	"productName": "borsti-hp",
+	"version": "2.0.0",
+	"description": "Homepage - borsTiHD",
+	"author": "borsTiHD",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/borsTiHD/borsti-hp"
+        },
+    "private": true,
+    "scripts": {
+        "dev": "nuxt dev",
+        "build": "nuxt build",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare",
+        "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore ."
+    },
+    "overrides": {
+        "vue": "latest"
+    },
+    "dependencies": {
+        "@fontsource/montserrat": "^4.5.14",
+        "@fontsource/roboto": "^4.5.8",
+        "@pinia/nuxt": "^0.4.6",
+        "fuse.js": "^6.6.2",
+        "pinia": "^2.0.29"
+    },
+    "devDependencies": {
+        "@nuxtjs/color-mode": "^3.2.0",
+        "@nuxtjs/tailwindcss": "^6.2.0",
+        "@typescript-eslint/eslint-plugin": "^5.48.2",
+        "@typescript-eslint/parser": "^5.48.2",
+        "daisyui": "^2.47.0",
+        "eslint": "^8.32.0",
+        "eslint-plugin-nuxt": "^4.0.0",
+        "eslint-plugin-vue": "^9.9.0",
+        "nuxt": "^3.0.0",
+        "tailwindcss": "^3.2.4",
+        "typescript": "^4.9.4",
+        "vite-plugin-eslint": "^1.8.1",
+        "vue-tsc": "^1.0.24"
+    }
 }
