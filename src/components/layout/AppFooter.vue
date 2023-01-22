@@ -18,7 +18,7 @@
                 <p>Press <kbd class="kbd kbd-sm">F</kbd> to pay respects.</p>
             </div>
             <div class="flex gap-4">
-                <NuxtLink v-for="(item, index) in navItems" :key="index" :to="item.link" class="link link-hover hover:text-primary">{{ item.name }}</NuxtLink>
+                <NuxtLink v-for="(item, index) in navItems" :key="index" :to="item.to" class="link link-hover hover:text-primary">{{ item.name }}</NuxtLink>
             </div>
             <p>{{ copyright }}</p>
         </div>
