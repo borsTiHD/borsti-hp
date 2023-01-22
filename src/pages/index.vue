@@ -11,10 +11,10 @@
                     <div class="card-body">
                         <p class="text-primary font-montserrat font-bold my-5 text-lg lg:text-xl xl:text-2xl leading-tight uppercase">{{ introduction }}</p>
                         <h1 class="font-roboto text-5xl leading-none font-bold">{{ author }}</h1>
-                        <h2 class="text-primary font-montserrat mb-10 text-xl lg:text-2xl xl:text-3xl leading-tight">{{ underline }}</h2>
+                        <h2 class="text-primary font-montserrat text-xl lg:text-2xl xl:text-3xl leading-tight">{{ underline }}</h2>
 
                         <!-- About me -->
-                        <blockquote class="p-2 mb-4 flex flex-col gap-6 bg-base-100 rounded-lg">
+                        <blockquote class="p-2 my-4 mt-8 flex flex-col gap-4 bg-base-100 rounded-lg">
                             <p
                                 v-for="(item, index) in descriptions"
                                 :key="index"
@@ -22,7 +22,10 @@
                                 v-html="item"
                             />
                         </blockquote>
-                        <button class="btn btn-primary" @click="btnAboutMe">Know me ↴</button>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <button class="btn btn-primary btn-block" @click="btnAboutMe">Know me ↴</button>
+                            <NuxtLink to="/projects/" class="btn btn-secondary btn-block btn-outline">Projects</NuxtLink>
+                        </div>
                     </div>
                 </div>
             </div>
