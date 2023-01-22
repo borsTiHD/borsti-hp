@@ -37,8 +37,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="divider">Images</div>
 
+                    <!-- Project images -->
+                    <div class="divider">Images</div>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                         <img
                             v-for="(image, imageIndex) in project.images"

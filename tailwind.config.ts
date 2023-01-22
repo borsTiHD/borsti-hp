@@ -35,5 +35,77 @@ export default <Config> {
             }
         }
     },
-    plugins: [require('daisyui')]
+    plugins: [require('daisyui')],
+    daisyui: {
+        themes: [
+            {
+                'light': {
+                    'primary': '#D90429',
+                    'secondary': '#038e76',
+                    'accent': '#f28c9b',
+                    'neutral': '#212037',
+                    'base-100': '#F3F3F6',
+                    'info': '#5399EA',
+                    'success': '#1FB26D',
+                    'warning': '#EEB053',
+                    'error': '#E4473F'
+                }
+            },
+            {
+                'dark': {
+                    'primary': '#FF2943',
+                    'primary-content': '#131616',
+                    'secondary': '#d8ccff',
+                    'accent': '#4e53ba',
+                    'neutral': '#1b1d1d', // '#414558', // '#1C141F'
+                    'base-100': '#212121', // '#282a36', // '#29293D'
+                    'base-content': '#f8f8f2',
+                    'info': '#378CD2',
+                    'success': '#3EE5CC',
+                    'warning': '#FBC165',
+                    'error': '#F82A57'
+                }
+            },
+            {
+                'slime': {
+                    'primary': '#54ea44',
+                    'secondary': '#d8ccff',
+                    'accent': '#4e53ba',
+                    'neutral': '#1C141F',
+                    'base-100': '#29293D',
+                    'info': '#378CD2',
+                    'success': '#3EE5CC',
+                    'warning': '#FBC165',
+                    'error': '#F82A57'
+                }
+            },
+            'cupcake',
+            'bumblebee',
+            'emerald',
+            'corporate',
+            'synthwave',
+            'retro',
+            'cyberpunk',
+            'valentine',
+            'halloween',
+            'garden',
+            'forest',
+            'aqua',
+            'lofi',
+            'pastel',
+            'fantasy',
+            'wireframe',
+            'black',
+            'luxury',
+            'dracula',
+            'cmyk',
+            'autumn',
+            'business',
+            'acid',
+            'lemonade',
+            'night',
+            'coffee',
+            'winter'
+        ]
+    }
 }

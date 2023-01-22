@@ -181,6 +181,7 @@ const themes = [
     'system',
     'light',
     'dark',
+    'slime',
     'cupcake',
     'bumblebee',
     'emerald',
