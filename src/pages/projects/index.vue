@@ -31,7 +31,7 @@
 
                     <!-- Project info -->
                     <div class="card-body">
-                        <h2 class="card-title">{{ project.name }}</h2>
+                        <h2 class="card-title">{{ project.name }} <span v-if="project.updates" class="badge">NEW</span></h2>
                         <p v-html="project.introduction" />
                         <div class="card-actions">
                             <div class="flex items-end gap-2 w-full">

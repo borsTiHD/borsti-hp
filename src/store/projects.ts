@@ -6,6 +6,7 @@ export const useProjectsStore = defineStore({
             {
                 name: 'Pi-Control',
                 projectName: 'pi-control',
+                updates: false,
                 url: 'https://github.com/borsTiHD/pi-control',
                 topics: ['vue', 'nuxt', 'nodejs', 'socket.io', 'express', 'xterm', 'bcryptjs', 'jwt', 'swagger', 'pwa'],
                 preview: 'https://raw.githubusercontent.com/borsTiHD/pi-control/main/screenshots/mockup.png',
@@ -46,6 +47,7 @@ export const useProjectsStore = defineStore({
             {
                 name: 'AutoFAN',
                 projectName: 'autofan',
+                updates: false,
                 url: '',
                 topics: ['electron', 'vue', 'nuxt', 'vuetify', 'axios', 'express', 'ssh2', 'xterm'],
                 preview: '/img/projects/autofan/1-Home-NoSidebar.jpg',
@@ -84,6 +86,7 @@ export const useProjectsStore = defineStore({
             {
                 name: 'TiMon',
                 projectName: 'timon',
+                updates: false,
                 url: '',
                 topics: ['php', 'mysql', 'oracle', 'bootstrap', 'jquery', 'ajax', 'datatables.net'],
                 preview: '/img/projects/timon/1_Home.jpg',
@@ -115,6 +118,7 @@ export const useProjectsStore = defineStore({
             {
                 name: 'Vue-Jack 🃏',
                 projectName: 'vue-jack',
+                updates: false,
                 url: 'https://github.com/borsTiHD/vue-jack',
                 topics: ['vue3', 'nuxt3', 'typescript', 'tailwindcss', 'pinia', 'vitest'],
                 preview: '/img/projects/vue-jack/4_game3_win.png',
@@ -147,6 +151,7 @@ export const useProjectsStore = defineStore({
             {
                 name: 'Diablo 2 Runewords Companion 😈',
                 projectName: 'diablo2-runewords-companion',
+                updates: false,
                 url: 'https://github.com/borsTiHD/diablo2-runewords-companion',
                 topics: ['vue', 'nuxt', 'vuetify'],
                 preview: '/img/projects/diablo2-runewords-companion/3_runewords_calcualted.png',
@@ -179,6 +184,7 @@ export const useProjectsStore = defineStore({
             {
                 name: 'Meme Stonks 🚀',
                 projectName: 'meme-stonks',
+                updates: false,
                 url: 'https://github.com/borsTiHD/meme-stonks',
                 topics: ['vue', 'nuxt', 'vuetify', 'axios', 'chart.js', 'idb'],
                 preview: '/img/projects/meme-stonks/3_stock_apple.png',
@@ -207,10 +213,11 @@ export const useProjectsStore = defineStore({
             {
                 name: 'Homepage: borstihd.de',
                 projectName: 'borsti-hp',
+                updates: true,
                 url: 'https://github.com/borsTiHD/borsti-hp',
-                topics: ['vue3', 'nuxt3', 'typescript', 'tailwindcss', 'pinia', 'vitest'],
-                preview: '/img/wallpaper.jpg',
-                images: ['/img/wallpaper.jpg'],
+                topics: ['vue3', 'nuxt3', 'typescript', 'tailwindcss', 'daisyui', 'pinia'],
+                preview: '/img/projects/borsti-hp/wallpaper.jpg',
+                images: ['/img/projects/borsti-hp/wallpaper.jpg'],
                 introduction: 'Well, this project is the page you are visiting right now. A portfolio to list some of my projects.',
                 description: [
                     'Well, this project is the page you are visiting right now. A portfolio to list some of my projects and with links to various social media accounts.',
@@ -219,12 +226,16 @@ export const useProjectsStore = defineStore({
                     '<br>',
                     'By the way, the background is self-made and represents the bundled source code from the project Pi-Control and can be downloaded in full quality from my <a class="hover:text-primary underline underline-offset-2" href="https://www.deviantart.com/p3r0/art/Source-Code-Wallpaper-4k-912021763" target="_blank">Deviantart</a> page.',
                     '<br>',
-                    'If you want to get in contact with me, you can do so via <a class="hover:text-primary underline underline-offset-2" href="https://www.linkedin.com/in/bastian-jakobs/" target="_blank">LinkedIn</a> or one of the other social media links in the footer.'
+                    'If you want to get in contact with me, you can do so via <a class="hover:text-primary underline underline-offset-2" href="https://www.linkedin.com/in/bastian-jakobs/" target="_blank">LinkedIn</a> or one of the other social media links in the footer.',
+                    '<br>',
+                    '<span class="badge">Update</span>',
+                    'I made a total redesign of the page. The new version uses a combination of Tailwind + DaisyUI. You can see the old version in the image gallery below.'
                 ]
             },
             {
                 name: 'Host Alive',
                 projectName: 'host-alive',
+                updates: false,
                 url: 'https://github.com/borsTiHD/host-alive',
                 topics: ['nodejs', 'net-ping', 'pushover-notifications'],
                 preview: '/img/projects/host-alive/2_continous.png',
@@ -249,6 +260,7 @@ export const useProjectsStore = defineStore({
         projectsTestData: [...Array(10).keys()].map((i) => ({
             name: `Project ${i + 1}`,
             projectName: `project-${i + 1}`,
+            updates: false,
             url: 'https://github.com/borsTiHD',
             topics: ['vue', 'nuxt', 'express', 'jws', 'socket.io'],
             preview: `https://picsum.photos/id/${i * 10}/860/860`,
