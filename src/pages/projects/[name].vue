@@ -49,19 +49,18 @@
                                 'w-full h-auto md:h-48 object-cover rounded-lg drop-shadow-lg',
                                 'cursor-pointer transform transition duration-500 hover:object-scale-down hover:scale-150 hover:z-10'
                             ]"
-                            @click="openImage(index)"
+                            @click="openImage(image)"
                         >
                     </div>
 
-                    <!-- <div class="carousel w-full">
-                        <div v-for="(image, imageIndex) in project.images" :id="`image-${imageIndex}`" :key="imageIndex" class="carousel-item relative w-full">
-                            <img :src="image" class="w-full h-auto md:h-96 object-cover">
-                            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                <a :href="`#image-${imageIndex === 0 ? project.images.length - 1 : imageIndex - 1}`" class="btn btn-circle">❮</a>
-                                <a :href="`#image-${imageIndex === project.images.length - 1 ? 0 : imageIndex + 1}`" class="btn btn-circle">❯</a>
-                            </div>
-                        </div>
-                    </div> -->
+                    <!-- Modal for image view -->
+                    <input id="image-gallery" v-model="showModal" type="checkbox" class="modal-toggle">
+                    <label for="image-gallery" class="modal cursor-pointer">
+                        <label class="modal-box w-fit max-w-7xl max-h-10/12 p-4" for="">
+                            <label for="image-gallery" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                            <img :src="modalImage" class="object-cover">
+                        </label>
+                    </label>
                 </div>
             </div>
         </section>
@@ -90,12 +89,10 @@ useHead({ title: pageTitle })
 const npmLink = (topic) => useNpmSearch(topic)
 
 // Opening image in modal
-const openImage = (index) => {
-    const modal = document.getElementById('modal')
-    const modalImage = document.getElementById('modal-image')
-    const modalImageSrc = document.getElementById(`image-${index}`).src
-
-    modalImage.src = modalImageSrc
-    modal.classList.add('active')
+const showModal = ref(false)
+const modalImage = ref('')
+const openImage = (image) => {
+    modalImage.value = image // Setting image to modal
+    showModal.value = true // Opening modal
 }
 </script>
