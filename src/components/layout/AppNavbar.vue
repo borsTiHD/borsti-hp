@@ -39,7 +39,7 @@
             </button>
         </div>
 
-        <!-- Links -->
+        <!-- Links - hidden on mobile -->
         <div class="hidden md:flex gap-2">
             <ul class="menu menu-horizontal px-1">
                 <li v-for="(item, index) in navItems" :key="index">
@@ -230,5 +230,11 @@ const themes = [
     100% {
         transform: scale(1);
     }
+}
+
+/* Active link */
+.router-link-active {
+    @apply link link-primary underline-offset-2;
+    font-weight: 600;
 }
 </style>
