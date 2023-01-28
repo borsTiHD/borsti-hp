@@ -13,7 +13,7 @@
                             <circle r="2" fill="#000" transform="matrix(0 -1 -1 0 16 14)" />
                         </g>
                     </mask>
-                    <path fill d="M0 0h48v48H0z" mask="url(#ipSSourceCode0)" />
+                    <path d="M0 0h48v48H0z" mask="url(#ipSSourceCode0)" />
                 </svg>
                 <p>Press <kbd class="kbd kbd-sm">F</kbd> to pay respects.</p>
             </div>
@@ -41,7 +41,7 @@
     </footer>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { usePagesStore } from '~/store/pages'
 import { useSocialsStore } from '~/store/socials'
 import { useAppStore } from '~/store/app'

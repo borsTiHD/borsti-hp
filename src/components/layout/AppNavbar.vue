@@ -19,12 +19,12 @@
             <Transition name="bounce">
                 <div v-if="showSearch" class="form-control">
                     <div class="dropdown">
-                        <input ref="searchInputRef" v-model="search" tabindex="0" type="search" placeholder="Search..." class="input input-bordered input-info" autofocus @blur="search === '' ? showSearch = false : false" @keydown="searchKeydown($event, 'SEARCH')">
+                        <input ref="searchInputRef" v-model="search" tabindex="0" type="search" placeholder="Search..." class="input input-bordered input-info" autofocus @blur="search === '' ? showSearch = false : false" @keydown="searchKeydown($event)">
                         <div v-if="search" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <ul ref="resultsRef" class="form-control">
                                 <li v-for="(result, index) in searchResults" :key="index" tabindex="0" type="results" @click="openResult(result.item)" @keydown="searchKeydown($event, result.item)">
                                     <a>
-                                        <svg v-if="result.item.to" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+                                        <svg v-if="isPageItem(result.item)" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
                                         <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                                         {{ result.item.name }}
                                     </a>
@@ -67,10 +67,34 @@
     </nav>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Fuse from 'fuse.js'
 import { usePagesStore } from '~/store/pages'
 import { useProjectsStore } from '~/store/projects'
+
+// Extend EventTarget to add type property
+interface EventTargetType extends EventTarget {
+    type: string;
+}
+
+// Page type definition
+interface PageItem {
+    name: string;
+    to: string;
+}
+
+// Fuse type definition
+interface ProjectItem {
+    name: string;
+    projectName: string;
+    updates: boolean;
+    url: string;
+    topics: string[];
+    preview: string;
+    images: string[];
+    introduction: string;
+    description: string[];
+}
 
 // Navitems
 const pagesStore = usePagesStore()
@@ -81,55 +105,59 @@ const projectsStore = useProjectsStore()
 
 // Search
 const search = ref(null)
-const searchInputRef = ref(null)
+const searchInputRef = ref<HTMLDivElement>()
 const showSearch = ref(false)
 const showSearchInput = () => {
     showSearch.value = !showSearch.value // Toggle search input
     if (showSearch.value) {
-        nextTick(() => { searchInputRef.value.focus() }) // Focus search input
+        nextTick(() => { searchInputRef.value ? searchInputRef.value.focus() : false }) // Focus search input
     }
 }
 
 // Tabbing/scrolling through input and search results
-const resultsRef = ref(null)
-const searchKeydown = (event, result) => {
+const resultsRef = ref<HTMLDivElement>()
+const searchKeydown = (event: KeyboardEvent, result?: ProjectItem | PageItem) => {
     // Prevent scrolling when pressing arrow keys
     if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
         event.preventDefault()
     }
 
+    // Get search result elements
+    const resultElements = resultsRef.value ? resultsRef.value.children : false
+
     // Determine if the user is tabbing through the search input or the search results
-    if (event.target.type === 'search') {
+    const target = event.target as EventTargetType
+    if (target.type === 'search') {
         // Tabbing through search input
 
         // If no search results, return
         if (!searchResults.value.length) { return false }
 
         // If user pressed on the search input, focus on the first search result
-        if (event.key === 'ArrowDown') {
-            nextTick(() => { resultsRef.value.children[0].focus() })
+        if (event.key === 'ArrowDown' && resultElements) {
+            nextTick(() => { (resultElements[0] as HTMLElement).focus() })
             return true
         }
 
         // If user pressed enter on the search input, navigate to the first search result
-        if (event.key === 'Enter') {
-            nextTick(() => { resultsRef.value.children[0].click() })
+        if (event.key === 'Enter' && resultElements) {
+            nextTick(() => { (resultElements[0] as HTMLElement).click() })
             return true
         }
-    } else if (event.target.type === 'results') {
+    } else if (target.type === 'results') {
         // Tabbing through search results
 
         // If the user presses arrow up, focus on the previous result
         if (event.key === 'ArrowUp') {
             const index = searchResults.value.findIndex((r) => r.item === result)
-            if (index > 0) {
-                nextTick(() => { resultsRef.value.children[index - 1].focus() })
+            if (index > 0 && resultElements) {
+                nextTick(() => { (resultElements[index - 1] as HTMLElement).focus() })
                 return true
             }
 
             // If the user presses arrow up on the first result, focus on the search input
             if (index === 0) {
-                nextTick(() => { searchInputRef.value.focus() })
+                nextTick(() => { searchInputRef.value ? searchInputRef.value.focus() : false })
                 return true
             }
         }
@@ -137,14 +165,14 @@ const searchKeydown = (event, result) => {
         // If the user presses arrow down, focus on the next result
         if (event.key === 'ArrowDown') {
             const index = searchResults.value.findIndex((r) => r.item === result)
-            if (index < searchResults.value.length - 1) {
-                nextTick(() => { resultsRef.value.children[index + 1].focus() })
+            if (index < searchResults.value.length - 1 && resultElements) {
+                nextTick(() => { (resultElements[index + 1] as HTMLElement).focus() })
                 return true
             }
         }
 
         // If the user presses enter, navigate to the result
-        if (event.key === 'Enter') {
+        if (event.key === 'Enter' && result) {
             openResult(result)
             return true
         }
@@ -169,9 +197,14 @@ const searchResults = computed(() => {
     return []
 })
 
+// Type guard for search results
+const isPageItem = (result: ProjectItem | PageItem): result is PageItem => {
+    return (result as PageItem).to !== undefined
+}
+
 // Navigate to search result
-const openResult = (result) => {
-    if (result.to) { navigateTo({ path: result.to }) } // Navigate to page
+const openResult = (result: PageItem | ProjectItem) => {
+    if (isPageItem(result)) { navigateTo({ path: result.to }) } // Navigate to page
     else { navigateTo({ path: `/projects/${result.projectName}` }) } // Navigate to project
 }
 

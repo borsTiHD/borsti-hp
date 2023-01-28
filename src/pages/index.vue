@@ -92,7 +92,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useAppStore } from '~/store/app'
 
 // Changing title
@@ -104,7 +104,7 @@ useHead({ title: pageTitle })
 // About me button
 const btnAboutMe = () => {
     const el = document.getElementById('about-me')
-    el.scrollIntoView({ behavior: 'smooth' })
+    el?.scrollIntoView({ behavior: 'smooth' })
 }
 
 // Skils for building skillset
@@ -129,8 +129,10 @@ const getRandomColor = () => {
 }
 
 // Creates skill tag
-const getSkill = (value, skill = undefined, color = undefined) => {
-    return `<span class="font-roboto italic underline underline-offset-2 ${color || getRandomColor()} decoration-2">${skill || skills[value]}</span>`
+const getSkill = (index: number | undefined, skill? : string, color? : string) => {
+    // If skill is undefined, return random skill
+    if (index === undefined) return `<span class="font-roboto italic underline underline-offset-2 ${color} decoration-2">${skill}</span>`
+    return `<span class="font-roboto italic underline underline-offset-2 ${getRandomColor()} decoration-2">${skills[index]}</span>`
 }
 
 // Introduction text
@@ -138,7 +140,7 @@ let counter = 0
 const introduction = 'Hi, my name is'
 const underline = 'Creator • YouTuber • GFX • Developer'
 const descriptions = [
-	`I'm a full-stack web developer from Germany, working as a software engineer at ${getSkill(false, 'Deutsche Telekom', 'decoration-magenta/80')}. I have the passion to make the web a beautiful place.`,
+	`I'm a full-stack web developer from Germany, working as a software engineer at ${getSkill(undefined, 'Deutsche Telekom', 'decoration-magenta/80')}. I have the passion to make the web a beautiful place.`,
 	`Building web and desktop apps since school. I have a diverse set of skills, ranging from ${getSkill(counter++)}, ${getSkill(counter++)}, ${getSkill(counter++)}, ${getSkill(counter++)} all the way to ${getSkill(counter++)}, ${getSkill(counter++)} and ${getSkill(counter++)}.`
 ]
 

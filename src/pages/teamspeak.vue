@@ -25,6 +25,9 @@
 <script setup>
 import { useAppStore } from '~/store/app'
 
+// No typescript here because of the script tag from tsviewer.com
+// The function 'ts3v_display' is defined in the script tag from tsviewer.com
+
 // Changing title
 const pageName = 'TeamSpeak'
 const subTitle = 'borsTiHD TS Viewer'

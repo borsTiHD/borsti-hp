@@ -8,7 +8,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import '@fontsource/roboto'
 import '@fontsource/roboto/700.css'
 import '@fontsource/montserrat'
@@ -20,7 +20,7 @@ import AppFooter from '@/components/layout/AppFooter.vue'
 const colorMode = useColorMode()
 const themeMode = computed(() => {
     // List of themes that use dark background image
-    const darkThemes = [
+    const darkThemes: string[] = [
         'dark',
         'synthwave',
         'halloween',
@@ -34,7 +34,7 @@ const themeMode = computed(() => {
     ]
 
     // List of themes that use light background image
-    const lightThemes = [
+    const lightThemes: string[] = [
         'light',
         'cupcake',
         'bumblebee',

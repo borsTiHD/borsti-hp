@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col">
+    <div v-if="project" class="flex flex-col">
         <!-- Headline -->
         <div class="flex justify-center">
             <div class="flex flex-col my-4">
@@ -68,7 +68,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useAppStore } from '~/store/app'
 import { useProjectsStore } from '~/store/projects'
 
@@ -78,21 +78,26 @@ const { name } = route.params
 
 // Get all projects
 const projectsStore = useProjectsStore()
-const project = projectsStore.getProjectByName(name)
+const project = projectsStore.getProjectByName(name as string)
+
+// If project not found, redirect to 'projects' page
+if (!project) {
+    useRouter().push('/projects')
+}
 
 // Changing title
 const subTitle = 'project details'
 const appStore = useAppStore()
-const pageTitle = `${project.name} - ${appStore.getTitle}`
+const pageTitle = `${project?.name} - ${appStore.getTitle}`
 useHead({ title: pageTitle })
 
 // Generating Npm Search link
-const npmLink = (topic) => useNpmSearch(topic)
+const npmLink = (topic: string) => useNpmSearch(topic)
 
 // Opening image in modal
 const showModal = ref(false)
 const modalImage = ref('')
-const openImage = (image) => {
+const openImage = (image: string) => {
     modalImage.value = image // Setting image to modal
     showModal.value = true // Opening modal
 }

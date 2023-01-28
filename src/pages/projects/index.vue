@@ -48,7 +48,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useAppStore } from '~/store/app'
 import { useProjectsStore } from '~/store/projects'
 
@@ -64,5 +64,5 @@ const projectsStore = useProjectsStore()
 const projects = projectsStore.getProjects
 
 // Generating Npm Search link
-const npmLink = (topic) => useNpmSearch(topic)
+const npmLink = (topic: string) => useNpmSearch(topic)
 </script>
