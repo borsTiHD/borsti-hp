@@ -9,7 +9,7 @@
         </div>
 
         <!-- Content -->
-        <section class="bg-base-300 flex justify-center p-8 lg:px-28 lg:py-10">
+        <section class="bg-base-200 flex justify-center p-8 lg:px-28 lg:py-10">
             <div class="flex flex-col justify-center">
                 <div class="bg-slate-800 rounded border border-slate-600 my-2 p-2">
                     <a :href="tsViewerUrl"><img :src="tsViewerBanner"></a>

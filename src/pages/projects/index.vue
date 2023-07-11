@@ -9,7 +9,7 @@
         </div>
 
         <!-- Content -->
-        <section class="bg-base-300 flex justify-center p-8 lg:px-28 lg:py-10">
+        <section class="bg-base-200 flex justify-center p-8 lg:px-28 lg:py-10">
             <div class="flex gap-8 flex-wrap justify-center">
                 <!-- Project cards -->
                 <div

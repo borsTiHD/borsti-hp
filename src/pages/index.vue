@@ -7,7 +7,7 @@
                 <figure><img src="~/assets/img/borsti_bw.png" :alt="`Photo of ${author}`" class="w-64 sm:w-96 max-w-sm rounded-lg drop-shadow-xl" loading="lazy"></figure>
 
                 <!-- Introduction - right side -->
-                <div class="mt-auto card bg-base-300 shadow-xl">
+                <div class="mt-auto card bg-base-200 shadow-xl">
                     <div class="card-body">
                         <p class="text-primary font-montserrat font-bold my-5 text-lg lg:text-xl xl:text-2xl leading-tight uppercase">{{ introduction }}</p>
                         <h1 class="font-roboto text-5xl leading-none font-bold">{{ author }}</h1>
@@ -32,7 +32,7 @@
         </section>
 
         <!-- More about me -->
-        <section id="about-me" class="bg-base-300 p-4 lg:px-28 lg:py-10 flex justify-center">
+        <section id="about-me" class="bg-base-200 p-4 lg:px-28 lg:py-10 flex justify-center">
             <div class="card bg-base-100 shadow-xl max-w-screen-xl">
                 <div class="card-body">
                     <h2 class="card-title">About Me</h2>
