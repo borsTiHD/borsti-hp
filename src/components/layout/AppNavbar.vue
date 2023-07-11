@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar gap-2 bg-base-300 md:ml-auto md:m-4 md:rounded-lg md:w-fit z-50">
+    <nav class="navbar gap-2 bg-base-200 md:ml-auto md:m-4 md:rounded-lg md:w-fit z-50">
         <!-- Mobile Menu -->
         <div class="navbar-start md:hidden">
             <div class="dropdown">
